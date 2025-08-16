@@ -191,7 +191,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2025-08-16 18:43:34 / 修改时间：21:13:32" itemprop="dateCreated datePublished" datetime="2025-08-16T18:43:34+08:00">2025-08-16</time>
+              <time title="创建时间：2025-08-16 18:43:34 / 修改时间：21:45:36" itemprop="dateCreated datePublished" datetime="2025-08-16T18:43:34+08:00">2025-08-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,21 +236,21 @@
 <li>本文默认读者掌握基本的计算机操作方法，因此简单的注册账号、安装软件等过程将不一一赘述。</li>
 <li>如果遇到了本文没有提到的一些问题，请善用搜索引擎，查找资料。</li>
 </ol>
-<h3 id="零实现方法">零、实现方法</h3>
+<h3 id="实现方法">实现方法</h3>
 <p>​ 本博客使用 Hexo 作为静态博客框架，其基于 Node.js
 实现，可以方便、快速（虽然我花了好几个小时）生成静态网页，并托管在
 Github 上。Hexo 本身也是 Github 上的一个开源项目，其官网 <a
 href="https://link.zhihu.com/?target=https%3A//hexo.io/">Hexo</a>
 支持中文浏览，可以自行查阅。</p>
 <hr />
-<h3 id="基础">基础</h3>
-<h4 id="一注册-github-账号">一、注册 Github 账号</h4>
+<h3 id="基本">基本</h3>
+<h4 id="注册-github-账号">注册 Github 账号</h4>
 <p>​ 由于我们要把博客托管在 Github 上，因此我们首先要注册 Github
 账号，注册过程不是很麻烦，但可能需要梯子访问。</p>
-<h4 id="二在-github-上创建个人仓库">二、在 Github 上创建个人仓库</h4>
+<h4 id="在-github-上创建个人仓库">在 Github 上创建个人仓库</h4>
 <p>​ 再注册完 Github 账号后，我们点击界面上的 New Repository
 按钮，创建新仓库，稍后我们会把自己的博客上传到仓库里。仓库名称应该为：<code>你的用户名.github.io</code>。</p>
-<h4 id="三下载-git-与-node.js">三、下载 Git 与 Node.js</h4>
+<h4 id="下载-git-与-node.js">下载 Git 与 Node.js</h4>
 <p>​ Git
 是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用
 Git 同步到 GitHub 上。下载 Git 可以从<a
@@ -262,7 +262,7 @@ target="_blank" rel="noopener" href="https://nodejs.org/en/download/">官网</a>
 在完成安装之后，我们可以在终端使用以下三行命令来检测是否安装成功：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git --version</span><br><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
 <p>​ 如果都能正确的显示出版本号，则说明安装成功。</p>
-<h4 id="四配置-git">四、配置 Git</h4>
+<h4 id="配置-git">配置 Git</h4>
 <p>​ 打开Git Bash，首先配置 Git 的用户名和邮箱信息</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;GitHub用户名&quot;</span><br><span class="line">$ git config --global user.email &quot;GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
 <p>​ 接着，我们将 Git 与 Github 账号绑定，在命令行中生成 SSH
@@ -276,7 +276,7 @@ key，标题随便填，将公钥复制进去即可。</p>
 <p>​ 完成后，在 Git Bash 命令行输入</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ SSH -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>​ 如果你可以成功认证，则代表设置正确。</p>
-<h4 id="五安装-hexo">五、安装 Hexo</h4>
+<h4 id="安装-hexo">安装 Hexo</h4>
 <p>​
 在电脑中合适的位置创建一个文件夹（路径最好为全英文），接着在终端中打开此文件夹，使用
 npm 命令安装 Hexo：</p>
@@ -288,7 +288,7 @@ npm 命令安装 Hexo：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>​ 如果在 <code>http://localhost:4000/</code>
 可以看到生成的博客，则说明搭建成功。</p>
-<h4 id="六将博客部署到-github">六、将博客部署到 Github</h4>
+<h4 id="将博客部署到-github">将博客部署到 Github</h4>
 <p>​ 打开我们先前创建的 GitHub 仓库，点击 <code>Code</code>，切换到
 <code>SSH</code>，将给出的连接完整的复制下来。接着在 Hexo
 文件夹中，打开根目录中的 <code>_config.yml</code> 文件，找到 deploy，将
@@ -299,7 +299,7 @@ npm 命令安装 Hexo：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
 <p>​ 这样，你的博客就被成功部署到 Github 上了。打开
 <code>https://你的用户名.github.io</code> 即可访问你刚部署好的博客。</p>
-<h4 id="七上传自己的文章">七、上传自己的文章</h4>
+<h4 id="上传自己的文章">上传自己的文章</h4>
 <p>在终端输入以下命令：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n &quot;文章标题&quot;</span><br></pre></td></tr></table></figure>
 <p>即可在 <code>\Hexo\source\_posts</code> 下创建新的 .md
@@ -307,7 +307,7 @@ npm 命令安装 Hexo：</p>
 <hr />
 <h3 id="进阶">进阶</h3>
 <p>在完成上述操作后，我们已经得到了一个基本的个人博客，以下介绍更多个性化的进阶内容，但可能更加困难。</p>
-<h4 id="八绑定个人域名">八、绑定个人域名</h4>
+<h4 id="绑定个人域名">绑定个人域名</h4>
 <p>​
 如果我们想使用我们自己的个性化域名，这就需要绑定我们自己的域名。作者在
 <a target="_blank" rel="noopener" href="https://www.namesilo.com/">Namesilo</a>
@@ -319,7 +319,7 @@ CNAME，主机记录均可，同时关闭代理。</p>
 CNAME，然后输入你的域名并保存。</p>
 <p>​
 最后，重新将你的博客上传到仓库中，就可以通过你自己的域名进入博客了。</p>
-<h4 id="九更换主题">九、更换主题</h4>
+<h4 id="更换主题">更换主题</h4>
 <p>​ 如果你不喜欢Hexo默认的主题，可以更换不同的主题，可以在<a
 target="_blank" rel="noopener" href="https://hexo.io/themes/">官网</a>寻找不同的主题，我选择了 NEXT
 主题，因为其配置功能多样，并且方便 <span
@@ -328,13 +328,13 @@ class="math inline">\(\LaTeX\)</span> 渲染。</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 <p>​ 即可将 NEXT 主题下载到本地。在根目录下的 _config.yml 中将主题修改为
 NEXT，并重新上传，即可将主题更改为 NEXT。</p>
-<h4 id="十配置文件与插件">十、配置文件与插件</h4>
+<h4 id="配置文件与插件">配置文件与插件</h4>
 <p>​ 在 Hexo 文件夹及 NEXT 文件夹根目录下的 _config.yml
 中都有大量配置选项，具体可查阅 Hexo 和 NEXT
 的官方文档，此处不多赘述。</p>
 <p>​ 此外，Hexo 也提供大量插件，也可以在 Hexo
 官网中查询，可以实现部分进阶功能如评论、图床等。</p>
-<h4 id="十一latex-的安装">十一、LaTeX 的安装</h4>
+<h4 id="latex-的安装">LaTeX 的安装</h4>
 <p>​ <span class="math inline">\(\LaTeX\)</span>
 的安装是我在搭建过程中花费时间最长的一步，因为大多数文章并未完整讲解安装方法，给我带来了很多麻烦。</p>
 <p>​ Hexo本身并不支持LaTeX的渲染，为了安装 <span
