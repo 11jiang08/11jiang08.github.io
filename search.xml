@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/08/16/Hello%20World/</url>
-    <content><![CDATA[<p>本站于2025年8月16日成功建立</p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用Hexo搭建个人博客</title>
     <url>/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>​
@@ -292,6 +283,15 @@ class="math inline">\(\beta\)</span> 互为充要条件。</p>
         <tag>高中数学</tag>
         <tag>集合</tag>
         <tag>命题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/08/16/Hello%20World/</url>
+    <content><![CDATA[<p>本站于2025年8月16日成功建立</p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
