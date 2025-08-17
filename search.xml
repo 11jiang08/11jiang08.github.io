@@ -190,10 +190,10 @@ href="https://fuhailin.github.io/Hexo-images/">在Hexo博客中插入图片的�
 <p>​
 集合的性质包括确定性、互异性与无序性。也就是说，对于一个给定的集合，其中的元素是确定的，也是各不相同的，而且各元素地位相等，与顺序无关。</p>
 <p>​ 我们将全体自然数组成的集合称为自然数集，记作 <span
-class="math inline">\(\N\)</span>，整数集为 <span
-class="math inline">\(\Z\)</span>，有理数集为 <span
-class="math inline">\(\Q\)</span>，实数集为 <span
-class="math inline">\(\R\)</span>.</p>
+class="math inline">\(\mathbb{N}\)</span>，整数集为 <span
+class="math inline">\(\mathbb{Z}\)</span>，有理数集为 <span
+class="math inline">\(\mathbb{Q}\)</span>，实数集为 <span
+class="math inline">\(\mathbb{R}\)</span>.</p>
 <p>​ 不包括任何元素的集合称为空集，记作 <span
 class="math inline">\(\varnothing\)</span>.</p>
 <p>​
@@ -210,7 +210,7 @@ class="math inline">\(a \in B\)</span>，则称集合 <span
 class="math inline">\(A\)</span> 是集合 <span
 class="math inline">\(B\)</span> 的子集，记作 <span
 class="math inline">\(A \subseteq B\)</span>，若 <span
-class="math inline">\(\exist b \in B\)</span> 且 <span
+class="math inline">\(\exists b \in B\)</span> 且 <span
 class="math inline">\(b \notin A\)</span>，则 <span
 class="math inline">\(A \subset B\)</span>。若 <span
 class="math inline">\(A \subseteq B\)</span> 且 <span
