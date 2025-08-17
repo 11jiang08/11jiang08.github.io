@@ -28,7 +28,7 @@
 <meta property="og:description" content="​ 搭建这个博客花费了我很大的精力，也查找了不少的资料。本文用于记录我搭建博客的经过，用于给其它想要搭建自己的个人博客的朋友提供参考。 写在前面  下载部分内容时可能需要梯子。 本文默认读者掌握基本的计算机操作方法，因此简单的注册账号、安装软件等过程将不一一赘述。 如果遇到了本文没有提到的一些问题，请善用搜索引擎，查找资料。  实现方法 ​ 本博客使用 Hexo 作为静态博客框架">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-16T10:43:34.000Z">
-<meta property="article:modified_time" content="2025-08-17T00:59:24.965Z">
+<meta property="article:modified_time" content="2025-08-17T06:23:59.235Z">
 <meta property="article:author" content="11jiang08">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
@@ -77,7 +77,7 @@
   </style>
 </noscript>
 
-</head>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -231,7 +231,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2025-08-17 08:59:24" itemprop="dateModified" datetime="2025-08-17T08:59:24+08:00">2025-08-17</time>
+                <time title="修改时间：2025-08-17 14:23:59" itemprop="dateModified" datetime="2025-08-17T14:23:59+08:00">2025-08-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -249,14 +249,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2k</span>
+              <span>2.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
+              <span>8 分钟</span>
             </span>
 
         </div>
@@ -366,16 +366,19 @@ target="_blank" rel="noopener" href="https://hexo.io/themes/">官网</a>寻找�
 class="math inline">\(\LaTeX\)</span> 渲染。</p>
 <p>​ 在终端中输入：</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>​ 即可将 NEXT 主题下载到本地。在根目录下的 _config.yml 中将主题修改为
-NEXT，并重新上传，即可将主题更改为 NEXT。</p>
+<p>​ 即可将 NEXT 主题下载到本地。在根目录下的 <code>_config.yml</code>
+中将主题修改为 NEXT，并重新上传，即可将主题更改为 NEXT。</p>
 <h4 id="配置文件与插件">配置文件与插件</h4>
-<p>​ 在 Hexo 文件夹及 NEXT 文件夹根目录下的 _config.yml
+<p>​ 在 Hexo 文件夹及 NEXT 文件夹根目录下的 <code>_config.yml</code>
 中都有大量配置选项，具体可查阅 Hexo 和 NEXT
 的官方文档，此处不多赘述。</p>
 <p>​ 此外，Hexo 也提供大量插件，也可以在 Hexo
 官网中查询，可以实现部分进阶功能如评论、图床等。</p>
 <p>​ 推荐参考：<a
 target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版）</a></p>
+<p>​ 如果想要切换浅/深色背景，可以参考：<a
+target="_blank" rel="noopener" href="https://moon-jam.me/NexT-dark-light-mode/">Hexo-NexT
+深淺主題切換配置</a></p>
 <h4 id="latex-的安装">LaTeX 的安装</h4>
 <p>​ <span class="math inline">\(\LaTeX\)</span>
 的安装是我在搭建过程中花费时间最长的一步，因为大多数文章并未完整讲解安装方法，给我带来了很多麻烦。</p>
@@ -393,35 +396,62 @@ target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-renderer-pand
 <p>​ 除此之外，我们还要在 NEXT 的配置文件中修改部分配置，使得能够正确渲染
 <span class="math inline">\(\LaTeX\)</span>，具体方法见<a
 target="_blank" rel="noopener" href="https://theme-next.js.org/docs/third-party-services/math-equations.html">参考文档</a>。</p>
+<h4 id="评论系统">评论系统</h4>
+<p>​ 评论系统推荐使用 utterances，优点为无广告，稳定。其原理是在 github
+中生成 issue，由于Hexo Next
+并未集成utterances，具体安装方法可以参考这两篇文章：</p>
+<ol type="1">
+<li><p><a target="_blank" rel="noopener" href="https://blog.lanweihong.com/posts/24011/">Hexo NexT
+主题使用 utterances 搭建评论系统</a></p></li>
+<li><p><a
+target="_blank" rel="noopener" href="https://blog.mylab.cc/2020/05/20/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Utterances%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">Hexo
+Next主题添加Utterances评论系统</a></p></li>
+</ol>
+<p>​ 第一篇参考配置 utterances（前半部分），在Hexo Next 中安装 utterances
+请参考第二篇文章。</p>
+<p>​ 如果在安装完成后遇到点击 “Sign in with GitHub” 会跳转 “Example
+Domain” 的问题，请检查 Hexo 的 <code>_config.yml</code> 文件中的网站 URL
+是否正确设置。</p>
 <hr />
 <h3 id="参考资料">参考资料</h3>
 <p>​
-在搭建博客及写这篇文章的过程中，我参考了大量的资料，向这些文章的作者致以真诚的谢意：</p>
+在搭建博客及写这篇文章的过程中，我参考了以下资料，向这些文章的作者致以真诚的谢意：</p>
 <ol type="1">
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo
-搭建个人网站详细教程</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/69207995">使用Github
-Pages和Hexo搭建自己的独立博客【超级详细的小白教程】</a></p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://nokiasonic.github.io/2020/12/17/%E3%80%90Hexo%E3%80%91Next%E4%B8%BB%E9%A2%98%E6%9B%B4%E5%A5%BD%E5%9C%B0%E6%94%AF%E6%8C%81LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">【Hexo】Next主题更好地支持LaTeX数学公式</a></p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45511189/article/details/115798563">hexo博客next主题添加对数学公式的支持</a></p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://blog.homurax.com/2022/08/21/hexo-theme-latex/">为 Hexo
-的任何主题添加数学公式（LaTeX）的支持</a></p></li>
-<li><p><a
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo
+搭建个人网站详细教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/69207995">使用Github
+Pages和Hexo搭建自己的独立博客【超级详细的小白教程】</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://nokiasonic.github.io/2020/12/17/%E3%80%90Hexo%E3%80%91Next%E4%B8%BB%E9%A2%98%E6%9B%B4%E5%A5%BD%E5%9C%B0%E6%94%AF%E6%8C%81LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">【Hexo】Next主题更好地支持LaTeX数学公式</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45511189/article/details/115798563">hexo博客next主题添加对数学公式的支持</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.homurax.com/2022/08/21/hexo-theme-latex/">为
+Hexo 的任何主题添加数学公式（LaTeX）的支持</a></li>
+<li><a
 target="_blank" rel="noopener" href="https://jdhao.github.io/2017/10/06/hexo-markdown-latex-equation/">Hexo
-书写 LaTeX 公式时的一些问题及解决方法</a></p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35988761">Hexo构建blog时渲染LaTeX数学公式的问题</a></p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/660317970">hexo博客增加latex支持</a></p></li>
-<li><p><a target="_blank" rel="noopener" href="https://cps.ninja/2019/03/16/hexo-with-latex/">让 Hexo
-搭建的博客支持 LaTeX</a></p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/187435941">Hexo搭建博客支持LaTeX</a></p></li>
-<li><p><a
-target="_blank" rel="noopener" href="https://fuhailin.github.io/Hexo-images/">在Hexo博客中插入图片的各种方式</a></p></li>
+书写 LaTeX 公式时的一些问题及解决方法</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/35988761">Hexo构建blog时渲染LaTeX数学公式的问题</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/660317970">hexo博客增加latex支持</a></li>
+<li><a target="_blank" rel="noopener" href="https://cps.ninja/2019/03/16/hexo-with-latex/">让 Hexo
+搭建的博客支持 LaTeX</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/187435941">Hexo搭建博客支持LaTeX</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://fuhailin.github.io/Hexo-images/">在Hexo博客中插入图片的各种方式</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版）</a></li>
+<li><a target="_blank" rel="noopener" href="https://moon-jam.me/NexT-dark-light-mode/">Hexo-NexT
+深淺主題切換配置</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.lanweihong.com/posts/24011/">Hexo NexT
+主题使用 utterances 搭建评论系统</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://blog.mylab.cc/2020/05/20/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Utterances%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">Hexo
+Next主题添加Utterances评论系统</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://d.cosx.org/d/424449-wo-zai-ge-ren-de-blogdownzhong-dian-ji-sign-in-with-githubhui-tiao-zhuan-example-domain/6">我在个人的Blogdown中点击“Sign
+in with GitHub”会跳转“Example Domain“”</a></li>
 </ol>
 <h3 id="常用链接">常用链接</h3>
 <ol type="1">
@@ -512,7 +542,7 @@ target="_blank" rel="noopener" href="https://fuhailin.github.io/Hexo-images/">�
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">实现方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC"><span class="nav-number">3.</span> <span class="nav-text">基本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C-github-%E8%B4%A6%E5%8F%B7"><span class="nav-number">3.1.</span> <span class="nav-text">注册 Github 账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8-github-%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BB%93%E5%BA%93"><span class="nav-number">3.2.</span> <span class="nav-text">在 Github 上创建个人仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-git-%E4%B8%8E-node.js"><span class="nav-number">3.3.</span> <span class="nav-text">下载 Git 与 Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-git"><span class="nav-number">3.4.</span> <span class="nav-text">配置 Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-hexo"><span class="nav-number">3.5.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0-github"><span class="nav-number">3.6.</span> <span class="nav-text">将博客部署到 Github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E7%AB%A0"><span class="nav-number">3.7.</span> <span class="nav-text">上传自己的文章</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6"><span class="nav-number">4.</span> <span class="nav-text">进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D"><span class="nav-number">4.1.</span> <span class="nav-text">绑定个人域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">4.2.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%8E%E6%8F%92%E4%BB%B6"><span class="nav-number">4.3.</span> <span class="nav-text">配置文件与插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#latex-%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">4.4.</span> <span class="nav-text">LaTeX 的安装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5"><span class="nav-number">6.</span> <span class="nav-text">常用链接</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E5%89%8D%E9%9D%A2"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">实现方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC"><span class="nav-number">3.</span> <span class="nav-text">基本</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C-github-%E8%B4%A6%E5%8F%B7"><span class="nav-number">3.1.</span> <span class="nav-text">注册 Github 账号</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9C%A8-github-%E4%B8%8A%E5%88%9B%E5%BB%BA%E4%B8%AA%E4%BA%BA%E4%BB%93%E5%BA%93"><span class="nav-number">3.2.</span> <span class="nav-text">在 Github 上创建个人仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-git-%E4%B8%8E-node.js"><span class="nav-number">3.3.</span> <span class="nav-text">下载 Git 与 Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE-git"><span class="nav-number">3.4.</span> <span class="nav-text">配置 Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-hexo"><span class="nav-number">3.5.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B0%86%E5%8D%9A%E5%AE%A2%E9%83%A8%E7%BD%B2%E5%88%B0-github"><span class="nav-number">3.6.</span> <span class="nav-text">将博客部署到 Github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E6%96%87%E7%AB%A0"><span class="nav-number">3.7.</span> <span class="nav-text">上传自己的文章</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%9B%E9%98%B6"><span class="nav-number">4.</span> <span class="nav-text">进阶</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D"><span class="nav-number">4.1.</span> <span class="nav-text">绑定个人域名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">4.2.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%8E%E6%8F%92%E4%BB%B6"><span class="nav-number">4.3.</span> <span class="nav-text">配置文件与插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#latex-%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">4.4.</span> <span class="nav-text">LaTeX 的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.5.</span> <span class="nav-text">评论系统</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="nav-number">5.</span> <span class="nav-text">参考资料</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E9%93%BE%E6%8E%A5"><span class="nav-number">6.</span> <span class="nav-text">常用链接</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -722,6 +752,26 @@ setInterval("createtime()",250);
     
 
   
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
 
 <script>
 NexT.utils.loadComments(document.querySelector('#utterances-container'), () => {
