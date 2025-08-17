@@ -145,7 +145,7 @@ href="https://github.com/wzpan/hexo-renderer-pandoc">hexo-renderer-pandoc</a>。
 href="https://theme-next.js.org/docs/third-party-services/math-equations.html">参考文档</a>。</p>
 <h4 id="评论系统">评论系统</h4>
 <p>​ 评论系统推荐使用 utterances，优点为无广告，稳定。其原理是在 github
-中生成 issue，由于Hexo Next
+中生成 issue。在低版本中，由于Hexo Next
 并未集成utterances，具体安装方法可以参考这两篇文章：</p>
 <ol type="1">
 <li><p><a href="https://blog.lanweihong.com/posts/24011/">Hexo NexT
@@ -156,6 +156,7 @@ Next主题添加Utterances评论系统</a></p></li>
 </ol>
 <p>​ 第一篇参考配置 utterances（前半部分），在Hexo Next 中安装 utterances
 请参考第二篇文章。</p>
+<p>​ 在高版本 Hexo 中，已经集成 utterances，按照官方文档配置即可。</p>
 <p>​ 如果在安装完成后遇到点击 “Sign in with GitHub” 会跳转 “Example
 Domain” 的问题，请检查 Hexo 的 <code>_config.yml</code> 文件中的网站 URL
 是否正确设置。</p>
