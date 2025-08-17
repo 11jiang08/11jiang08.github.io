@@ -6,6 +6,6 @@ http://example.com/tags/index.html
 http://example.com/2025/08/16/Hello%20World/
 http://example.com/
 http://example.com/tags/Hexo/
-http://example.com/tags/%E6%B8%B8%E6%88%8F-florr/
-http://example.com/categories/%E6%B8%B8%E6%88%8F/
+http://example.com/tags/florr/
 http://example.com/categories/%E6%8A%80%E6%9C%AF/
+http://example.com/categories/%E6%B8%B8%E6%88%8F/
