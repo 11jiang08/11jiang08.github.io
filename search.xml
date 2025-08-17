@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/08/16/Hello%20World/</url>
-    <content><![CDATA[<p>本站于2025年8月16日成功建立</p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用Hexo搭建个人博客</title>
     <url>/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>​
@@ -112,6 +103,9 @@ class="math inline">\(\LaTeX\)</span> 渲染。</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 <p>​ 即可将 NEXT 主题下载到本地。在根目录下的 <code>_config.yml</code>
 中将主题修改为 NEXT，并重新上传，即可将主题更改为 NEXT。</p>
+<p>​ <strong>在安装完成后，请检查是否安装的是最新版。</strong></p>
+<p>​ <strong>在安装完成后，请检查是否安装的是最新版。</strong></p>
+<p>​ <strong>在安装完成后，请检查是否安装的是最新版。</strong></p>
 <h4 id="配置文件与插件">配置文件与插件</h4>
 <p>​ 在 Hexo 文件夹及 NEXT 文件夹根目录下的 <code>_config.yml</code>
 中都有大量配置选项，具体可查阅 Hexo 和 NEXT
@@ -206,6 +200,15 @@ in with GitHub”会跳转“Example Domain“”</a></li>
       <categories>
         <category>技术</category>
       </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2025/08/16/Hello%20World/</url>
+    <content><![CDATA[<p>本站于2025年8月16日成功建立</p>
+]]></content>
       <tags>
         <tag>Hexo</tag>
       </tags>
