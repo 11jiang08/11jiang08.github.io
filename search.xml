@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2025/08/16/Hello%20World/</url>
-    <content><![CDATA[<p>本站于2025年8月16日成功建立</p>
-]]></content>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用Hexo搭建个人博客</title>
     <url>/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>​
@@ -214,6 +205,15 @@ in with GitHub”会跳转“Example Domain“”</a></li>
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2025/08/16/Hello%20World/</url>
+    <content><![CDATA[<p>本站于2025年8月16日成功建立</p>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>高中数学笔记：集合与命题基础概念</title>
     <url>/2025/08/17/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%9A%E9%9B%86%E5%90%88%E4%B8%8E%E5%91%BD%E9%A2%98%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h3 id="集合">集合</h3>
@@ -268,7 +268,8 @@ A = \varnothing\)</span>.</li>
 </ol>
 <h5 id="德摩根定律">德摩根定律</h5>
 <p>​ <span class="math inline">\(\complement_U(A\cap B)=(\complement_U A)
-\cup (\complement_U B),\complement_U(A \cup B)=(\complement_U A) \cap
+\cup (\complement_U B)\)</span> , <span
+class="math inline">\(\complement_U(A \cup B)=(\complement_U A) \cap
 (\complement_U B)\)</span></p>
 <h5 id="容斥原理">容斥原理</h5>
 <p>​
