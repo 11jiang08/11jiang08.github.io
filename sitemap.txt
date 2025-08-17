@@ -6,6 +6,8 @@ http://example.com/tags/index.html
 http://example.com/2025/08/16/Hello%20World/
 http://example.com/
 http://example.com/tags/Hexo/
-http://example.com/tags/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6-%E9%9B%86%E5%90%88-%E5%91%BD%E9%A2%98/
+http://example.com/tags/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6/
+http://example.com/tags/%E9%9B%86%E5%90%88/
+http://example.com/tags/%E5%91%BD%E9%A2%98/
 http://example.com/categories/%E6%8A%80%E6%9C%AF/
 http://example.com/categories/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/
