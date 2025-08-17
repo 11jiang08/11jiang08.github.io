@@ -11,7 +11,7 @@
   </entry>
   <entry>
     <title>使用Hexo搭建个人博客</title>
-    <url>/2025/08/16/%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84/</url>
+    <url>/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>​
 搭建这个博客花费了我很大的精力，也查找了不少的资料。本文用于记录我搭建博客的经过，用于给其它想要搭建自己的个人博客的朋友提供参考。</p>
 <h3 id="写在前面">写在前面</h3>
@@ -118,6 +118,8 @@ NEXT，并重新上传，即可将主题更改为 NEXT。</p>
 的官方文档，此处不多赘述。</p>
 <p>​ 此外，Hexo 也提供大量插件，也可以在 Hexo
 官网中查询，可以实现部分进阶功能如评论、图床等。</p>
+<p>​ 推荐参考：<a
+href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版）</a></p>
 <h4 id="latex-的安装">LaTeX 的安装</h4>
 <p>​ <span class="math inline">\(\LaTeX\)</span>
 的安装是我在搭建过程中花费时间最长的一步，因为大多数文章并未完整讲解安装方法，给我带来了很多麻烦。</p>
