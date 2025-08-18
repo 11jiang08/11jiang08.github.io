@@ -131,13 +131,15 @@ class="math inline">\((1+y)^2-2x^2(1+y^2)+x^4(1-y)^2\)</span></p>
 class="math inline">\(=[(1+y)^2+2(1+y)x^2(1-y)+x^4(1-y)^2]-2(1+y)x^2(1-y)-2x^2(1+y^2)\)</span></p>
 <p>​ <span
 class="math inline">\(=[(1+y)+x^2(1-y)]^2-2x^2[(1-y^2)+(1+y^2)]\)</span></p>
-<p>​ <span class="math inline">\(=(x^2-x^2y+y+1)^2-4x^2\)</span> ​ <span
-class="math inline">\(=(x^2-x^2y+y+1+2x)(x^2-x^2y+y+1-2x)\)</span> ​
-<span
-class="math inline">\(=[(x+1)^2-y(x+1)(x-1)][(x-1)^2-y(x+1)(x-1)]\)</span><br />
-​<span
-class="math inline">\(=(x+1)(x-1)[(x+1)-y(x-1)][(x-1)-y(x+1)]\)</span><br />
-​<span class="math inline">\(=(x+1)(x-1)(x-xy+y+1)(x-xy-y-1)\)</span></p>
+<p>​ <span class="math inline">\(=(x^2-x^2y+y+1)^2-4x^2\)</span></p>
+<p>​ <span
+class="math inline">\(=(x^2-x^2y+y+1+2x)(x^2-x^2y+y+1-2x)\)</span></p>
+<p>​ <span
+class="math inline">\(=[(x+1)^2-y(x+1)(x-1)][(x-1)^2-y(x+1)(x-1)]\)</span></p>
+<p>​ <span
+class="math inline">\(=(x+1)(x-1)[(x+1)-y(x-1)][(x-1)-y(x+1)]\)</span></p>
+<p>​ <span
+class="math inline">\(=(x+1)(x-1)(x-xy+y+1)(x-xy-y-1)\)</span></p>
 <h3 id="主元法与换元法">主元法与换元法</h3>
 <ol type="1">
 <li>主元法：在多元多项式中选定一个变量或一个常见整体作“主元”，把原式看成关于这个主元的一元多项式，其余字母视为常数；按一元多项式的常规方法（提公因式、公式法、十字相乘等）分解。</li>
