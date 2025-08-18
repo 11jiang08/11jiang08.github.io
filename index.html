@@ -173,7 +173,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -184,7 +184,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -230,7 +230,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://11jiang08.github.io/2025/08/17/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%9A%E9%9B%86%E5%90%88%E4%B8%8E%E5%91%BD%E9%A2%98%E5%9F%BA%E7%A1%80/">
+    <link itemprop="mainEntityOfPage" href="https://11jiang08.github.io/2025/08/18/%E3%80%90%E5%88%9D%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -248,7 +248,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2025/08/17/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%EF%BC%9A%E9%9B%86%E5%90%88%E4%B8%8E%E5%91%BD%E9%A2%98%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">高中数学笔记：集合与命题基础概念</a>
+          <a href="/2025/08/18/%E3%80%90%E5%88%9D%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/" class="post-title-link" itemprop="url">【初中数学笔记】因式分解：从入门到入土</a>
         </h2>
 
         <div class="post-meta-container">
@@ -260,7 +260,525 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2025-08-17 11:46:18 / 修改时间：17:00:46" itemprop="dateCreated datePublished" datetime="2025-08-17T11:46:18+08:00">2025-08-17</time>
+      <time title="创建时间：2025-08-18 10:34:17 / 修改时间：14:54:27" itemprop="dateCreated datePublished" datetime="2025-08-18T10:34:17+08:00">2025-08-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">初等数学</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>15 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>​
+因式分解指的是把一个整式分解成多个整式的乘积的过程。在因式分解中，通常要求各个因式的乘积都是既约多项式，即在规定数集内无法继续因式分解。</p>
+<p>​
+在初中数学中，因式分解作为数学学习的重点之一，其考察形式灵活多变，有诸多技巧。从提取公因式到待定系数法属于基础技巧，轮换对称式到既约多项式属于高级技巧。</p>
+<h3 id="提取公因式">提取公因式</h3>
+<p>​
+提取公因式是因式分解中最基础技巧，几个整式都含有的因式称为它们的公因式。
+<span class="math display">\[
+ma_1+ma_2+...+ma_n=m(a_1+a_2+...+a_n)
+\]</span> ​
+在提取公因式时，要注意一次提净。如果某个整式本身就是公因式，则需注意不要漏
+<span class="math inline">\(1\)</span>.</p>
+<p><strong>例 1</strong>：因式分解：<span
+class="math inline">\(8a^3x^2-6ab^2xy^2-10ab^3xy\)</span>.</p>
+<p>解：原式 <span
+class="math inline">\(=2ax(4a^2x-3b^2y^2-5b^3y).\)</span></p>
+<h3 id="公式法">公式法</h3>
+<p>​
+在因式分解的时候有诸多公式可以使用，以下列出常见的公式，需牢记于心：</p>
+<ol type="1">
+<li><p>平方差公式：<span
+class="math inline">\(a^2-b^2=(a+b)(a-b)\)</span></p>
+<p>立方差公式：<span
+class="math inline">\(a^3-b^3=(a-b)(a^2+ab+b^2)\)</span></p>
+<p>上述公式的推广：<span
+class="math inline">\(a^n-b^n=(a-b)(a^{n-1}+a^{n-2}b+...+ab^{n-2}+b^{n-1})\)</span>，<span
+class="math inline">\(n\)</span> 为正整数且 <span
+class="math inline">\(n \geq 2\)</span>.</p></li>
+<li><p>立方和公式：<span
+class="math inline">\(a^3+b^3=(a+b)(a^2-ab+b^2)\)</span></p>
+<p>上述公式的推广：<span
+class="math inline">\(a^n+b^n=(a+b)(a^{n-1}-a^{n-2}b+...+a^2b^{n-3}-ab^{n-2}+b^{n-1})\)</span>，<span
+class="math inline">\(n\)</span> 为奇数且 <span
+class="math inline">\(n\geq 3\)</span>.</p></li>
+<li><p>三项立方和公式：<span
+class="math inline">\(a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-ac-bc)\)</span></p>
+<p>推论：当 <span class="math inline">\(a+b+c=0\)</span> 时，<span
+class="math inline">\(a^3+b^3+c^3 = 3abc\)</span></p></li>
+<li><p>完全平方公式：<span
+class="math inline">\(a^2+2ab+b^2=(a+b)^2\)</span>，<span
+class="math inline">\(a^2-2ab+b^2=(a-b)^2\)</span></p></li>
+<li><p>三项完全平方公式：<span
+class="math inline">\(a^2+b^2+c^2+2ab+2bc+2ac=(a+b+c)^2\)</span></p></li>
+<li><p>完全立方公式：<span
+class="math inline">\(a^3+3a^2b+3ab^2+b^3=(a+b)^3\)</span>，<span
+class="math inline">\(a^3-3a^2b+3ab^2-b^3=(a-b)^3\)</span></p>
+<p>上述公式的推广：<span
+class="math inline">\((a+b)^n=a^n+C^1_na^{n-1}b+...+C^{n-1}_nab^{n-1}+b^n\)</span>，<span
+class="math inline">\(n\)</span> 为正整数且 <span
+class="math inline">\(n \geq 2\)</span>.</p></li>
+</ol>
+<p><strong>例 2</strong>：因式分解：<span
+class="math inline">\(a^6-b^6\)</span>.</p>
+<p>解：原式 <span class="math inline">\(=(a^3-b^3)(a^3+b^3)\)</span></p>
+<p>​ <span
+class="math inline">\(=(a+b)(a-b)(a^2-ab+b^2)(a^2+ab+b^2)\)</span></p>
+<p>本题先利用了平方差公式，再利用了立方和公式与立方差公式，也可以先利用立方差公式。</p>
+<h3 id="十字相乘法">十字相乘法</h3>
+<p>​ 十字相乘法是指将整式 <span class="math inline">\(ax^2+bx+c\)</span>
+分解为 <span class="math inline">\((mx+n)(px+q)\)</span>，其中 <span
+class="math inline">\(a=mp,bnp+mq,c=nq\)</span>.</p>
+<p>如 <span
+class="math inline">\(6x^2+19x+15=(3x+5)(2x+3)\)</span>，<span
+class="math inline">\(2x^2-5x-3=(2x+1)(x-3)\)</span>.</p>
+<p>​ 连续运用 <span class="math inline">\(2\)</span>
+次十字相乘法的方法称为双十字相乘法，其方法为 <span
+class="math display">\[
+ax^2+by^2+cxy+dx+ey+f=(mx+ny+s)(px+qy+t)
+\]</span> ​ 其中 <span class="math inline">\(a=mp\)</span>，<span
+class="math inline">\(b=nq\)</span>，<span
+class="math inline">\(c=mp+nq\)</span>，<span
+class="math inline">\(d=mt+sp\)</span>，<span
+class="math inline">\(e=nt+sq\)</span>，<span
+class="math inline">\(f=st\)</span>.</p>
+<p>​ 在使用十字相乘法时,我们通常采用以下方法进行检验：</p>
+<p><img src="https://private-user-images.githubusercontent.com/121497703/478831467-4c84cc79-cc2f-405b-b418-fc4f9e20118e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU0ODMzNzMsIm5iZiI6MTc1NTQ4MzA3MywicGF0aCI6Ii8xMjE0OTc3MDMvNDc4ODMxNDY3LTRjODRjYzc5LWNjMmYtNDA1Yi1iNDE4LWZjNGY5ZTIwMTE4ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxOFQwMjExMTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xYTczZmUyMDNjYmExZmY1MTU5MzExYTA2OWVkMmMxY2M5YjQ5NWRhMmQ4Njk0YTA3ZTBmYjgzYTQ1Yjc5YzUwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.eCpRnOLBLum74NsNj9yYTRASY2a7RvhsjpHBMeIGU5U" style="zoom: 50%;" /></p>
+<p><strong>例 3</strong>：因式分解：<span
+class="math inline">\(2x^2-3xy-2y^2-xz+7yz-3z^2\)</span>.</p>
+<p>解：原式 <span class="math inline">\(=(2x+y-3z)(x-2y+z)\)</span></p>
+<h3 id="分组分解法">分组分解法</h3>
+<p>​
+分组分解法是一种常用的因式分解方法，主要思想是将多项式的各项按照一定规律进行分组，使得每一组中都能提取出一个公因式，然后再把这些公因式作为整体提取，进而完成因式分解。</p>
+<p>常见的分组方式有两类：</p>
+<ol type="1">
+<li>直接分组：将多项式按顺序分成若干组，每一组提取公因式后，得到的结果中含有相同的括号因式。</li>
+<li>巧妙分组：当直接分组无法出现公因式时，可以通过适当调整项的顺序或拆分、合并项，制造出相同的因式。</li>
+</ol>
+<p><strong>例 4</strong>：因式分解：<span
+class="math inline">\(ax-by-bx+ay\)</span></p>
+<p>解：原式 <span class="math inline">\(=(ax-bx)+(ay-by)\)</span></p>
+<p>​ <span class="math inline">\(=(a-b)x+(a-b)y\)</span></p>
+<p>​ <span class="math inline">\(=(a-b)(x+y)\)</span></p>
+<p><strong>例 5</strong>：因式分解：<span
+class="math inline">\(x^2yz+axyz+yz-xy^2-xz^2-az^2\)</span></p>
+<p>解：原式 <span
+class="math inline">\(=(axyz-az^2)+(x^2yz-xz^2)+(yz-xy^2)\)</span></p>
+<p>​ <span class="math inline">\(=az(xy-z)+xz(xy-z)+y(z-xy)\)</span></p>
+<p>​ <span class="math inline">\(=(az+xz-y)(xy-z)\)</span></p>
+<p>​
+分组分解法的关键在于分组的技巧，有时需要通过观察项之间的关系，灵活地调整顺序或分配方式，才能成功提取出公因式。</p>
+<h3 id="拆项与添项">拆项与添项</h3>
+<ol type="1">
+<li>拆项法：当原式不能直接分组时，可以把某一项“拆开”，让式子便于分组。</li>
+<li>添项法：当多项式中缺少“关键项”时，可以巧妙地添加并同时减去同一个项，使式子便于分组。添项法的核心是“加减同一个量”，制造出某种常见公式结构（如完全平方、立方和差等）。</li>
+</ol>
+<p><strong>例 6</strong>：因式分解：<span
+class="math inline">\(a^3+b^3+3a^2+3b^2+3a+3b+2\)</span></p>
+<p>解：原式 <span
+class="math inline">\(=(a^3+3a^2+3a+1)+(b^3+3b^2+3b+1)\)</span></p>
+<p>​ <span class="math inline">\(=(a+1)^3+(b+1)^3\)</span></p>
+<p>​ <span
+class="math inline">\(=(a+1+b+1)[(a+1)^2-(a+1)(b+1)+(b+1)^2]\)</span></p>
+<p>​ <span class="math inline">\(=(a+b+2)(a^2+b^2-ab+a+b+1)\)</span></p>
+<p><strong>例 7</strong>：因式分解：<span
+class="math inline">\((1+y)^2-2x^2(1+y^2)+x^4(1-y)^2\)</span></p>
+<p>解：原式 <span
+class="math inline">\(=[(1+y)^2+2(1+y)x^2(1-y)+x^4(1-y)^2]-2(1+y)x^2(1-y)-2x^2(1+y^2)\)</span></p>
+<p>​ <span
+class="math inline">\(=[(1+y)+x^2(1-y)]^2-2x^2[(1-y^2)+(1+y^2)]\)</span></p>
+<p>​ <span class="math inline">\(=(x^2-x^2y+y+1)^2-4x^2\)</span> ​ <span
+class="math inline">\(=(x^2-x^2y+y+1+2x)(x^2-x^2y+y+1-2x)\)</span> ​
+<span
+class="math inline">\(=[(x+1)^2-y(x+1)(x-1)][(x-1)^2-y(x+1)(x-1)]\)</span><br />
+​<span
+class="math inline">\(=(x+1)(x-1)[(x+1)-y(x-1)][(x-1)-y(x+1)]\)</span><br />
+​<span class="math inline">\(=(x+1)(x-1)(x-xy+y+1)(x-xy-y-1)\)</span></p>
+<h3 id="主元法与换元法">主元法与换元法</h3>
+<ol type="1">
+<li>主元法：在多元多项式中选定一个变量或一个常见整体作“主元”，把原式看成关于这个主元的一元多项式，其余字母视为常数；按一元多项式的常规方法（提公因式、公式法、十字相乘等）分解。</li>
+<li>换元法：当多项式结构比较复杂时，可以通过“设元”的方式，用一个新字母代替复杂的部分，使表达式简化，然后分解，最后再代回。</li>
+</ol>
+<p><strong>例 8</strong>：因式分解：<span
+class="math inline">\(2x^3-x^2z-4x^2y+2xyz+2xy^2-y^2z\)</span></p>
+<p>解：以 <span class="math inline">\(y\)</span> 为主元降幂排列</p>
+<p>​ 原式 <span
+class="math inline">\(=(2x-z)y^2-2xy(2x-z)+x^2(2x-z)\)</span></p>
+<p>​ <span class="math inline">\(=(2x-z)(x^2-2xy+y^2)\)</span></p>
+<p>​ <span class="math inline">\(=(2x-z)(x-y)^2\)</span></p>
+<h3 id="整式的一次因式">整式的一次因式</h3>
+<h4 id="整式的带余除法">整式的带余除法</h4>
+<p>​ 设 <span class="math inline">\(f(x)\)</span> 为 <span
+class="math inline">\(n\)</span> 次多项式，<span
+class="math inline">\(g(x)\)</span> 为 <span
+class="math inline">\(m\)</span> 次多项式（<span
+class="math inline">\(n,m\)</span> 为整数且 <span
+class="math inline">\(n&gt;m\)</span>），则 <span
+class="math display">\[
+f(x)=g(x)q(x)+r(x)
+\]</span> ​ 其中 <span class="math inline">\(q(x)\)</span> 为商式，<span
+class="math inline">\(r(x)\)</span> 为余式。</p>
+<h4 id="余数定理">余数定理</h4>
+<p>​ 设 <span class="math inline">\(g(x)=x-a\)</span>，则 <span
+class="math inline">\(f(x)=(x-a)q(x)+r\)</span></p>
+<p>​ 令 <span class="math inline">\(x=a\)</span>，则 <span
+class="math inline">\(f(a)=r\)</span>，即 <span
+class="math inline">\(f(x)\)</span> 除以 <span
+class="math inline">\(x-a\)</span> 的余数等于 <span
+class="math inline">\(f(a)\)</span>.</p>
+<p>​ 由余数定理可以推出，若 <span
+class="math inline">\(f(a)=0\)</span>，则 <span
+class="math inline">\(x-a\)</span> 是 <span
+class="math inline">\(f(x)\)</span> 的一个因式。</p>
+<p><strong>例9</strong>：因式分解：<span class="math inline">\(6x^4 -
+5x^3 - 28x^2 + 13x + 30\)</span></p>
+<p>解：当 <span class="math inline">\(x=-1\)</span> 时，原式 <span
+class="math inline">\(=0\)</span>，所以 <span
+class="math inline">\(x+1\)</span> 是它的一个因式</p>
+<p>​ 原式 <span
+class="math inline">\(=(x+1)(6x^3-11x^2-17x+30)\)</span></p>
+<p>​ 当 <span class="math inline">\(x=2\)</span> 时，<span
+class="math inline">\(6x^3-11x^2-17x+30=0\)</span>，所以 <span
+class="math inline">\(x-2\)</span> 也是它的一个因式</p>
+<p>​ <span class="math inline">\((x+1)(6x^3-11x^2-17x+30)\)</span></p>
+<p>​ <span class="math inline">\(=(x+1)(x-2)(6x^2+x-15)\)</span></p>
+<p>​ <span class="math inline">\(=(x+1)(x-2)(2x-3)(3x+5)\)</span></p>
+<h4 id="整系数多项式的有理根">整系数多项式的有理根</h4>
+<p>​ 对于整系数多项式 <span
+class="math inline">\(f(x)=a_nx^n+a_{n-1}x^{n-1}+...+a_1x+a_0\)</span>，设有理数
+<span class="math inline">\(\frac{p}{q}\)</span>（<span
+class="math inline">\(p,q\)</span> 为整数且 <span
+class="math inline">\(p,q\)</span> 互质）为其根，则 <span
+class="math display">\[
+f(\frac{p}{q})=a_n(\frac{p}{q})^n+a_{n-1}(\frac{p}{q})^{n-1}+...+a_1(\frac{p}{q})+a_0=0
+\]</span> ​ 去分母得 <span class="math display">\[
+a_np^n+a_{n-1}p^{n-1}q+...+a_1pq^{n-1}+a_0q^n=0
+\]</span> ​ 左式应能被 <span class="math inline">\(p\)</span> 整除，但
+<span class="math inline">\(q\)</span> 与 <span
+class="math inline">\(p\)</span> 互质，则 <span
+class="math inline">\(a_0\)</span> 能被 <span
+class="math inline">\(p\)</span> 整除，同理 <span
+class="math inline">\(a_n\)</span> 能被 <span
+class="math inline">\(q\)</span> 整除。</p>
+<p>​ 因此，<span class="math inline">\(\frac{p}{q}\)</span> 是 <span
+class="math inline">\(f(x)\)</span> 的根的必要条件为 <span
+class="math inline">\(p\)</span> 是 <span
+class="math inline">\(a_0\)</span> 的因数，<span
+class="math inline">\(q\)</span> 是 <span
+class="math inline">\(a_n\)</span> 的因数。</p>
+<p>​ 注意：<span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(a_0\)</span> 的因数，<span
+class="math inline">\(q\)</span> 是 <span
+class="math inline">\(a_n\)</span> 的因数并不是 <span
+class="math inline">\(\frac{p}{q}\)</span> 是 <span
+class="math inline">\(f(x)\)</span> 的根的充分条件。</p>
+<h4 id="判别法">判别法</h4>
+<p>​ 设 <span class="math inline">\(p\)</span> 是 <span
+class="math inline">\(a_0\)</span> 的因数，<span
+class="math inline">\(q\)</span> 是 <span
+class="math inline">\(a_n\)</span> 的因数，<span
+class="math inline">\(p,q\)</span> 互质。若 <span
+class="math inline">\(p-q\)</span> 不是 <span
+class="math inline">\(f(1)\)</span> 的因数，则 <span
+class="math inline">\(x-\frac{p}{q}\)</span> 不是 <span
+class="math inline">\(f(x)\)</span> 的因式。</p>
+<h3 id="整式的二次因式">整式的二次因式</h3>
+<h4 id="待定系数法">待定系数法</h4>
+<p>​
+对于整系数的四次多项式，如果它没有有理系数的一次因式，则考虑它能否分解为两个二次因式的乘积。处理这种问题常用待定系数法。</p>
+<p><strong>例 10</strong>：因式分解：<span
+class="math inline">\(x^4+x^3+2x^2-x+3\)</span></p>
+<p>解：运用待定系数法，设原式 <span
+class="math inline">\(=(x^2+ax+b)(x^2+cx+d)\)</span></p>
+<p>​ 因此 <span class="math display">\[
+\begin{cases}
+a+c=1 \\
+b+d+ac=2 \\
+bc+ad=-1\\
+bd=3
+\end{cases}
+\]</span> ​ 由于 <span class="math inline">\(b,d\)</span> 为整数，则有
+<span class="math inline">\(\begin{cases}b=1\\d=3\end{cases}\)</span> 或
+<span
+class="math inline">\(\begin{cases}b=-1\\d=-3\end{cases}\)</span>，分别代入可解得整数解
+<span
+class="math inline">\(\begin{cases}a=-1\\b=1\\c=2\\d=3\end{cases}\)</span>，因此有</p>
+<p>​ 原式 <span class="math inline">\(=(x^2-x+1)(x^2+2x+3)\)</span></p>
+<h3 id="轮换式与对称式">轮换式与对称式</h3>
+<p>​
+如果多项式中任意两个字母互换后，多项式保持不变，则多项式为对称式。如果多项式中所有字母依次轮换后，多项式保持不变，则多项式为轮换式。对称式必定为轮换式，但轮换式不一定为对称式。</p>
+<p>​
+如果轮换式中含有某些字母的式子，则其必定含有所有同种形式但字母不同的式子。</p>
+<p><strong>例 11</strong>：分解因式：<span
+class="math inline">\(a^3(b-c)+b^3(c-a)+c^3(a-b)\)</span></p>
+<p>解：将 <span class="math inline">\(a=b\)</span> 代入，原式 <span
+class="math inline">\(=0\)</span>，因此 <span
+class="math inline">\(a-b\)</span> 是原式的一个因式，同理 <span
+class="math inline">\(b-c\)</span>，<span
+class="math inline">\(c-a\)</span> 也是原式的因式。由于原式是
+四次式，则应还有一个一次齐次轮换式。</p>
+<p>​ 设原式 <span
+class="math inline">\(=k(a-b)(b-c)(c-a)(a+b+c)\)</span>，比较系数可得
+<span class="math inline">\(k=-1\)</span>，于是</p>
+<p>​ 原式 <span
+class="math inline">\(=-(a-b)(b-c)(c-a)(a+b+c)\)</span></p>
+<p>​ 可以看出，有时我们需要补充齐次轮换式：</p>
+<ol type="1">
+<li>一次齐次轮换式：<span class="math inline">\(k(a+b+c)\)</span></li>
+<li>二次齐次轮换式：<span
+class="math inline">\(l(x^2+y^2+z^2)+m(xz+yz+xz)\)</span></li>
+<li>三次齐次轮换式：<span
+class="math inline">\(l(x^3+y^3+z^3)+m(x^2y+y^2z+z^2x)+n(xy^2+yz^2+zx^2)+kxyz\)</span></li>
+</ol>
+<p><strong>例 12</strong>：分解因式：</p>
+<p><span
+class="math inline">\((y^2-z^2)(1+xy)(1+xz)+(z^2-x^2)(1+yz)(1+xy)+(x^2-y^2)(1+zx)(1+zy)\)</span></p>
+<p>解：容易看出原式为轮换式，有因式 <span
+class="math inline">\((x-y)(y-z)(z-x)\)</span>.</p>
+<p>​ 将原式拆分为 <span
+class="math inline">\(xyz[x(y^2-z^2)+y(z^2-x^2)+z(x^2-y^2)]\)</span></p>
+<p>​ <span
+class="math inline">\(+x(y+z)(y^2-z^2)+y(x+z)(z^2-x^2)+z(x+y)(x^2-y^2)\)</span></p>
+<p>​ 则可转换为齐次式处理，分别有：</p>
+<p>​ <span
+class="math inline">\(xyz[x(y^2-z^2)+y(z^2-x^2)+z(x^2-y^2)]\)</span></p>
+<p>​ <span class="math inline">\(=xyz(x-y)(y-z)(z-x)\)</span></p>
+<p>​ <span
+class="math inline">\(x(y+z)(y^2-z^2)+y(x+z)(z^2-x^2)+z(x+y)(x^2-y^2)\)</span></p>
+<p>​ <span class="math inline">\(=(x-y)(y-z)(z-x)(x+y+z)\)</span></p>
+<p>​ 两式相加即有原式 <span
+class="math inline">\(=(x-y)(y-z)(z-x)(x+y+z+xyz)\)</span></p>
+<p>​
+轮换式与对称式的分解，通常先导出一些一次因式，然后根据轮换式和对称式的特点，导出更多因式，最后其余的因式用待定系数法得出。</p>
+<p>​
+如果轮换式不是齐次式，则按照次数分为几个齐次轮换式的和，分解后再相加。</p>
+<h3 id="实数集与复数集的分解">实数集与复数集的分解</h3>
+<h4 id="二次三项式的分解">二次三项式的分解</h4>
+<p>​ 对于二次三项式 <span class="math inline">\(ax^2+bx+c (a \neq
+0)\)</span>，其在复数集的分解方法为： <span class="math display">\[
+ax^2+bx+c=a(x-x_1)(x-x_2)
+\]</span> ​ 其中 <span class="math inline">\(x_1,x_2\)</span> 是方程
+<span class="math inline">\(ax^2+bx+c=0\)</span> 的两根。若 <span
+class="math inline">\(\Delta &lt;
+0\)</span>，则方程无实数根，也就是说该二次三项式是在实数范围内的既约多项式。</p>
+<p>​ 如果将分解范围扩展到复数集，则引入虚数单位 <span
+class="math inline">\(i\)</span> 的概念，<span
+class="math inline">\(i^2=-1\)</span>，容易看出二次三项式在复数范围内一定可以分解，如
+<span
+class="math inline">\(x^2+x+1\)</span>，其在实数范围内无法分解，但在复数范围内有</p>
+<p>​ 原式 <span
+class="math inline">\(=(x-\frac{-1-3i}{2})(x-\frac{-1+3i}{2})=\frac{1}{4}(2x+1+3i)(2x+1-3i)\)</span></p>
+<h4 id="代数基本定理">代数基本定理</h4>
+<p>​ 代数基本定理：在复数集内，每个关于 <span
+class="math inline">\(x\)</span> 的多项式至少有一个根。即对于多项式
+<span
+class="math inline">\(f(x)=\displaystyle\sum_{i=0}^na_ix^i\)</span>（<span
+class="math inline">\(n\)</span> 为正整数），一定有复数 <span
+class="math inline">\(c\)</span> 使得 <span
+class="math inline">\(f(c)=0\)</span>.</p>
+<p>​ 也就是说，在复数集内，只有一次多项式是既约多项式。<span
+class="math inline">\(n\)</span> 次多项式在复数集内恰好有 <span
+class="math inline">\(n\)</span> 个根，可以分解为 <span
+class="math inline">\(f(x)=a_n(x-x_1)(x-x_2)...(x-x_n)\)</span>.</p>
+<p>​ 由于实系数多项式的虚数根是两两共轭的，则我们把共轭的两项因式相乘：
+<span class="math display">\[
+[x-(a+bi)][x-(a-bi)]=x^2-2ax+(a^2+b^2)
+\]</span> ​ 为实系数多项式。</p>
+<p>​ 因此我们把所有共轭的因式相乘，即可得到 <span
+class="math inline">\(f(x)\)</span>
+在实数集内的分解。所以在实数集中既约多项式一定是一次因式或二次因式。</p>
+<h4 id="单位根">单位根</h4>
+<p>​ 多项式 <span class="math inline">\(x^n-1\)</span> 的根称为 <span
+class="math inline">\(n\)</span> 次单位根，其复数集内有 <span
+class="math inline">\(n\)</span> 个根，即 <span
+class="math inline">\(\sqrt[n]{1}\)</span> 在复数集内有 <span
+class="math inline">\(n\)</span> 个值。 它们分别为 <span
+class="math display">\[
+\cos\frac{2k\pi}{n}+i\sin\frac{2k\pi}{n} (k=1,2,...,n)
+\]</span> <strong>例 13</strong>：分解因式：<span
+class="math inline">\(x^3-1\)</span></p>
+<p>解：在实数集内，<span class="math inline">\(x^3-1\)</span> 只能分解为
+<span class="math inline">\((x-1)(x^2+x+1)\)</span>.</p>
+<p>​ 运用单位根知识，原式 <span
+class="math inline">\(=(x-1)(x-\frac{-1+\sqrt{3}}{2})(x-\frac{-1-\sqrt{3}i}{2})\)</span></p>
+<p>​ 特别地，我们将三次虚单位根记作 <span
+class="math inline">\(\omega\)</span>，如果 <span
+class="math inline">\(\omega\)</span> 是实系数多项式的根，那么 <span
+class="math inline">\(x^2+x+1\)</span> 就是 <span
+class="math inline">\(f(x)\)</span> 的一个因式。</p>
+<h3 id="既约多项式">既约多项式</h3>
+<p>​ 一个多项式 <span class="math inline">\(f(x)\)</span> 若次数 <span
+class="math inline">\(\ge
+1\)</span>，并且在规定数集内不能分解为两个比它次数更低的多项式的乘积（除了单位元与它本身），那么
+<span class="math inline">\(f(x)\)</span> 就是既约多项式。</p>
+<h4 id="艾氏判别法">艾氏判别法</h4>
+<p>​ 在有理数集内判断多项式是否为既约多项式，可以使用艾氏判别法：</p>
+<p>设 <span class="math inline">\(f(x)\)</span>
+是一个整系数多项式，如果存在一个质数 <span
+class="math inline">\(p\)</span> 满足以下条件：</p>
+<ol type="1">
+<li><span class="math inline">\(p\)</span> 不整除 <span
+class="math inline">\(a_n\)</span>.</li>
+<li><span class="math inline">\(p\)</span> 整除其余的系数。</li>
+<li><span class="math inline">\(p^2\)</span> 不整除 <span
+class="math inline">\(a_0\)</span>.</li>
+</ol>
+<p>则 <span class="math inline">\(f(x)\)</span>
+在有理数集内是既约多项式。</p>
+<p>​ 艾氏判别法的证明较为复杂，可以参考《数学奥林匹克小丛书
+初中卷1：因式分解技巧》12.5。</p>
+<p><strong>例14</strong>：证明：<span
+class="math inline">\(x^2+x+1\)</span> 在有理数集内为既约多项式。</p>
+<p>证明：令 <span class="math inline">\(x=y+1\)</span>，则原式 <span
+class="math inline">\(=(y+1)^2+(y+1)+1=y^2+3y+3\)</span></p>
+<p>​ 取 <span
+class="math inline">\(p=3\)</span>，满足艾氏判别法，因此原多项式为既约多项式。</p>
+<h4 id="以-2-为模的算术">以 2 为模的算术</h4>
+<p>​ 采用以 <span class="math inline">\(2\)</span>
+为模的算术，可以极大的减少整数与多项式的个数，使问题大为化简。如一次多项式只有
+<span class="math inline">\(x\)</span>、<span
+class="math inline">\(x+1\)</span>，二次既约多项式只有 <span
+class="math inline">\(x^2+x+1\)</span>。</p>
+<p><strong>例 15</strong>：证明：<span
+class="math inline">\(x^5+x^2-1\)</span> 在有理数集内为既约多项式。</p>
+<p>证明：如果原式不为既约多项式，则其一定有一次因式或二次因式。</p>
+<p>​ 采用以 <span class="math inline">\(2\)</span>
+为模的算术，可以知道原式一定能被 <span
+class="math inline">\(x\)</span>、<span
+class="math inline">\(x+1\)</span>、<span
+class="math inline">\(x^2+x+1\)</span> 中的某一个整除，</p>
+<p>​ 则原式 <span
+class="math inline">\(=x^5-x^2+1=x^2(x^3-1)+1=x^2(x+1)(x^2+x+1)+1\)</span></p>
+<p>​ 因此，原式一定不被 <span class="math inline">\(x\)</span>、<span
+class="math inline">\(x+1\)</span>、<span
+class="math inline">\(x^2+x+1\)</span>
+中的某一个整除，则原式在有理数集内为既约多项式。</p>
+<h4 id="分圆多项式">分圆多项式</h4>
+<p>​ 在 <span class="math inline">\(n\)</span> 次单位根中，如果 <span
+class="math inline">\(k\)</span> 与 <span
+class="math inline">\(n\)</span> 互质，则对应的单位根称为本原单位根。与
+<span class="math inline">\(n\)</span>
+次本原单位根对应的一次因式之积为一个整系数多项式，被称为分圆多项式。如
+<span class="math inline">\(x^{15}-1\)</span>
+的本原单位根对应的一次因式之积为： <span class="math display">\[
+x^8-x^7+x^5-x^4+x^3-x+1
+\]</span> 其为既约多项式得证明见 《数学奥林匹克小丛书
+初中卷1：因式分解技巧》12.3</p>
+<p>​ 一般地，分圆多项式在有理数集内均为既约多项式。</p>
+<h4 id="绝对不可约">绝对不可约</h4>
+<p>​
+有些多元多项式在有理数集内不可约，但在扩大的数集内却可以分解，在复数集内不可约的多元多项式称为是绝对不可约的。如二元二次多项式
+<span class="math inline">\(ax^2+bxy+cy^2+dx+ey+f\)</span>，当 <span
+class="math display">\[
+4acf+bed-cd^2-ae^2-fb^2 \neq 0
+\]</span> ​ 时，该多项式是绝对不可约的。</p>
+<p>​ 如果上式等于 <span
+class="math inline">\(0\)</span>，则该式在复数集内可以分解为两个一次因式之积。进一步地，如果
+<span class="math inline">\(b^2-4ac \geq 0\)</span>，<span
+class="math inline">\(d^2-4af \geq 0\)</span>，<span
+class="math inline">\(e^2-4cf \geq 0\)</span>
+同时成立，则在实数集内就可以分解。更进一步地，如果三式都是有理数的平方，则上式可以在有理数范围内分解。</p>
+<h3 id="推荐书目">推荐书目</h3>
+<p>如果想要更深入地学习，或是寻找更多的题目，可以参考以下书目：</p>
+<ol type="1">
+<li>《数学奥林匹克小丛书 初中卷1：因式分解技巧》</li>
+<li>《数学奥林匹克精编 七年级》</li>
+<li>《奥赛经典：初中数学竞赛中的代数问题》</li>
+<li>《初中尖子生数学超级题典——式、方程与不等式》</li>
+</ol>
+<p>本文的部分例题即出自以上书目。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://11jiang08.github.io/2025/08/17/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E9%9B%86%E5%90%88%E4%B8%8E%E5%91%BD%E9%A2%98%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="11jiang08">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="11jiang08's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 11jiang08's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/08/17/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E9%9B%86%E5%90%88%E4%B8%8E%E5%91%BD%E9%A2%98%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">【高中数学笔记】集合与命题基础</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2025-08-17 11:46:18" itemprop="dateCreated datePublished" datetime="2025-08-17T11:46:18+08:00">2025-08-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-18 12:57:33" itemprop="dateModified" datetime="2025-08-18T12:57:33+08:00">2025-08-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -461,7 +979,7 @@ class="math inline">\(\beta\)</span> 互为充要条件。</p>
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-17 20:12:17" itemprop="dateModified" datetime="2025-08-17T20:12:17+08:00">2025-08-17</time>
+      <time title="修改时间：2025-08-17 22:11:28" itemprop="dateModified" datetime="2025-08-17T22:11:28+08:00">2025-08-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -642,7 +1160,7 @@ Next主题添加Utterances评论系统</a></p></li>
 </ol>
 <p>​ 第一篇参考配置 utterances（前半部分），在Hexo Next 中安装 utterances
 请参考第二篇文章。</p>
-<p>​ 在高版本 Hexo 中，已经集成 utterances，按照官方文档配置即可。</p>
+<p>​ 在高版本 Next 中，已经集成 utterances，按照官方文档配置即可。</p>
 <p>​ 如果在安装完成后遇到点击 “Sign in with GitHub” 会跳转 “Example
 Domain” 的问题，请检查 Hexo 的 <code>_config.yml</code> 文件中的网站 URL
 是否正确设置。</p>
