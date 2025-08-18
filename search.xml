@@ -10,326 +10,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【高中数学笔记】集合与命题基础</title>
-    <url>/2025/08/17/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E9%9B%86%E5%90%88%E4%B8%8E%E5%91%BD%E9%A2%98%E5%9F%BA%E7%A1%80/</url>
-    <content><![CDATA[<h3 id="集合">集合</h3>
-<h4 id="集合的概念">集合的概念</h4>
-<p>​
-我们把能够确切指定的不同对象组成的整体叫做集合，简称集。集合中的各个对象叫做这个集合的元素。</p>
-<p>​
-集合的性质包括确定性、互异性与无序性。也就是说，对于一个给定的集合，其中的元素是确定的，也是各不相同的，而且各元素地位相等，与顺序无关。</p>
-<p>​ 我们将全体自然数组成的集合称为自然数集，记作 <span
-class="math inline">\(\mathbb{N}\)</span>，整数集为 <span
-class="math inline">\(\mathbb{Z}\)</span>，有理数集为 <span
-class="math inline">\(\mathbb{Q}\)</span>，实数集为 <span
-class="math inline">\(\mathbb{R}\)</span>.</p>
-<p>​ 不包括任何元素的集合称为空集，记作 <span
-class="math inline">\(\varnothing\)</span>.</p>
-<p>​
-描述集合的方法有列举法和描述法。列举法把集合中的元素一一列举出来，描述法在大括号内先写出此集合中元素的一般形式，再划一条竖线，写出集合中的元素的公共性质，即
-<span class="math inline">\(A=\{x|x满足性质P\}\)</span>.</p>
-<p>​ 若 <span class="math inline">\(a\)</span> 是集合 <span
-class="math inline">\(A\)</span> 的元素，则称 <span
-class="math inline">\(a\)</span> 属于 <span
-class="math inline">\(A\)</span>，记作 <span class="math inline">\(a \in
-A\)</span>，反之 <span class="math inline">\(a \notin A\)</span>.</p>
-<h4 id="集合的关系">集合的关系</h4>
-<p>​ 若 <span class="math inline">\(\forall a \in A\)</span>，都有 <span
-class="math inline">\(a \in B\)</span>，则称集合 <span
-class="math inline">\(A\)</span> 是集合 <span
-class="math inline">\(B\)</span> 的子集，记作 <span
-class="math inline">\(A \subseteq B\)</span>，若 <span
-class="math inline">\(\exists b \in B\)</span> 且 <span
-class="math inline">\(b \notin A\)</span>，则 <span
-class="math inline">\(A \subset B\)</span>。若 <span
-class="math inline">\(A \subseteq B\)</span> 且 <span
-class="math inline">\(B \subseteq A\)</span>，则 <span
-class="math inline">\(A = B\)</span>.</p>
-<p>​ 对于一个含有 <span class="math inline">\(n\)</span>
-个元素的集合，其有 <span class="math inline">\(2^n\)</span> 个子集，有
-<span class="math inline">\(2^n-1\)</span> 个真子集，有 <span
-class="math inline">\(2^n-2\)</span> 个非空真子集。</p>
-<h4 id="集合的运算">集合的运算</h4>
-<ol type="1">
-<li>交集：<span class="math inline">\(A \cap B = \{x|x\in A 且 x \in
-B\}\)</span>，其重要性质有 <span class="math inline">\(A \cap B = A
-\Leftrightarrow A \subseteq B\)</span>.</li>
-<li>并集：<span class="math inline">\(A \cup B = \{x|x \in A 或 x \in
-B\}\)</span>，其重要性质有 <span class="math inline">\(A \cup B = A
-\Leftrightarrow B \subseteq A\)</span>.</li>
-<li>补集：<span class="math inline">\(\complement_U A=\{x|x\in U 且 x
-\notin A\}\)</span>，其重要性质有 <span
-class="math inline">\((\complement_UA) \cup A = U,(\complement_U A) \cap
-A = \varnothing\)</span>.</li>
-</ol>
-<h5 id="德摩根定律">德摩根定律</h5>
-<p>​ <span class="math inline">\(\complement_U(A\cap B)=(\complement_U A)
-\cup (\complement_U B)\)</span> , <span
-class="math inline">\(\complement_U(A \cup B)=(\complement_U A) \cap
-(\complement_U B)\)</span></p>
-<h5 id="容斥原理">容斥原理</h5>
-<p>​
-在计数时，为了使重叠部分不被重复计算，人们研究出一种新的计数方法，这种方法的基本思想是：先不考虑重叠的情况，把包含于某内容中的所有对象的数目先计算出来，然后再
-把计数时重复计算的数目减去，使得计算的结果既无遗漏又无重复，这种计数的方法称为容斥原理。</p>
-<p>​ 如 <span class="math inline">\(n(A\cup B) = n(A)+n(B)-n(A\cap
-B)\)</span>.</p>
-<h3 id="命题">命题</h3>
-<h4 id="命题的概念">命题的概念</h4>
-<p>​
-可以判断真假的语句称为命题，命题通常用陈述句表示。正确的命题叫做真命题，错误的命题叫做假命题。一般地，命题是由题设（条件）和结论两部分组成的。题设是已知事项，结论是由已知事项推出的事项。</p>
-<p>​ 一般地，如果命题 <span class="math inline">\(\alpha\)</span>
-成立可以推出事件 <span class="math inline">\(\beta\)</span>
-成立，那么就说 <span class="math inline">\(\alpha\)</span> 可以推出
-<span class="math inline">\(\beta\)</span>，记作 <span
-class="math inline">\(\alpha \Rightarrow \beta\)</span>，反之 <span
-class="math inline">\(\alpha \nRightarrow \beta\)</span>. 如果 <span
-class="math inline">\(\alpha \Rightarrow \beta\)</span> 且 <span
-class="math inline">\(\beta \Rightarrow \alpha\)</span>，则 <span
-class="math inline">\(\alpha \Leftrightarrow \beta\)</span>.</p>
-<h4 id="四种命题形式">四种命题形式</h4>
-<ol type="1">
-<li><p>原命题：原命题为若 <span class="math inline">\(p\)</span> 则
-<span class="math inline">\(q\)</span>。</p></li>
-<li><p>逆命题：一个命题由条件和结论两部分组成，如果把原命题的条件和结论互换，所得的命题是原命题的逆命题。逆命题为若
-<span class="math inline">\(q\)</span> 则 <span
-class="math inline">\(p\)</span>。</p></li>
-<li><p>否命题：如果一个命题的条件和结论分别是另一个命题的条件的否定与结论的否定，则称这两个命题为互否命题，
-其中一个命题是另一个命题的否命题。否命题为若 <span
-class="math inline">\(\neg p\)</span> 则 <span
-class="math inline">\(\neg q\)</span>。</p></li>
-<li><p>逆否命题：如果将一个命题的结论的否定作为条件，而将此命题的条件的否定作为结论所得到的命题叫做原命题的逆否命题。原命题与其逆否命题等价。逆否命题为若
-<span class="math inline">\(\neg q\)</span> 则 <span
-class="math inline">\(\neg p\)</span>。</p></li>
-</ol>
-<h4 id="充分条件必要条件">充分条件，必要条件</h4>
-<p>​ 如果 <span class="math inline">\(\alpha \Rightarrow
-\beta\)</span>，则 <span class="math inline">\(\alpha\)</span> 是 <span
-class="math inline">\(\beta\)</span> 的充分条件,<span
-class="math inline">\(\beta\)</span> 是 <span
-class="math inline">\(a\)</span> 的必要条件。如果 <span
-class="math inline">\(\alpha \Leftrightarrow \beta\)</span>，则 <span
-class="math inline">\(\alpha\)</span> 和 <span
-class="math inline">\(\beta\)</span> 互为充要条件。</p>
-<p>​ 设 <span class="math inline">\(A = \{x|x具有性质 \alpha\},B =
-\{x|x具有性质 \beta\}\)</span>，则 <span class="math inline">\(A
-\subseteq B\)</span> 是 <span class="math inline">\(\alpha \Rightarrow
-\beta\)</span> 的充要条件。</p>
-]]></content>
-      <categories>
-        <category>初等数学</category>
-      </categories>
-      <tags>
-        <tag>高中数学</tag>
-        <tag>集合</tag>
-        <tag>命题</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用Hexo搭建个人博客</title>
-    <url>/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p>​
-搭建这个博客花费了我很大的精力，也查找了不少的资料。本文用于记录我搭建博客的经过，用于给其它想要搭建自己的个人博客的朋友提供参考。</p>
-<h3 id="写在前面">写在前面</h3>
-<ol type="1">
-<li>下载部分内容时可能需要梯子。</li>
-<li>本文默认读者掌握基本的计算机操作方法，因此简单的注册账号、安装软件等过程将不一一赘述。</li>
-<li>如果遇到了本文没有提到的一些问题，请善用搜索引擎，查找资料。</li>
-</ol>
-<h3 id="实现方法">实现方法</h3>
-<p>​ 本博客使用 Hexo 作为静态博客框架，其基于 Node.js
-实现，可以方便、快速（虽然我花了好几个小时）生成静态网页，并托管在
-Github 上。Hexo 本身也是 Github 上的一个开源项目，其官网 <a
-href="https://link.zhihu.com/?target=https%3A//hexo.io/">Hexo</a>
-支持中文浏览，可以自行查阅。</p>
-<hr />
-<h3 id="基本">基本</h3>
-<h4 id="注册-github-账号">注册 Github 账号</h4>
-<p>​ 由于我们要把博客托管在 Github 上，因此我们首先要注册 Github
-账号，注册过程不是很麻烦，但可能需要梯子访问。</p>
-<h4 id="在-github-上创建个人仓库">在 Github 上创建个人仓库</h4>
-<p>​ 再注册完 Github 账号后，我们点击界面上的 New Repository
-按钮，创建新仓库，稍后我们会把自己的博客上传到仓库里。仓库名称应该为：<code>你的用户名.github.io</code>。</p>
-<h4 id="下载-git-与-node.js">下载 Git 与 Node.js</h4>
-<p>​ Git
-是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用
-Git 同步到 GitHub 上。下载 Git 可以从<a
-href="https://git-scm.com/downloads/win">官网</a>下载。</p>
-<p>​ 因为 Hexo 基于 Node.js 实现，因此我们也需要安装 Node.js，也从<a
-href="https://nodejs.org/en/download/">官网</a>下载即可。在安装 Node.js
-时也会同时安装环境变量及 npm，npm在后续搭建时会大量使用。</p>
-<p>​
-在完成安装之后，我们可以在终端使用以下三行命令来检测是否安装成功：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ git --version</span><br><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
-<p>​ 如果都能正确的显示出版本号，则说明安装成功。</p>
-<h4 id="配置-git">配置 Git</h4>
-<p>​ 打开Git Bash，首先配置 Git 的用户名和邮箱信息</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;GitHub用户名&quot;</span><br><span class="line">$ git config --global user.email &quot;GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p>​ 接着，我们将 Git 与 Github 账号绑定，在命令行中生成 SSH
-密钥文件：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ SSH-keygen -t rsa -C &quot;GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p>​ 如果提示你设置密码，直接留空，则默认不需要密码。</p>
-<p>​ 在密钥生成成功后，运行 <code>clip &lt; ~/.SSH/id_rsa.pub</code>
-将公钥复制到剪贴板上，然后登陆你的 Github 账号，进入
-<code>Settings</code>，点击 <code>SSH and GPG Keys</code>，添加你的 SSH
-key，标题随便填，将公钥复制进去即可。</p>
-<p>​ 完成后，在 Git Bash 命令行输入</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ SSH -T git@github.com</span><br></pre></td></tr></table></figure>
-<p>​ 如果你可以成功认证，则代表设置正确。</p>
-<h4 id="安装-hexo">安装 Hexo</h4>
-<p>​
-在电脑中合适的位置创建一个文件夹（路径最好为全英文），接着在终端中打开此文件夹，使用
-npm 命令安装 Hexo：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>​ 在显示完成后，在刚刚新建的文件夹里再新建一个 <code>Hexo</code>
-文件夹，然后在终端中输入：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Hexo</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
-<p>​ 在 Hexo 安装完成后，为了测试是否正确安装，输入以下命令：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>​ 如果在 <code>http://localhost:4000/</code>
-可以看到生成的博客，则说明搭建成功。</p>
-<h4 id="将博客部署到-github">将博客部署到 Github</h4>
-<p>​ 打开我们先前创建的 GitHub 仓库，点击 <code>Code</code>，切换到
-<code>SSH</code>，将给出的连接完整的复制下来。接着在 Hexo
-文件夹中，打开根目录中的 <code>_config.yml</code> 文件，找到 deploy，将
-<code>type</code> 改为 git，在 <code>repository</code>
-后粘贴上你刚刚得到的仓库地址。由于创建仓库时默认的分支为 main，则将
-<code>branch</code> 改成 main。</p>
-<p>​ 接着，在 Hexo 文件夹下执行以下命令：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-<p>​ 这样，你的博客就被成功部署到 Github 上了。打开
-<code>https://你的用户名.github.io</code> 即可访问你刚部署好的博客。</p>
-<h4 id="上传自己的文章">上传自己的文章</h4>
-<p>在终端输入以下命令：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ hexo n &quot;文章标题&quot;</span><br></pre></td></tr></table></figure>
-<p>即可在 <code>\Hexo\source\_posts</code> 下创建新的 .md
-文档，在写完文章后参考六中的做法重新上传仓库，即可看到新的文章。</p>
-<hr />
-<h3 id="进阶">进阶</h3>
-<p>在完成上述操作后，我们已经得到了一个基本的个人博客，以下介绍更多个性化的进阶内容，但可能更加困难。</p>
-<h4 id="绑定个人域名">绑定个人域名</h4>
-<p>​
-如果我们想使用我们自己的个性化域名，这就需要绑定我们自己的域名。作者在
-<a href="https://www.namesilo.com/">Namesilo</a>
-上购买了自己的域名，然后托管到 Cloudflare
-上。（具体方法请在网上自行搜索教程），然后进入控制台，点击
-DNS，添加解析记录，其中记录类型选择
-CNAME，主机记录均可，同时关闭代理。</p>
-<p>​ 进入本地博客，在 source 目录下创建一个无后缀名的文件，命名为
-CNAME，然后输入你的域名并保存。</p>
-<p>​
-最后，重新将你的博客上传到仓库中，就可以通过你自己的域名进入博客了。</p>
-<h4 id="更换主题">更换主题</h4>
-<p>​ 如果你不喜欢Hexo默认的主题，可以更换不同的主题，可以在<a
-href="https://hexo.io/themes/">官网</a>寻找不同的主题，我选择了 NEXT
-主题，因为其配置功能多样，并且方便 <span
-class="math inline">\(\LaTeX\)</span> 渲染。</p>
-<p>​ 在终端中输入：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>​ 即可将 NEXT 主题下载到本地。在根目录下的 <code>_config.yml</code>
-中将主题修改为 NEXT，并重新上传，即可将主题更改为 NEXT。</p>
-<p>​ <strong>在安装完成后，请检查是否安装的是最新版。</strong></p>
-<p>​ <strong>在安装完成后，请检查是否安装的是最新版。</strong></p>
-<p>​ <strong>在安装完成后，请检查是否安装的是最新版。</strong></p>
-<h4 id="配置文件与插件">配置文件与插件</h4>
-<p>​ 在 Hexo 文件夹及 NEXT 文件夹根目录下的 <code>_config.yml</code>
-中都有大量配置选项，具体可查阅 Hexo 和 NEXT
-的官方文档，此处不多赘述。</p>
-<p>​ 此外，Hexo 也提供大量插件，也可以在 Hexo
-官网中查询，可以实现部分进阶功能如评论、图床等。</p>
-<p>​ 推荐参考：<a
-href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版）</a></p>
-<p>​ 如果想要切换浅/深色背景，可以参考：<a
-href="https://moon-jam.me/NexT-dark-light-mode/">Hexo-NexT
-深淺主題切換配置</a></p>
-<h4 id="latex-的安装">LaTeX 的安装</h4>
-<p>​ <span class="math inline">\(\LaTeX\)</span>
-的安装是我在搭建过程中花费时间最长的一步，因为大多数文章并未完整讲解安装方法，给我带来了很多麻烦。</p>
-<p>​ Hexo本身并不支持LaTeX的渲染，为了安装 <span
-class="math inline">\(\LaTeX\)</span>，我们首先需要卸载 Hexo
-自带的renderer，并安装 <a
-href="https://github.com/wzpan/hexo-renderer-pandoc">hexo-renderer-pandoc</a>。</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ npm uninstall hexo-renderer-marked --save</span><br><span class="line">$ npm install hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
-<p>​ 并同时安装高于 <code>V2.0</code> 版本的 Pandoc。</p>
-<p>​ 接下来，我们安装 <code>hexo-filter-mathjax</code>，具体方法为：</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-filter-mathjax</span><br></pre></td></tr></table></figure>
-<p>​ 然后在 Hexo 根目录下的 <code>_config.yml</code>
-文件里加入以下配置：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Default(true) will load mathjax/katex script on demand</span></span><br><span class="line">  <span class="comment"># That is it only render those page who has &#x27;mathjax: true&#x27; in Front Matter.</span></span><br><span class="line">  <span class="comment"># If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">engine:</span> <span class="string">mathjax</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">none</span> <span class="comment"># or &#x27;ams&#x27; or &#x27;all&#x27;</span></span><br><span class="line">  <span class="attr">single_dollars:</span> <span class="literal">true</span> <span class="comment"># enable single dollar signs as in-line math delimiters</span></span><br><span class="line">  <span class="attr">cjk_width:</span> <span class="number">0.9</span> <span class="comment"># relative CJK char width</span></span><br><span class="line">  <span class="attr">normal_width:</span> <span class="number">0.6</span> <span class="comment"># relative normal (monospace) width</span></span><br><span class="line">  <span class="attr">append_css:</span> <span class="literal">true</span> <span class="comment"># add CSS to pages rendered by MathJax</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">false</span> <span class="comment"># if true, every page will be rendered by MathJax regardless the `mathjax` setting in Front-matter</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pandoc:</span></span><br><span class="line">  <span class="attr">args:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">--mathjax</span></span><br></pre></td></tr></table></figure>
-<p>​ 除此之外，我们还要在 NEXT 的配置文件中修改部分配置，使得能够正确渲染
-<span class="math inline">\(\LaTeX\)</span>，具体方法见<a
-href="https://theme-next.js.org/docs/third-party-services/math-equations.html">参考文档</a>。</p>
-<h4 id="评论系统">评论系统</h4>
-<p>​ 评论系统推荐使用 utterances，优点为无广告，稳定。其原理是在 github
-中生成 issue。在低版本中，由于Hexo Next
-并未集成utterances，具体安装方法可以参考这两篇文章：</p>
-<ol type="1">
-<li><p><a href="https://blog.lanweihong.com/posts/24011/">Hexo NexT
-主题使用 utterances 搭建评论系统</a></p></li>
-<li><p><a
-href="https://blog.mylab.cc/2020/05/20/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Utterances%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">Hexo
-Next主题添加Utterances评论系统</a></p></li>
-</ol>
-<p>​ 第一篇参考配置 utterances（前半部分），在Hexo Next 中安装 utterances
-请参考第二篇文章。</p>
-<p>​ 在高版本 Next 中，已经集成 utterances，按照官方文档配置即可。</p>
-<p>​ 如果在安装完成后遇到点击 “Sign in with GitHub” 会跳转 “Example
-Domain” 的问题，请检查 Hexo 的 <code>_config.yml</code> 文件中的网站 URL
-是否正确设置。</p>
-<hr />
-<h3 id="参考资料">参考资料</h3>
-<p>​
-在搭建博客及写这篇文章的过程中，我参考了以下资料，向这些文章的作者致以真诚的谢意：</p>
-<ol type="1">
-<li><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo
-搭建个人网站详细教程</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/69207995">使用Github
-Pages和Hexo搭建自己的独立博客【超级详细的小白教程】</a></li>
-<li><a
-href="https://nokiasonic.github.io/2020/12/17/%E3%80%90Hexo%E3%80%91Next%E4%B8%BB%E9%A2%98%E6%9B%B4%E5%A5%BD%E5%9C%B0%E6%94%AF%E6%8C%81LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">【Hexo】Next主题更好地支持LaTeX数学公式</a></li>
-<li><a
-href="https://blog.csdn.net/weixin_45511189/article/details/115798563">hexo博客next主题添加对数学公式的支持</a></li>
-<li><a href="https://blog.homurax.com/2022/08/21/hexo-theme-latex/">为
-Hexo 的任何主题添加数学公式（LaTeX）的支持</a></li>
-<li><a
-href="https://jdhao.github.io/2017/10/06/hexo-markdown-latex-equation/">Hexo
-书写 LaTeX 公式时的一些问题及解决方法</a></li>
-<li><a
-href="https://zhuanlan.zhihu.com/p/35988761">Hexo构建blog时渲染LaTeX数学公式的问题</a></li>
-<li><a
-href="https://zhuanlan.zhihu.com/p/660317970">hexo博客增加latex支持</a></li>
-<li><a href="https://cps.ninja/2019/03/16/hexo-with-latex/">让 Hexo
-搭建的博客支持 LaTeX</a></li>
-<li><a
-href="https://zhuanlan.zhihu.com/p/187435941">Hexo搭建博客支持LaTeX</a></li>
-<li><a
-href="https://fuhailin.github.io/Hexo-images/">在Hexo博客中插入图片的各种方式</a></li>
-<li><a
-href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版）</a></li>
-<li><a href="https://moon-jam.me/NexT-dark-light-mode/">Hexo-NexT
-深淺主題切換配置</a></li>
-<li><a href="https://blog.lanweihong.com/posts/24011/">Hexo NexT
-主题使用 utterances 搭建评论系统</a></li>
-<li><a
-href="https://blog.mylab.cc/2020/05/20/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Utterances%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">Hexo
-Next主题添加Utterances评论系统</a></li>
-<li><a
-href="https://d.cosx.org/d/424449-wo-zai-ge-ren-de-blogdownzhong-dian-ji-sign-in-with-githubhui-tiao-zhuan-example-domain/6">我在个人的Blogdown中点击“Sign
-in with GitHub”会跳转“Example Domain“”</a></li>
-</ol>
-<h3 id="常用链接">常用链接</h3>
-<ol type="1">
-<li><a href="https://hexo.io/zh-cn/">Hexo 官网</a></li>
-<li><a href="https://theme-next.js.org/">NEXT 主题官网</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【初中数学笔记】因式分解：从入门到入土</title>
     <url>/2025/08/18/%E3%80%90%E5%88%9D%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/</url>
     <content><![CDATA[<p>​
@@ -407,7 +87,7 @@ class="math inline">\(d=mt+sp\)</span>，<span
 class="math inline">\(e=nt+sq\)</span>，<span
 class="math inline">\(f=st\)</span>.</p>
 <p>​ 在使用十字相乘法时,我们通常采用以下方法进行检验：</p>
-<p><img src="https://private-user-images.githubusercontent.com/121497703/478831467-4c84cc79-cc2f-405b-b418-fc4f9e20118e.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTU1MDA2OTksIm5iZiI6MTc1NTUwMDM5OSwicGF0aCI6Ii8xMjE0OTc3MDMvNDc4ODMxNDY3LTRjODRjYzc5LWNjMmYtNDA1Yi1iNDE4LWZjNGY5ZTIwMTE4ZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwODE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDgxOFQwNjU5NTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02YmZmZmU1NmFmZDJlZDliYTkyZGNkZmI2ZWE1Yzk3YmFiM2Q4NjA5NjZmOGJlMzBhY2QxZWE1OGY5N2MzZDM0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.SF8gcv5Wq4ZLdEDbEN8b93h7kpMHraLY1F0U_0YAfoI" alt="img1" style="zoom: 50%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG2025-08-18_154354.jpg" alt="img1" style="zoom: 33%;" /></p>
 <p><strong>例 3</strong>：因式分解：<span
 class="math inline">\(2x^2-3xy-2y^2-xz+7yz-3z^2\)</span>.</p>
 <p>解：原式 <span class="math inline">\(=(2x+y-3z)(x-2y+z)\)</span></p>
@@ -758,6 +438,326 @@ class="math inline">\(e^2-4cf \geq 0\)</span>
       <tags>
         <tag>初中数学</tag>
         <tag>因式分解</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【高中数学笔记】集合与命题基础</title>
+    <url>/2025/08/17/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E9%9B%86%E5%90%88%E4%B8%8E%E5%91%BD%E9%A2%98%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h3 id="集合">集合</h3>
+<h4 id="集合的概念">集合的概念</h4>
+<p>​
+我们把能够确切指定的不同对象组成的整体叫做集合，简称集。集合中的各个对象叫做这个集合的元素。</p>
+<p>​
+集合的性质包括确定性、互异性与无序性。也就是说，对于一个给定的集合，其中的元素是确定的，也是各不相同的，而且各元素地位相等，与顺序无关。</p>
+<p>​ 我们将全体自然数组成的集合称为自然数集，记作 <span
+class="math inline">\(\mathbb{N}\)</span>，整数集为 <span
+class="math inline">\(\mathbb{Z}\)</span>，有理数集为 <span
+class="math inline">\(\mathbb{Q}\)</span>，实数集为 <span
+class="math inline">\(\mathbb{R}\)</span>.</p>
+<p>​ 不包括任何元素的集合称为空集，记作 <span
+class="math inline">\(\varnothing\)</span>.</p>
+<p>​
+描述集合的方法有列举法和描述法。列举法把集合中的元素一一列举出来，描述法在大括号内先写出此集合中元素的一般形式，再划一条竖线，写出集合中的元素的公共性质，即
+<span class="math inline">\(A=\{x|x满足性质P\}\)</span>.</p>
+<p>​ 若 <span class="math inline">\(a\)</span> 是集合 <span
+class="math inline">\(A\)</span> 的元素，则称 <span
+class="math inline">\(a\)</span> 属于 <span
+class="math inline">\(A\)</span>，记作 <span class="math inline">\(a \in
+A\)</span>，反之 <span class="math inline">\(a \notin A\)</span>.</p>
+<h4 id="集合的关系">集合的关系</h4>
+<p>​ 若 <span class="math inline">\(\forall a \in A\)</span>，都有 <span
+class="math inline">\(a \in B\)</span>，则称集合 <span
+class="math inline">\(A\)</span> 是集合 <span
+class="math inline">\(B\)</span> 的子集，记作 <span
+class="math inline">\(A \subseteq B\)</span>，若 <span
+class="math inline">\(\exists b \in B\)</span> 且 <span
+class="math inline">\(b \notin A\)</span>，则 <span
+class="math inline">\(A \subset B\)</span>。若 <span
+class="math inline">\(A \subseteq B\)</span> 且 <span
+class="math inline">\(B \subseteq A\)</span>，则 <span
+class="math inline">\(A = B\)</span>.</p>
+<p>​ 对于一个含有 <span class="math inline">\(n\)</span>
+个元素的集合，其有 <span class="math inline">\(2^n\)</span> 个子集，有
+<span class="math inline">\(2^n-1\)</span> 个真子集，有 <span
+class="math inline">\(2^n-2\)</span> 个非空真子集。</p>
+<h4 id="集合的运算">集合的运算</h4>
+<ol type="1">
+<li>交集：<span class="math inline">\(A \cap B = \{x|x\in A 且 x \in
+B\}\)</span>，其重要性质有 <span class="math inline">\(A \cap B = A
+\Leftrightarrow A \subseteq B\)</span>.</li>
+<li>并集：<span class="math inline">\(A \cup B = \{x|x \in A 或 x \in
+B\}\)</span>，其重要性质有 <span class="math inline">\(A \cup B = A
+\Leftrightarrow B \subseteq A\)</span>.</li>
+<li>补集：<span class="math inline">\(\complement_U A=\{x|x\in U 且 x
+\notin A\}\)</span>，其重要性质有 <span
+class="math inline">\((\complement_UA) \cup A = U,(\complement_U A) \cap
+A = \varnothing\)</span>.</li>
+</ol>
+<h5 id="德摩根定律">德摩根定律</h5>
+<p>​ <span class="math inline">\(\complement_U(A\cap B)=(\complement_U A)
+\cup (\complement_U B)\)</span> , <span
+class="math inline">\(\complement_U(A \cup B)=(\complement_U A) \cap
+(\complement_U B)\)</span></p>
+<h5 id="容斥原理">容斥原理</h5>
+<p>​
+在计数时，为了使重叠部分不被重复计算，人们研究出一种新的计数方法，这种方法的基本思想是：先不考虑重叠的情况，把包含于某内容中的所有对象的数目先计算出来，然后再
+把计数时重复计算的数目减去，使得计算的结果既无遗漏又无重复，这种计数的方法称为容斥原理。</p>
+<p>​ 如 <span class="math inline">\(n(A\cup B) = n(A)+n(B)-n(A\cap
+B)\)</span>.</p>
+<h3 id="命题">命题</h3>
+<h4 id="命题的概念">命题的概念</h4>
+<p>​
+可以判断真假的语句称为命题，命题通常用陈述句表示。正确的命题叫做真命题，错误的命题叫做假命题。一般地，命题是由题设（条件）和结论两部分组成的。题设是已知事项，结论是由已知事项推出的事项。</p>
+<p>​ 一般地，如果命题 <span class="math inline">\(\alpha\)</span>
+成立可以推出事件 <span class="math inline">\(\beta\)</span>
+成立，那么就说 <span class="math inline">\(\alpha\)</span> 可以推出
+<span class="math inline">\(\beta\)</span>，记作 <span
+class="math inline">\(\alpha \Rightarrow \beta\)</span>，反之 <span
+class="math inline">\(\alpha \nRightarrow \beta\)</span>. 如果 <span
+class="math inline">\(\alpha \Rightarrow \beta\)</span> 且 <span
+class="math inline">\(\beta \Rightarrow \alpha\)</span>，则 <span
+class="math inline">\(\alpha \Leftrightarrow \beta\)</span>.</p>
+<h4 id="四种命题形式">四种命题形式</h4>
+<ol type="1">
+<li><p>原命题：原命题为若 <span class="math inline">\(p\)</span> 则
+<span class="math inline">\(q\)</span>。</p></li>
+<li><p>逆命题：一个命题由条件和结论两部分组成，如果把原命题的条件和结论互换，所得的命题是原命题的逆命题。逆命题为若
+<span class="math inline">\(q\)</span> 则 <span
+class="math inline">\(p\)</span>。</p></li>
+<li><p>否命题：如果一个命题的条件和结论分别是另一个命题的条件的否定与结论的否定，则称这两个命题为互否命题，
+其中一个命题是另一个命题的否命题。否命题为若 <span
+class="math inline">\(\neg p\)</span> 则 <span
+class="math inline">\(\neg q\)</span>。</p></li>
+<li><p>逆否命题：如果将一个命题的结论的否定作为条件，而将此命题的条件的否定作为结论所得到的命题叫做原命题的逆否命题。原命题与其逆否命题等价。逆否命题为若
+<span class="math inline">\(\neg q\)</span> 则 <span
+class="math inline">\(\neg p\)</span>。</p></li>
+</ol>
+<h4 id="充分条件必要条件">充分条件，必要条件</h4>
+<p>​ 如果 <span class="math inline">\(\alpha \Rightarrow
+\beta\)</span>，则 <span class="math inline">\(\alpha\)</span> 是 <span
+class="math inline">\(\beta\)</span> 的充分条件,<span
+class="math inline">\(\beta\)</span> 是 <span
+class="math inline">\(a\)</span> 的必要条件。如果 <span
+class="math inline">\(\alpha \Leftrightarrow \beta\)</span>，则 <span
+class="math inline">\(\alpha\)</span> 和 <span
+class="math inline">\(\beta\)</span> 互为充要条件。</p>
+<p>​ 设 <span class="math inline">\(A = \{x|x具有性质 \alpha\},B =
+\{x|x具有性质 \beta\}\)</span>，则 <span class="math inline">\(A
+\subseteq B\)</span> 是 <span class="math inline">\(\alpha \Rightarrow
+\beta\)</span> 的充要条件。</p>
+]]></content>
+      <categories>
+        <category>初等数学</category>
+      </categories>
+      <tags>
+        <tag>高中数学</tag>
+        <tag>集合</tag>
+        <tag>命题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Hexo搭建个人博客</title>
+    <url>/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>​
+搭建这个博客花费了我很大的精力，也查找了不少的资料。本文用于记录我搭建博客的经过，用于给其它想要搭建自己的个人博客的朋友提供参考。</p>
+<h3 id="写在前面">写在前面</h3>
+<ol type="1">
+<li>下载部分内容时可能需要梯子。</li>
+<li>本文默认读者掌握基本的计算机操作方法，因此简单的注册账号、安装软件等过程将不一一赘述。</li>
+<li>如果遇到了本文没有提到的一些问题，请善用搜索引擎，查找资料。</li>
+</ol>
+<h3 id="实现方法">实现方法</h3>
+<p>​ 本博客使用 Hexo 作为静态博客框架，其基于 Node.js
+实现，可以方便、快速（虽然我花了好几个小时）生成静态网页，并托管在
+Github 上。Hexo 本身也是 Github 上的一个开源项目，其官网 <a
+href="https://link.zhihu.com/?target=https%3A//hexo.io/">Hexo</a>
+支持中文浏览，可以自行查阅。</p>
+<hr />
+<h3 id="基本">基本</h3>
+<h4 id="注册-github-账号">注册 Github 账号</h4>
+<p>​ 由于我们要把博客托管在 Github 上，因此我们首先要注册 Github
+账号，注册过程不是很麻烦，但可能需要梯子访问。</p>
+<h4 id="在-github-上创建个人仓库">在 Github 上创建个人仓库</h4>
+<p>​ 再注册完 Github 账号后，我们点击界面上的 New Repository
+按钮，创建新仓库，稍后我们会把自己的博客上传到仓库里。仓库名称应该为：<code>你的用户名.github.io</code>。</p>
+<h4 id="下载-git-与-node.js">下载 Git 与 Node.js</h4>
+<p>​ Git
+是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用
+Git 同步到 GitHub 上。下载 Git 可以从<a
+href="https://git-scm.com/downloads/win">官网</a>下载。</p>
+<p>​ 因为 Hexo 基于 Node.js 实现，因此我们也需要安装 Node.js，也从<a
+href="https://nodejs.org/en/download/">官网</a>下载即可。在安装 Node.js
+时也会同时安装环境变量及 npm，npm在后续搭建时会大量使用。</p>
+<p>​
+在完成安装之后，我们可以在终端使用以下三行命令来检测是否安装成功：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ git --version</span><br><span class="line">$ node -v</span><br><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
+<p>​ 如果都能正确的显示出版本号，则说明安装成功。</p>
+<h4 id="配置-git">配置 Git</h4>
+<p>​ 打开Git Bash，首先配置 Git 的用户名和邮箱信息</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name &quot;GitHub用户名&quot;</span><br><span class="line">$ git config --global user.email &quot;GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>​ 接着，我们将 Git 与 Github 账号绑定，在命令行中生成 SSH
+密钥文件：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ SSH-keygen -t rsa -C &quot;GitHub注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>​ 如果提示你设置密码，直接留空，则默认不需要密码。</p>
+<p>​ 在密钥生成成功后，运行 <code>clip &lt; ~/.SSH/id_rsa.pub</code>
+将公钥复制到剪贴板上，然后登陆你的 Github 账号，进入
+<code>Settings</code>，点击 <code>SSH and GPG Keys</code>，添加你的 SSH
+key，标题随便填，将公钥复制进去即可。</p>
+<p>​ 完成后，在 Git Bash 命令行输入</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ SSH -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>​ 如果你可以成功认证，则代表设置正确。</p>
+<h4 id="安装-hexo">安装 Hexo</h4>
+<p>​
+在电脑中合适的位置创建一个文件夹（路径最好为全英文），接着在终端中打开此文件夹，使用
+npm 命令安装 Hexo：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>​ 在显示完成后，在刚刚新建的文件夹里再新建一个 <code>Hexo</code>
+文件夹，然后在终端中输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> Hexo</span><br><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<p>​ 在 Hexo 安装完成后，为了测试是否正确安装，输入以下命令：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>​ 如果在 <code>http://localhost:4000/</code>
+可以看到生成的博客，则说明搭建成功。</p>
+<h4 id="将博客部署到-github">将博客部署到 Github</h4>
+<p>​ 打开我们先前创建的 GitHub 仓库，点击 <code>Code</code>，切换到
+<code>SSH</code>，将给出的连接完整的复制下来。接着在 Hexo
+文件夹中，打开根目录中的 <code>_config.yml</code> 文件，找到 deploy，将
+<code>type</code> 改为 git，在 <code>repository</code>
+后粘贴上你刚刚得到的仓库地址。由于创建仓库时默认的分支为 main，则将
+<code>branch</code> 改成 main。</p>
+<p>​ 接着，在 Hexo 文件夹下执行以下命令：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+<p>​ 这样，你的博客就被成功部署到 Github 上了。打开
+<code>https://你的用户名.github.io</code> 即可访问你刚部署好的博客。</p>
+<h4 id="上传自己的文章">上传自己的文章</h4>
+<p>在终端输入以下命令：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ hexo n &quot;文章标题&quot;</span><br></pre></td></tr></table></figure>
+<p>即可在 <code>\Hexo\source\_posts</code> 下创建新的 .md
+文档，在写完文章后参考六中的做法重新上传仓库，即可看到新的文章。</p>
+<hr />
+<h3 id="进阶">进阶</h3>
+<p>在完成上述操作后，我们已经得到了一个基本的个人博客，以下介绍更多个性化的进阶内容，但可能更加困难。</p>
+<h4 id="绑定个人域名">绑定个人域名</h4>
+<p>​
+如果我们想使用我们自己的个性化域名，这就需要绑定我们自己的域名。作者在
+<a href="https://www.namesilo.com/">Namesilo</a>
+上购买了自己的域名，然后托管到 Cloudflare
+上。（具体方法请在网上自行搜索教程），然后进入控制台，点击
+DNS，添加解析记录，其中记录类型选择
+CNAME，主机记录均可，同时关闭代理。</p>
+<p>​ 进入本地博客，在 source 目录下创建一个无后缀名的文件，命名为
+CNAME，然后输入你的域名并保存。</p>
+<p>​
+最后，重新将你的博客上传到仓库中，就可以通过你自己的域名进入博客了。</p>
+<h4 id="更换主题">更换主题</h4>
+<p>​ 如果你不喜欢Hexo默认的主题，可以更换不同的主题，可以在<a
+href="https://hexo.io/themes/">官网</a>寻找不同的主题，我选择了 NEXT
+主题，因为其配置功能多样，并且方便 <span
+class="math inline">\(\LaTeX\)</span> 渲染。</p>
+<p>​ 在终端中输入：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>​ 即可将 NEXT 主题下载到本地。在根目录下的 <code>_config.yml</code>
+中将主题修改为 NEXT，并重新上传，即可将主题更改为 NEXT。</p>
+<p>​ <strong>在安装完成后，请检查是否安装的是最新版。</strong></p>
+<p>​ <strong>在安装完成后，请检查是否安装的是最新版。</strong></p>
+<p>​ <strong>在安装完成后，请检查是否安装的是最新版。</strong></p>
+<h4 id="配置文件与插件">配置文件与插件</h4>
+<p>​ 在 Hexo 文件夹及 NEXT 文件夹根目录下的 <code>_config.yml</code>
+中都有大量配置选项，具体可查阅 Hexo 和 NEXT
+的官方文档，此处不多赘述。</p>
+<p>​ 此外，Hexo 也提供大量插件，也可以在 Hexo
+官网中查询，可以实现部分进阶功能如评论、图床等。</p>
+<p>​ 推荐参考：<a
+href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版）</a></p>
+<p>​ 如果想要切换浅/深色背景，可以参考：<a
+href="https://moon-jam.me/NexT-dark-light-mode/">Hexo-NexT
+深淺主題切換配置</a></p>
+<h4 id="latex-的安装">LaTeX 的安装</h4>
+<p>​ <span class="math inline">\(\LaTeX\)</span>
+的安装是我在搭建过程中花费时间最长的一步，因为大多数文章并未完整讲解安装方法，给我带来了很多麻烦。</p>
+<p>​ Hexo本身并不支持LaTeX的渲染，为了安装 <span
+class="math inline">\(\LaTeX\)</span>，我们首先需要卸载 Hexo
+自带的renderer，并安装 <a
+href="https://github.com/wzpan/hexo-renderer-pandoc">hexo-renderer-pandoc</a>。</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ npm uninstall hexo-renderer-marked --save</span><br><span class="line">$ npm install hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
+<p>​ 并同时安装高于 <code>V2.0</code> 版本的 Pandoc。</p>
+<p>​ 接下来，我们安装 <code>hexo-filter-mathjax</code>，具体方法为：</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-filter-mathjax</span><br></pre></td></tr></table></figure>
+<p>​ 然后在 Hexo 根目录下的 <code>_config.yml</code>
+文件里加入以下配置：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Default(true) will load mathjax/katex script on demand</span></span><br><span class="line">  <span class="comment"># That is it only render those page who has &#x27;mathjax: true&#x27; in Front Matter.</span></span><br><span class="line">  <span class="comment"># If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.</span></span><br><span class="line">  <span class="attr">per_page:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">engine:</span> <span class="string">mathjax</span></span><br><span class="line">  </span><br><span class="line"><span class="attr">mathjax:</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">none</span> <span class="comment"># or &#x27;ams&#x27; or &#x27;all&#x27;</span></span><br><span class="line">  <span class="attr">single_dollars:</span> <span class="literal">true</span> <span class="comment"># enable single dollar signs as in-line math delimiters</span></span><br><span class="line">  <span class="attr">cjk_width:</span> <span class="number">0.9</span> <span class="comment"># relative CJK char width</span></span><br><span class="line">  <span class="attr">normal_width:</span> <span class="number">0.6</span> <span class="comment"># relative normal (monospace) width</span></span><br><span class="line">  <span class="attr">append_css:</span> <span class="literal">true</span> <span class="comment"># add CSS to pages rendered by MathJax</span></span><br><span class="line">  <span class="attr">every_page:</span> <span class="literal">false</span> <span class="comment"># if true, every page will be rendered by MathJax regardless the `mathjax` setting in Front-matter</span></span><br><span class="line"></span><br><span class="line"><span class="attr">pandoc:</span></span><br><span class="line">  <span class="attr">args:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">--mathjax</span></span><br></pre></td></tr></table></figure>
+<p>​ 除此之外，我们还要在 NEXT 的配置文件中修改部分配置，使得能够正确渲染
+<span class="math inline">\(\LaTeX\)</span>，具体方法见<a
+href="https://theme-next.js.org/docs/third-party-services/math-equations.html">参考文档</a>。</p>
+<h4 id="评论系统">评论系统</h4>
+<p>​ 评论系统推荐使用 utterances，优点为无广告，稳定。其原理是在 github
+中生成 issue。在低版本中，由于Hexo Next
+并未集成utterances，具体安装方法可以参考这两篇文章：</p>
+<ol type="1">
+<li><p><a href="https://blog.lanweihong.com/posts/24011/">Hexo NexT
+主题使用 utterances 搭建评论系统</a></p></li>
+<li><p><a
+href="https://blog.mylab.cc/2020/05/20/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Utterances%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">Hexo
+Next主题添加Utterances评论系统</a></p></li>
+</ol>
+<p>​ 第一篇参考配置 utterances（前半部分），在Hexo Next 中安装 utterances
+请参考第二篇文章。</p>
+<p>​ 在高版本 Next 中，已经集成 utterances，按照官方文档配置即可。</p>
+<p>​ 如果在安装完成后遇到点击 “Sign in with GitHub” 会跳转 “Example
+Domain” 的问题，请检查 Hexo 的 <code>_config.yml</code> 文件中的网站 URL
+是否正确设置。</p>
+<hr />
+<h3 id="参考资料">参考资料</h3>
+<p>​
+在搭建博客及写这篇文章的过程中，我参考了以下资料，向这些文章的作者致以真诚的谢意：</p>
+<ol type="1">
+<li><a href="https://zhuanlan.zhihu.com/p/26625249">GitHub+Hexo
+搭建个人网站详细教程</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/69207995">使用Github
+Pages和Hexo搭建自己的独立博客【超级详细的小白教程】</a></li>
+<li><a
+href="https://nokiasonic.github.io/2020/12/17/%E3%80%90Hexo%E3%80%91Next%E4%B8%BB%E9%A2%98%E6%9B%B4%E5%A5%BD%E5%9C%B0%E6%94%AF%E6%8C%81LaTeX%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">【Hexo】Next主题更好地支持LaTeX数学公式</a></li>
+<li><a
+href="https://blog.csdn.net/weixin_45511189/article/details/115798563">hexo博客next主题添加对数学公式的支持</a></li>
+<li><a href="https://blog.homurax.com/2022/08/21/hexo-theme-latex/">为
+Hexo 的任何主题添加数学公式（LaTeX）的支持</a></li>
+<li><a
+href="https://jdhao.github.io/2017/10/06/hexo-markdown-latex-equation/">Hexo
+书写 LaTeX 公式时的一些问题及解决方法</a></li>
+<li><a
+href="https://zhuanlan.zhihu.com/p/35988761">Hexo构建blog时渲染LaTeX数学公式的问题</a></li>
+<li><a
+href="https://zhuanlan.zhihu.com/p/660317970">hexo博客增加latex支持</a></li>
+<li><a href="https://cps.ninja/2019/03/16/hexo-with-latex/">让 Hexo
+搭建的博客支持 LaTeX</a></li>
+<li><a
+href="https://zhuanlan.zhihu.com/p/187435941">Hexo搭建博客支持LaTeX</a></li>
+<li><a
+href="https://fuhailin.github.io/Hexo-images/">在Hexo博客中插入图片的各种方式</a></li>
+<li><a
+href="https://zhuanlan.zhihu.com/p/618864711">Hexo+Next主题搭建个人博客+优化全过程（完整详细版）</a></li>
+<li><a href="https://moon-jam.me/NexT-dark-light-mode/">Hexo-NexT
+深淺主題切換配置</a></li>
+<li><a href="https://blog.lanweihong.com/posts/24011/">Hexo NexT
+主题使用 utterances 搭建评论系统</a></li>
+<li><a
+href="https://blog.mylab.cc/2020/05/20/Hexo-Next%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0Utterances%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/">Hexo
+Next主题添加Utterances评论系统</a></li>
+<li><a
+href="https://d.cosx.org/d/424449-wo-zai-ge-ren-de-blogdownzhong-dian-ji-sign-in-with-githubhui-tiao-zhuan-example-domain/6">我在个人的Blogdown中点击“Sign
+in with GitHub”会跳转“Example Domain“”</a></li>
+</ol>
+<h3 id="常用链接">常用链接</h3>
+<ol type="1">
+<li><a href="https://hexo.io/zh-cn/">Hexo 官网</a></li>
+<li><a href="https://theme-next.js.org/">NEXT 主题官网</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
