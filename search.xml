@@ -16,6 +16,7 @@
 因式分解指的是把一个整式分解成多个整式的乘积的过程。在因式分解中，通常要求各个因式的乘积都是既约多项式，即在规定数集内无法继续因式分解。</p>
 <p>​
 在初中数学中，因式分解作为数学学习的重点之一，其考察形式灵活多变，有诸多技巧。从提取公因式到待定系数法属于基础技巧，轮换对称式到既约多项式属于高级技巧。</p>
+<span id="more"></span>
 <h3 id="提取公因式">提取公因式</h3>
 <p>​
 提取公因式是因式分解中最基础技巧，几个整式都含有的因式称为它们的公因式。
@@ -467,6 +468,7 @@ class="math inline">\(A\)</span> 的元素，则称 <span
 class="math inline">\(a\)</span> 属于 <span
 class="math inline">\(A\)</span>，记作 <span class="math inline">\(a \in
 A\)</span>，反之 <span class="math inline">\(a \notin A\)</span>.</p>
+<span id="more"></span>
 <h4 id="集合的关系">集合的关系</h4>
 <p>​ 若 <span class="math inline">\(\forall a \in A\)</span>，都有 <span
 class="math inline">\(a \in B\)</span>，则称集合 <span
@@ -575,6 +577,7 @@ class="math inline">\(\beta\)</span> 互为充要条件。</p>
 Github 上。Hexo 本身也是 Github 上的一个开源项目，其官网 <a
 href="https://link.zhihu.com/?target=https%3A//hexo.io/">Hexo</a>
 支持中文浏览，可以自行查阅。</p>
+<span id="more"></span>
 <hr />
 <h3 id="基本">基本</h3>
 <h4 id="注册-github-账号">注册 Github 账号</h4>
