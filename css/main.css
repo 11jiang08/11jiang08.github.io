@@ -1221,7 +1221,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #c2b1ff;
+    background: #fffff1;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2575,7 +2575,7 @@ mjx-container[display='true'] + br {
 }
 header.header {
   background: var(--content-bg-color);
-  border-radius: initial;
+  border-radius: 20px 20px 20px 20px;
   box-shadow: initial;
 }
 @media (max-width: 991px) {
@@ -2612,7 +2612,7 @@ header.header {
   }
 }
 .main-inner {
-  border-radius: initial;
+  border-radius: 20px 20px 20px 20px;
   box-sizing: border-box;
   width: calc(100% - 252px);
 }
@@ -2747,7 +2747,7 @@ header.header {
   }
   .sidebar-inner {
     background: var(--content-bg-color);
-    border-radius: initial;
+    border-radius: 20px;
     box-shadow: initial;
     box-sizing: border-box;
     color: var(--text-color);
@@ -2821,4 +2821,7 @@ header.header {
   .pagination {
     margin-bottom: 10px;
   }
+}
+mjx-container.MathJax.CtxtMenu_Attached_0 {
+  min-width: auto !important;
 }
