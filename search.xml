@@ -561,8 +561,114 @@ class="math inline">\(\beta\)</span> 互为充要条件。</p>
       </tags>
   </entry>
   <entry>
+    <title>【Hexo】博客新增的若干功能</title>
+    <url>/2025/08/19/%E3%80%90Hexo%E3%80%91%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%A2%9E%E7%9A%84%E8%8B%A5%E5%B9%B2%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<p>​ 前情提要：<a
+href="https://blog.80gnaij11.top/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">使用
+Hexo 搭建个人博客</a></p>
+<p>​
+在网站正式上线之后，我们根据用户的反馈与自身的优化计划，又陆续增加了一些新功能。在这里，我会逐一为大家介绍这些功能的安装方法和使用说明，方便有需要的朋友进行参考和操作。需要说明的是，这些新增功能大多属于页面美化或体验优化的类型，能够让网站在视觉效果、交互体验以及操作便捷性上有所提升。</p>
+<p>​ 新增加的功能：1. 使用 Github 作为图床；2. 阅读全文功能；3.
+博客页面圆角化；4. Canvas-Nest 背景动画。</p>
+<p>​
+如果你追求更高的美观度、更流畅的交互体验，或者希望网站在细节上更加人性化，可以尝试安装并使用这些功能；但如果你对现有的使用体验已经满意，也可以选择不安装，不会影响网站的核心使用。</p>
+<span id="more"></span>
+<h3 id="使用-github-作为图床">使用 Github 作为图床</h3>
+<p>​ Markdown
+允许插入图片，通常做法是在本地存储图片并上传到网站，但如果图片数量过多，会使网站加载变慢。这时候我们也有第二种方案：图床。</p>
+<p>​
+图床，指的是专门用于存储和管理图片的在线服务。通常用户将图片上传到图床后，可以获得一个外链，然后用于博客文章、论坛帖子插图、社交媒体分享或是个人笔记。</p>
+<p>​
+虽然图床方便，但不同类型的图床各有缺陷：免费公共图床随时可能关闭、限流或更换域名。专门的付费商业图床价格不菲。这时候我们可以考虑
+Github + PicGo + JSdelivr 的方法来自建图床。</p>
+<h4 id="新建-github-仓库并生成-token">新建 GitHub 仓库并生成 Token</h4>
+<p>​ 首先需要新建一个 Github
+仓库用来存储图像，为了方便我们将这个仓库命名为 img-bed。</p>
+<p>​ 接着，我们需要为账号生成一个
+Token，点击个人头像，依次选择【Settings】-【Developer
+settings】-【Personal access tokens】-【Tokens
+(classic)】，选择【repo】，取消【Expiration Date】，点击【Generate
+token】生成Token，注意一定要将 Token 妥善保存，因为这个 Token
+只会显示一次。</p>
+<h4 id="下载-picgo并配置">下载 PicGo并配置</h4>
+<p>Picgo 下载地址：<a
+href="https://github.com/Molunerfinn/picgo/releases">Github 页面</a></p>
+<p>​ 安装完成后按照要求配置 Github 图床，建议设为默认图床。由于 Github
+在中国大陆访问速度较慢，我们可以使用 JSdelivr 免费 CDN
+加速访问，具体方法为将自定义域名设置为
+<code>https://cdn.jsdelivr.net/gh/用户名/仓库名</code>.
+在访问图片时使用链接
+<code>https://cdn.jsdelivr.net/gh/用户名/仓库名/图片路径</code>.可以发现访问速度快了许多！</p>
+<p>​ 在配置完成后，就可以在 PicGo 软件中上传图片并获得图床链接了。</p>
+<h3 id="阅读全文功能">阅读全文功能</h3>
+<p>​ Next
+主题默认显示文章的完整内容，有时不利于访问者观看，因此我们可以增加一个
+“阅读全文”
+功能。阅读全文功能比较简单，在编写你的文章的时候，在你不想在预览中显示的部分前加上
+<code>&lt;!--more--&gt;</code>
+标签，标签之后的部分就不会显示在主页了。</p>
+<h3 id="博客页面圆角化">博客页面圆角化</h3>
+<p>​ 为了使博客页面圆角化，我们新建一个文件
+<code>Hexo/source/_data/variables.styl</code>（如果没有
+<code>_data</code> 文件夹，就也新建一个），然后加入以下代码：</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 圆角</span></span><br><span class="line"><span class="variable">$border</span>-radius-inner     = <span class="number">20px</span> <span class="number">20px</span> <span class="number">20px</span> <span class="number">20px</span>;</span><br><span class="line"><span class="variable">$border</span>-radius           = <span class="number">20px</span>;</span><br></pre></td></tr></table></figure>
+<p>​ 然后在 <code>Hexo/themes/next/_config.yml</code> 文件中的
+<code>custom file paths.</code> 中开 取消掉 <code>variable</code>
+的注释。重新部署就可以看到页面圆角化了。</p>
+<p>​ 在 Next 的 issue
+中提到侧边栏顶栏无法显示为圆角，目前并没有找到特别好的解决办法，可以参考资料6.</p>
+<h3 id="canvas-nest-背景动画">Canvas-Nest 背景动画</h3>
+<p>​
+Canvas-Nest是一段超轻量的前端脚本，在页面背景里生成若干“粒子点”，点之间以线段相连并随鼠标交互漂移。它只依赖浏览器原生
+<code>&lt;canvas&gt;</code>，体积小、接入简单，常见于个人博客、落地页、文档站的装饰性背景。</p>
+<p>​ 我们新建一个文件 <code>Hexo/source/_data/footer.njk</code>（如果没有
+<code>_data</code> 文件夹，就也新建一个），然后加入以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script color=&quot;0,0,255&quot; opacity=&quot;0.5&quot; zIndex=&quot;-1&quot; count=&quot;99&quot; src=&quot;https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>​ 其中 <code>color</code>、<code>opacity</code> 和 <code>count</code>
+可以按个人喜好修改，分别影响线条的颜色，线条颜色的饱和度和粒子点的数量。</p>
+<p>​ 然后在 <code>Hexo/themes/next/_config.yml</code> 文件中的
+<code>custom file paths.</code> 中开 取消掉 <code>footer</code>
+的注释。重新部署就可以看到动画效果了。</p>
+<h3 id="参考资料">参考资料</h3>
+<ol type="1">
+<li><p><a
+href="https://blog.csdn.net/qq_36759224/article/details/98058240">Github+jsDelivr+PicGo
+打造稳定快速、高效免费图床</a></p></li>
+<li><p><a
+href="https://zhuanlan.zhihu.com/p/489236769">使用Github+picGo搭建图床，保姆级教程来了</a></p></li>
+<li><p><a
+href="https://zhengyujie.github.io/2019/08/01/hexo%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87/">NexT主题阅读全文设置</a></p></li>
+<li><p><a
+href="https://blog.kevinly.com.cn/Hexo-%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96-%E8%83%8C%E6%99%AF%E8%AE%BE%E7%BD%AE%E4%B8%8E%E6%96%87%E6%9C%AC%E9%80%8F%E6%98%8E%E5%8F%8A%E5%9C%86%E8%A7%92%E5%8C%96/">Hexo
+界面美化-背景设置与文本透明及圆角化</a></p></li>
+<li><p><a
+href="https://cs-cshi.github.io/hexo-blog/Hexo-NexT%20%E8%AE%BE%E7%BD%AE%E5%9C%86%E8%A7%92/">Hexo-NexT
+设置圆角</a></p></li>
+<li><p><a
+href="https://github.com/next-theme/hexo-theme-next/issues/51">侧边栏顶栏无法显示为圆角</a></p></li>
+<li><p><a
+href="https://river106.cn/posts/caed9503.html">Hexo博客主题Next添加动态线条背景canvas_nest</a></p></li>
+</ol>
+<h3 id="常用网站">常用网站</h3>
+<ol type="1">
+<li><a href="https://github.com/Molunerfinn/picgo/releases">PicGo Github
+页面</a></li>
+<li><a
+href="https://github.com/theme-next/theme-next-canvas-nest">Canvas-Nest
+Github 页面</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Hexo 博客</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Hexo搭建个人博客</title>
-    <url>/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <url>/2025/08/16/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>​
 搭建这个博客花费了我很大的精力，也查找了不少的资料。本文用于记录我搭建博客的经过，用于给其它想要搭建自己的个人博客的朋友提供参考。</p>
 <h3 id="写在前面">写在前面</h3>
@@ -764,6 +870,7 @@ href="https://josh-gao.top/posts/b158f1b4.html#%E9%A1%B5%E9%9D%A2">Hexo-NexT
 ]]></content>
       <categories>
         <category>技术</category>
+        <category>Hexo博客</category>
       </categories>
       <tags>
         <tag>Hexo</tag>
