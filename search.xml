@@ -10,6 +10,112 @@
       </tags>
   </entry>
   <entry>
+    <title>【Hexo】博客新增的若干功能</title>
+    <url>/2025/08/19/%E3%80%90Hexo%E3%80%91%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%A2%9E%E7%9A%84%E8%8B%A5%E5%B9%B2%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<p>​ 前情提要：<a
+href="https://blog.80gnaij11.top/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">使用
+Hexo 搭建个人博客</a></p>
+<p>​
+在网站正式上线之后，我们根据用户的反馈与自身的优化计划，又陆续增加了一些新功能。在这里，我会逐一为大家介绍这些功能的安装方法和使用说明，方便有需要的朋友进行参考和操作。需要说明的是，这些新增功能大多属于页面美化或体验优化的类型，能够让网站在视觉效果、交互体验以及操作便捷性上有所提升。</p>
+<p>​ 新增加的功能：1. 使用 Github 作为图床；2. 阅读全文功能；3.
+博客页面圆角化；4. Canvas-Nest 背景动画。</p>
+<p>​
+如果你追求更高的美观度、更流畅的交互体验，或者希望网站在细节上更加人性化，可以尝试安装并使用这些功能；但如果你对现有的使用体验已经满意，也可以选择不安装，不会影响网站的核心使用。</p>
+<span id="more"></span>
+<h3 id="使用-github-作为图床">使用 Github 作为图床</h3>
+<p>​ Markdown
+允许插入图片，通常做法是在本地存储图片并上传到网站，但如果图片数量过多，会使网站加载变慢。这时候我们也有第二种方案：图床。</p>
+<p>​
+图床，指的是专门用于存储和管理图片的在线服务。通常用户将图片上传到图床后，可以获得一个外链，然后用于博客文章、论坛帖子插图、社交媒体分享或是个人笔记。</p>
+<p>​
+虽然图床方便，但不同类型的图床各有缺陷：免费公共图床随时可能关闭、限流或更换域名。专门的付费商业图床价格不菲。这时候我们可以考虑
+Github + PicGo + JSdelivr 的方法来自建图床。</p>
+<h4 id="新建-github-仓库并生成-token">新建 GitHub 仓库并生成 Token</h4>
+<p>​ 首先需要新建一个 Github
+仓库用来存储图像，为了方便我们将这个仓库命名为 img-bed。</p>
+<p>​ 接着，我们需要为账号生成一个
+Token，点击个人头像，依次选择【Settings】-【Developer
+settings】-【Personal access tokens】-【Tokens
+(classic)】，选择【repo】，取消【Expiration Date】，点击【Generate
+token】生成Token，注意一定要将 Token 妥善保存，因为这个 Token
+只会显示一次。</p>
+<h4 id="下载-picgo并配置">下载 PicGo并配置</h4>
+<p>Picgo 下载地址：<a
+href="https://github.com/Molunerfinn/picgo/releases">Github 页面</a></p>
+<p>​ 安装完成后按照要求配置 Github 图床，建议设为默认图床。由于 Github
+在中国大陆访问速度较慢，我们可以使用 JSdelivr 免费 CDN
+加速访问，具体方法为将自定义域名设置为
+<code>https://cdn.jsdelivr.net/gh/用户名/仓库名</code>.
+在访问图片时使用链接
+<code>https://cdn.jsdelivr.net/gh/用户名/仓库名/图片路径</code>.可以发现访问速度快了许多！</p>
+<p>​ 在配置完成后，就可以在 PicGo 软件中上传图片并获得图床链接了。</p>
+<h3 id="阅读全文功能">阅读全文功能</h3>
+<p>​ Next
+主题默认显示文章的完整内容，有时不利于访问者观看，因此我们可以增加一个
+“阅读全文”
+功能。阅读全文功能比较简单，在编写你的文章的时候，在你不想在预览中显示的部分前加上
+<code>&lt;!--more--&gt;</code>
+标签，标签之后的部分就不会显示在主页了。</p>
+<h3 id="博客页面圆角化">博客页面圆角化</h3>
+<p>​ 为了使博客页面圆角化，我们新建一个文件
+<code>Hexo/source/_data/variables.styl</code>（如果没有
+<code>_data</code> 文件夹，就也新建一个），然后加入以下代码：</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 圆角</span></span><br><span class="line"><span class="variable">$border</span>-radius-inner     = <span class="number">20px</span> <span class="number">20px</span> <span class="number">20px</span> <span class="number">20px</span>;</span><br><span class="line"><span class="variable">$border</span>-radius           = <span class="number">20px</span>;</span><br></pre></td></tr></table></figure>
+<p>​ 然后在 <code>Hexo/themes/next/_config.yml</code> 文件中的
+<code>custom file paths.</code> 中开 取消掉 <code>variable</code>
+的注释。重新部署就可以看到页面圆角化了。</p>
+<p>​ 在 Next 的 issue
+中提到侧边栏顶栏无法显示为圆角，目前并没有找到特别好的解决办法，可以参考资料6.</p>
+<h3 id="canvas-nest-背景动画">Canvas-Nest 背景动画</h3>
+<p>​
+Canvas-Nest是一段超轻量的前端脚本，在页面背景里生成若干“粒子点”，点之间以线段相连并随鼠标交互漂移。它只依赖浏览器原生
+<code>&lt;canvas&gt;</code>，体积小、接入简单，常见于个人博客、落地页、文档站的装饰性背景。</p>
+<p>​ 我们新建一个文件 <code>Hexo/source/_data/footer.njk</code>（如果没有
+<code>_data</code> 文件夹，就也新建一个），然后加入以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script color=&quot;0,0,255&quot; opacity=&quot;0.5&quot; zIndex=&quot;-1&quot; count=&quot;99&quot; src=&quot;https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>​ 其中 <code>color</code>、<code>opacity</code> 和 <code>count</code>
+可以按个人喜好修改，分别影响线条的颜色，线条颜色的饱和度和粒子点的数量。</p>
+<p>​ 然后在 <code>Hexo/themes/next/_config.yml</code> 文件中的
+<code>custom file paths.</code> 中开 取消掉 <code>footer</code>
+的注释。重新部署就可以看到动画效果了。</p>
+<h3 id="参考资料">参考资料</h3>
+<ol type="1">
+<li><p><a
+href="https://blog.csdn.net/qq_36759224/article/details/98058240">Github+jsDelivr+PicGo
+打造稳定快速、高效免费图床</a></p></li>
+<li><p><a
+href="https://zhuanlan.zhihu.com/p/489236769">使用Github+picGo搭建图床，保姆级教程来了</a></p></li>
+<li><p><a
+href="https://zhengyujie.github.io/2019/08/01/hexo%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87/">NexT主题阅读全文设置</a></p></li>
+<li><p><a
+href="https://blog.kevinly.com.cn/Hexo-%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96-%E8%83%8C%E6%99%AF%E8%AE%BE%E7%BD%AE%E4%B8%8E%E6%96%87%E6%9C%AC%E9%80%8F%E6%98%8E%E5%8F%8A%E5%9C%86%E8%A7%92%E5%8C%96/">Hexo
+界面美化-背景设置与文本透明及圆角化</a></p></li>
+<li><p><a
+href="https://cs-cshi.github.io/hexo-blog/Hexo-NexT%20%E8%AE%BE%E7%BD%AE%E5%9C%86%E8%A7%92/">Hexo-NexT
+设置圆角</a></p></li>
+<li><p><a
+href="https://github.com/next-theme/hexo-theme-next/issues/51">侧边栏顶栏无法显示为圆角</a></p></li>
+<li><p><a
+href="https://river106.cn/posts/caed9503.html">Hexo博客主题Next添加动态线条背景canvas_nest</a></p></li>
+</ol>
+<h3 id="常用网站">常用网站</h3>
+<ol type="1">
+<li><a href="https://github.com/Molunerfinn/picgo/releases">PicGo Github
+页面</a></li>
+<li><a
+href="https://github.com/theme-next/theme-next-canvas-nest">Canvas-Nest
+Github 页面</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Hexo博客</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【Hexo】使用Hexo搭建个人博客</title>
     <url>/2025/08/16/%E3%80%90Hexo%E3%80%91%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
     <content><![CDATA[<p>​
@@ -209,112 +315,6 @@ href="https://josh-gao.top/posts/b158f1b4.html#%E9%A1%B5%E9%9D%A2">Hexo-NexT
 <ol type="1">
 <li><a href="https://hexo.io/zh-cn/">Hexo 官网</a></li>
 <li><a href="https://theme-next.js.org/">NEXT 主题官网</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>技术</category>
-        <category>Hexo博客</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>【Hexo】博客新增的若干功能</title>
-    <url>/2025/08/19/%E3%80%90Hexo%E3%80%91%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%A2%9E%E7%9A%84%E8%8B%A5%E5%B9%B2%E5%8A%9F%E8%83%BD/</url>
-    <content><![CDATA[<p>​ 前情提要：<a
-href="https://blog.80gnaij11.top/2025/08/16/%E4%BD%BF%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">使用
-Hexo 搭建个人博客</a></p>
-<p>​
-在网站正式上线之后，我们根据用户的反馈与自身的优化计划，又陆续增加了一些新功能。在这里，我会逐一为大家介绍这些功能的安装方法和使用说明，方便有需要的朋友进行参考和操作。需要说明的是，这些新增功能大多属于页面美化或体验优化的类型，能够让网站在视觉效果、交互体验以及操作便捷性上有所提升。</p>
-<p>​ 新增加的功能：1. 使用 Github 作为图床；2. 阅读全文功能；3.
-博客页面圆角化；4. Canvas-Nest 背景动画。</p>
-<p>​
-如果你追求更高的美观度、更流畅的交互体验，或者希望网站在细节上更加人性化，可以尝试安装并使用这些功能；但如果你对现有的使用体验已经满意，也可以选择不安装，不会影响网站的核心使用。</p>
-<span id="more"></span>
-<h3 id="使用-github-作为图床">使用 Github 作为图床</h3>
-<p>​ Markdown
-允许插入图片，通常做法是在本地存储图片并上传到网站，但如果图片数量过多，会使网站加载变慢。这时候我们也有第二种方案：图床。</p>
-<p>​
-图床，指的是专门用于存储和管理图片的在线服务。通常用户将图片上传到图床后，可以获得一个外链，然后用于博客文章、论坛帖子插图、社交媒体分享或是个人笔记。</p>
-<p>​
-虽然图床方便，但不同类型的图床各有缺陷：免费公共图床随时可能关闭、限流或更换域名。专门的付费商业图床价格不菲。这时候我们可以考虑
-Github + PicGo + JSdelivr 的方法来自建图床。</p>
-<h4 id="新建-github-仓库并生成-token">新建 GitHub 仓库并生成 Token</h4>
-<p>​ 首先需要新建一个 Github
-仓库用来存储图像，为了方便我们将这个仓库命名为 img-bed。</p>
-<p>​ 接着，我们需要为账号生成一个
-Token，点击个人头像，依次选择【Settings】-【Developer
-settings】-【Personal access tokens】-【Tokens
-(classic)】，选择【repo】，取消【Expiration Date】，点击【Generate
-token】生成Token，注意一定要将 Token 妥善保存，因为这个 Token
-只会显示一次。</p>
-<h4 id="下载-picgo并配置">下载 PicGo并配置</h4>
-<p>Picgo 下载地址：<a
-href="https://github.com/Molunerfinn/picgo/releases">Github 页面</a></p>
-<p>​ 安装完成后按照要求配置 Github 图床，建议设为默认图床。由于 Github
-在中国大陆访问速度较慢，我们可以使用 JSdelivr 免费 CDN
-加速访问，具体方法为将自定义域名设置为
-<code>https://cdn.jsdelivr.net/gh/用户名/仓库名</code>.
-在访问图片时使用链接
-<code>https://cdn.jsdelivr.net/gh/用户名/仓库名/图片路径</code>.可以发现访问速度快了许多！</p>
-<p>​ 在配置完成后，就可以在 PicGo 软件中上传图片并获得图床链接了。</p>
-<h3 id="阅读全文功能">阅读全文功能</h3>
-<p>​ Next
-主题默认显示文章的完整内容，有时不利于访问者观看，因此我们可以增加一个
-“阅读全文”
-功能。阅读全文功能比较简单，在编写你的文章的时候，在你不想在预览中显示的部分前加上
-<code>&lt;!--more--&gt;</code>
-标签，标签之后的部分就不会显示在主页了。</p>
-<h3 id="博客页面圆角化">博客页面圆角化</h3>
-<p>​ 为了使博客页面圆角化，我们新建一个文件
-<code>Hexo/source/_data/variables.styl</code>（如果没有
-<code>_data</code> 文件夹，就也新建一个），然后加入以下代码：</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 圆角</span></span><br><span class="line"><span class="variable">$border</span>-radius-inner     = <span class="number">20px</span> <span class="number">20px</span> <span class="number">20px</span> <span class="number">20px</span>;</span><br><span class="line"><span class="variable">$border</span>-radius           = <span class="number">20px</span>;</span><br></pre></td></tr></table></figure>
-<p>​ 然后在 <code>Hexo/themes/next/_config.yml</code> 文件中的
-<code>custom file paths.</code> 中开 取消掉 <code>variable</code>
-的注释。重新部署就可以看到页面圆角化了。</p>
-<p>​ 在 Next 的 issue
-中提到侧边栏顶栏无法显示为圆角，目前并没有找到特别好的解决办法，可以参考资料6.</p>
-<h3 id="canvas-nest-背景动画">Canvas-Nest 背景动画</h3>
-<p>​
-Canvas-Nest是一段超轻量的前端脚本，在页面背景里生成若干“粒子点”，点之间以线段相连并随鼠标交互漂移。它只依赖浏览器原生
-<code>&lt;canvas&gt;</code>，体积小、接入简单，常见于个人博客、落地页、文档站的装饰性背景。</p>
-<p>​ 我们新建一个文件 <code>Hexo/source/_data/footer.njk</code>（如果没有
-<code>_data</code> 文件夹，就也新建一个），然后加入以下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script color=&quot;0,0,255&quot; opacity=&quot;0.5&quot; zIndex=&quot;-1&quot; count=&quot;99&quot; src=&quot;https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-<p>​ 其中 <code>color</code>、<code>opacity</code> 和 <code>count</code>
-可以按个人喜好修改，分别影响线条的颜色，线条颜色的饱和度和粒子点的数量。</p>
-<p>​ 然后在 <code>Hexo/themes/next/_config.yml</code> 文件中的
-<code>custom file paths.</code> 中开 取消掉 <code>footer</code>
-的注释。重新部署就可以看到动画效果了。</p>
-<h3 id="参考资料">参考资料</h3>
-<ol type="1">
-<li><p><a
-href="https://blog.csdn.net/qq_36759224/article/details/98058240">Github+jsDelivr+PicGo
-打造稳定快速、高效免费图床</a></p></li>
-<li><p><a
-href="https://zhuanlan.zhihu.com/p/489236769">使用Github+picGo搭建图床，保姆级教程来了</a></p></li>
-<li><p><a
-href="https://zhengyujie.github.io/2019/08/01/hexo%E9%98%85%E8%AF%BB%E5%85%A8%E6%96%87/">NexT主题阅读全文设置</a></p></li>
-<li><p><a
-href="https://blog.kevinly.com.cn/Hexo-%E7%95%8C%E9%9D%A2%E7%BE%8E%E5%8C%96-%E8%83%8C%E6%99%AF%E8%AE%BE%E7%BD%AE%E4%B8%8E%E6%96%87%E6%9C%AC%E9%80%8F%E6%98%8E%E5%8F%8A%E5%9C%86%E8%A7%92%E5%8C%96/">Hexo
-界面美化-背景设置与文本透明及圆角化</a></p></li>
-<li><p><a
-href="https://cs-cshi.github.io/hexo-blog/Hexo-NexT%20%E8%AE%BE%E7%BD%AE%E5%9C%86%E8%A7%92/">Hexo-NexT
-设置圆角</a></p></li>
-<li><p><a
-href="https://github.com/next-theme/hexo-theme-next/issues/51">侧边栏顶栏无法显示为圆角</a></p></li>
-<li><p><a
-href="https://river106.cn/posts/caed9503.html">Hexo博客主题Next添加动态线条背景canvas_nest</a></p></li>
-</ol>
-<h3 id="常用网站">常用网站</h3>
-<ol type="1">
-<li><a href="https://github.com/Molunerfinn/picgo/releases">PicGo Github
-页面</a></li>
-<li><a
-href="https://github.com/theme-next/theme-next-canvas-nest">Canvas-Nest
-Github 页面</a></li>
 </ol>
 ]]></content>
       <categories>
@@ -817,7 +817,7 @@ class="math inline">\(f(x)\)</span>
 <span class="math inline">\((x-1)(x^2-3x-3)&gt;0\)</span>，三个根分别为
 <span
 class="math inline">\(x_1=1,x_2=\frac{3-\sqrt{21}}{2},x_3=\frac{3+\sqrt{21}}{2}\)</span>，画出图像：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG2025-08-20_091252.jpg" alt="img1" style="zoom: 33%;" /></p>
+<p><img src="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250820114607.png" alt="img1" style="zoom: 33%;" /></p>
 <p>​ 可以看出，原不等式的解集为 <span
 class="math inline">\((\frac{3-\sqrt{21}}{2},1) \cup
 (\frac{3+\sqrt{21}}{2},+\infty)\)</span>.</p>
@@ -864,7 +864,9 @@ class="math inline">\(\frac{a_1+a_2+...+a_n}{n} \geq
 \sqrt[n]{a_1a_2...a_n}\)</span>，当 <span
 class="math inline">\(a_1=a_2=...=a_n\)</span> 时取到等号。</p>
 <h3 id="均值不等式">均值不等式</h3>
-<p>​ 均值不等式是基本不等式的推广形式。其一般形式为： <span
+<p>​ 均值不等式是基本不等式的推广形式。记 <span
+class="math inline">\(a_1,a_2,...,a_n\)</span> 为 <span
+class="math inline">\(n\)</span> 个正实数，其一般形式为： <span
 class="math display">\[
 \sqrt{\frac{\sum a_i^2}{n}} \geq \frac{\sum a_i}{n} \geq \sqrt[n]{\prod
 x_i} \geq \frac{n}{\sum \frac{1}{x_i}}
@@ -1016,6 +1018,108 @@ class="math inline">\(\beta\)</span> 互为充要条件。</p>
         <tag>高中数学</tag>
         <tag>集合</tag>
         <tag>命题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【高中数学笔记】均值不等式的证明方法</title>
+    <url>/2025/08/20/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E8%AF%81%E6%98%8E%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>​ 设 <span class="math inline">\(a_1,a_2,...,a_n\)</span> 是 <span
+class="math inline">\(n\)</span> 个正实数，其平方平均 <span
+class="math inline">\(Q_n=\sqrt{\frac{a_1^2+a_2^2+...+a_n^2}{n}}\)</span>，算术平均
+<span
+class="math inline">\(A_n=\frac{a_1+a_2+...+a_n}{n}\)</span>，几何平均
+<span
+class="math inline">\(G_n=\sqrt[n]{a_1a_2...a_n}\)</span>，调和平均
+<span
+class="math inline">\(H_n=\frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+...+\frac{1}{a_n}}\)</span>。由均值不等式可知：
+<span class="math display">\[
+\min\{a_1,a_2,...,a_n\} \leq H_n \leq G_n \leq A_n \leq Q_n \leq
+\max\{a_1,a_2,...,a_n\}
+\]</span> ​ 当且仅当 <span class="math inline">\(a_1=a_2=...a_n\)</span>
+时等号成立。</p>
+<p>​
+均值不等式的证明方法有很多，数学归纳法、拉格朗日乘数法、琴生不等式法、排序不等式法、柯西不等式法等等，都可以证明均值不等式。</p>
+<span id="more"></span>
+<h3 id="数学归纳法">数学归纳法</h3>
+<p>​ 首先证明 <span class="math inline">\(A_n \geq G_n\)</span>，先证
+<span class="math inline">\(n=2^m(m\in \mathbb{R}^+)\)</span> 时 <span
+class="math inline">\(A_n \geq G_n\)</span> 成立。</p>
+<p>​ 当 <span class="math inline">\(m=1\)</span> 时，由基本不等式得 <span
+class="math inline">\(\frac{a_1+a_2}{2} \geq \sqrt{a_1a_2}\)</span>
+显然成立。</p>
+<p>​ 假设当 <span class="math inline">\(m=k\)</span> 时命题成立，则 <span
+class="math inline">\(m=k+1\)</span> 时，</p>
+<p>​ <span
+class="math inline">\(\sqrt[2^{k+1}]{a_1a_2...a_{2^k}...a_{2^{k+1}}}=\sqrt{\sqrt[2^k]{a_1a_2...a_{2^k}}\sqrt[2^k]{a_{2^k}a_{2^k+1}...a_{2^{k+1}}}}\)</span></p>
+<p>​ <span class="math inline">\(\leq
+\frac{1}{2}(\sqrt[2^k]{a_1a_2...a_{2^k}}+\sqrt[2^k]{a_{2^k}a_{2^k+1}...a_{2^{k+1}}})\)</span></p>
+<p>​ <span class="math inline">\(\leq
+\frac{1}{2}(\frac{a_1+a_2+...+a_{2^k}}{2^k}+\frac{a_{2^k+1}+a_{2^k+2}+...+a_{2^{k+1}}}{2^k})\)</span></p>
+<p>​ <span
+class="math inline">\(=\frac{a_1+a_2+...a_{2^{k+1}}}{2^{k+1}}\)</span></p>
+<p>​ 当且仅当 <span
+class="math inline">\(a_1=a_2=...=a_{2^{k+1}}\)</span>
+时取到等号。由数学归纳法可知 <span class="math inline">\(n=2^m(m\in
+\mathbb{R}^+)\)</span> 时 <span class="math inline">\(A_n \geq
+G_n\)</span> 成立。即 <span class="math inline">\(A_n \geq G_n\)</span>
+对无数个正整数 <span class="math inline">\(n\)</span> 成立。</p>
+<p>​ 假设 <span class="math inline">\(n=k+1\)</span> 时命题成立，则当
+<span class="math inline">\(n=k\)</span> 时，令 <span
+class="math inline">\(b=\frac{a_1+a_2+...+a_k}{k}\)</span>，有</p>
+<p>​ <span class="math inline">\(\sqrt[k+1]{a_1a_2...a_kb} \leq
+\frac{a_1+a_2+...+a_k+b}{k+1}=\frac{kb+b}{k+1}=b\)</span>，当且仅当
+<span class="math inline">\(a_1=a_2=...=a_k\)</span> 时取到等号。</p>
+<p>​ 则 <span class="math inline">\(a_1a_2...a_kb \leq
+b^{k+1}\)</span>，即 <span class="math inline">\(a_1a_2...a_k \leq
+b^k\)</span>.</p>
+<p>​ 因此 <span class="math inline">\(\sqrt[k]{a_1a_2...a_k} \leq b =
+\frac{a_1+a_2+...+a_k}{k}\)</span>，所以 <span
+class="math inline">\(n=k\)</span>
+时命题成立。由反向数学归纳法可知当正整数 <span
+class="math inline">\(n&gt;1\)</span> 时 <span class="math inline">\(A_n
+\geq G_n\)</span> 成立。</p>
+<p>​ 接下来证明 <span class="math inline">\(G_n \geq H_n\)</span>，取
+<span class="math inline">\(b_i=a_i\)</span>，则由 <span
+class="math inline">\(A_n \geq G_n\)</span>， <span
+class="math display">\[
+\frac{b_1+b_2+...+b_n}{n} \geq \sqrt[n]{b_1b_2...b_n}
+\]</span> ​ 代入得 <span class="math display">\[
+\frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+...+\frac{1}{a_n}} \leq
+\sqrt[n]{a_1a_2...a_n}
+\]</span> ​ 当且仅当 <span class="math inline">\(a_1=a_2=...=a_n\)</span>
+时等号成立。</p>
+<p>​ 又因为 <span class="math inline">\(\displaystyle n\sum_{i=1}^n
+a_i^2-(\sum_{i=1}^na_i)^2=\sum_{i=1}^n a_i\sum_{j=1}^n(a_i-a_j)=\sum_{1
+\leq i &lt;j \leq n}(a_i-a_j)^2 \geq 0\)</span></p>
+<p>​ 即 <span class="math inline">\(\displaystyle n\sum_{i=1}^n a_i^2
+\geq (\sum_{i=1}^na_i)^2\)</span> ，<span
+class="math inline">\(\sqrt{\frac{a_1^2+a_2^2+...+a_n^2}{n}} \geq
+\frac{a_1+a_2+...+a_n}{n}\)</span></p>
+<p>​ 综上所述，<span class="math inline">\(Q_n \geq A_n \geq G_n \geq
+H_n\)</span>，当且仅当 <span
+class="math inline">\(a_1=a_2=...=a_n\)</span> 时取到等号。</p>
+<h3 id="二元形式的几何证明">二元形式的几何证明</h3>
+<p>​ 对于均值不等式的二元形式，我们可以通过几何法进行巧妙的证明。</p>
+<p>​ 如图所示，<span class="math inline">\(CH \perp AB,AB \perp OG,CO
+\perp CM\)</span>.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250820120849.png" alt="img1" style="zoom:33%;" /></p>
+<p>​ 设 <span class="math inline">\(AM=a,BM=b\)</span>，不难发现，<span
+class="math inline">\(AO=CO=BO=\frac{a-b}{2}\)</span>,<span
+class="math inline">\(OM=\frac{a+b}{2}\)</span>,<span
+class="math inline">\(MC=\sqrt{AM·BM}=\sqrt{ab}\)</span>.</p>
+<p>​ <span
+class="math inline">\(MG=\sqrt{OG^2+OM^2}=\sqrt{\frac{a^2+b^2}{2}}\)</span>,<span
+class="math inline">\(HM=\frac{MC^2}{OM}=\frac{ab}{\frac{a+b}{2}}=\frac{2}{\frac{1}{a}+\frac{1}{b}}\)</span>.</p>
+<p>​ 在直角三角形中，<span
+class="math inline">\(MG&gt;OM&gt;CM&gt;HM\)</span>，即 <span
+class="math inline">\(\sqrt{\frac{a^2+b^2}{2}}&gt;\frac{a+b}{2}&gt;\sqrt{ab}&gt;\frac{2}{\frac{1}{a}+\frac{1}{b}}\)</span></p>
+]]></content>
+      <categories>
+        <category>初等数学</category>
+      </categories>
+      <tags>
+        <tag>高中数学</tag>
+        <tag>不等式</tag>
       </tags>
   </entry>
 </search>
