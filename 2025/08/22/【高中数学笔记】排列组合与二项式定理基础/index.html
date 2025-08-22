@@ -19,22 +19,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"11jiang08.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="11jiang08&#39;s Blog">
-<meta property="og:url" content="https://11jiang08.github.io/tags/%E7%BB%9F%E8%AE%A1/index.html">
+    <meta name="description" content="​ 在初等数学中，排列组合是研究从若干元素中按照一定规则选择或排列的方法。  排列：从 \(n\) 个不同元素中，按照一定的顺序选取 \(r\) 个元素的不同排列方式数目，记为 \(P_n^r&#x3D;\frac{n!}{(n-r)!}\) 若选取全部元素（即 \(r &#x3D; n\)），则为 \(n!\)。 组合：从 \(n\) 个不同元素中，不考虑顺序地选取 \(r\) 个元素的方式数目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【高中数学笔记】排列组合与二项式定理基础">
+<meta property="og:url" content="https://11jiang08.github.io/2025/08/22/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="11jiang08&#39;s Blog">
+<meta property="og:description" content="​ 在初等数学中，排列组合是研究从若干元素中按照一定规则选择或排列的方法。  排列：从 \(n\) 个不同元素中，按照一定的顺序选取 \(r\) 个元素的不同排列方式数目，记为 \(P_n^r&#x3D;\frac{n!}{(n-r)!}\) 若选取全部元素（即 \(r &#x3D; n\)），则为 \(n!\)。 组合：从 \(n\) 个不同元素中，不考虑顺序地选取 \(r\) 个元素的方式数目">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-08-22T06:21:48.000Z">
+<meta property="article:modified_time" content="2025-08-22T06:51:18.293Z">
 <meta property="article:author" content="11jiang08">
+<meta property="article:tag" content="高中数学">
+<meta property="article:tag" content="排列组合">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://11jiang08.github.io/tags/%E7%BB%9F%E8%AE%A1/">
+<link rel="canonical" href="https://11jiang08.github.io/2025/08/22/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86%E5%9F%BA%E7%A1%80/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"tags/统计/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://11jiang08.github.io/2025/08/22/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86%E5%9F%BA%E7%A1%80/","path":"2025/08/22/【高中数学笔记】排列组合与二项式定理基础/","title":"【高中数学笔记】排列组合与二项式定理基础"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>标签: 统计 | 11jiang08's Blog</title>
+<title>【高中数学笔记】排列组合与二项式定理基础 | 11jiang08's Blog</title>
   
 
 
@@ -146,7 +152,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -159,6 +165,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B9%98%E6%B3%95%E5%8E%9F%E7%90%86%E4%B8%8E%E5%8A%A0%E6%B3%95%E5%8E%9F%E7%90%86"><span class="nav-number">1.</span> <span class="nav-text">乘法原理与加法原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%92%E5%88%97%E4%B8%8E%E7%BB%84%E5%90%88"><span class="nav-number">2.</span> <span class="nav-text">排列与组合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86%E5%8F%8A%E5%85%B6%E6%80%A7%E8%B4%A8"><span class="nav-number">3.</span> <span class="nav-text">二项式定理及其性质</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -220,51 +227,215 @@
 
     </div>
 
-    <div class="main-inner tag posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
+
+
+<div class="post-block">
   
   
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h1 class="collection-header">统计
-          <small>标签</small>
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://11jiang08.github.io/2025/08/22/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="11jiang08">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="11jiang08's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【高中数学笔记】排列组合与二项式定理基础 | 11jiang08's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【高中数学笔记】排列组合与二项式定理基础
         </h1>
-      </div>
 
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2025</span>
+
+      <time title="创建时间：2025-08-22 14:21:48 / 修改时间：14:51:18" itemprop="dateCreated datePublished" datetime="2025-08-22T14:21:48+08:00">2025-08-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%88%9D%E7%AD%89%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">初等数学</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>836</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>​
+在初等数学中，排列组合是研究从若干元素中按照一定规则选择或排列的方法。</p>
+<ul>
+<li><p>排列：从 <span class="math inline">\(n\)</span>
+个不同元素中，按照一定的顺序选取 <span class="math inline">\(r\)</span>
+个元素的不同排列方式数目，记为 <span
+class="math inline">\(P_n^r=\frac{n!}{(n-r)!}\)</span></p>
+<p>若选取全部元素（即 <span class="math inline">\(r = n\)</span>），则为
+<span class="math inline">\(n!\)</span>。</p></li>
+<li><p>组合：从 <span class="math inline">\(n\)</span>
+个不同元素中，不考虑顺序地选取 <span class="math inline">\(r\)</span>
+个元素的方式数目，记为 <span
+class="math inline">\(C_n^r=\frac{n!}{(n-r)!r!}\)</span></p></li>
+</ul>
+<p>​ 排列与组合是概率论、统计学和算法设计等领域的重要工具。</p>
+<p>​ 二项式定理描述了二项式 <span class="math inline">\((a+b)^n\)</span>
+的展开形式：<span class="math inline">\((a+b)^n = \displaystyle
+\sum_{k=0}^{n} C_n^k a^{n-k} b^k\)</span>. 其中 <span
+class="math inline">\(C_n^k\)</span> 表示在展开过程中选择 <span
+class="math inline">\(k\)</span> 次 <span
+class="math inline">\(b\)</span> 的方式数。</p>
+<p>​ 例如：<span class="math inline">\((a+b)^3 = a^3 + 3a^2b + 3ab^2 +
+b^3\)</span></p>
+<p>​
+二项式定理将代数与组合论紧密结合：组合数既是展开系数，也是从“选择”角度自然推导出来的结果。</p>
+<span id="more"></span>
+<h3 id="乘法原理与加法原理">乘法原理与加法原理</h3>
+<ul>
+<li><p>乘法原理：如果完成一件事需要 <span
+class="math inline">\(n\)</span> 个步骤，第 <span
+class="math inline">\(i\)</span> 步有 <span
+class="math inline">\(m_i\)</span> 种不同的方法，那么完成这件事一共有
+<span class="math inline">\(N=\displaystyle\prod _{i=1}^n m_i\)</span>
+种不同的方法。</p></li>
+<li><p>加法原理：如果完成一件事有 <span class="math inline">\(n\)</span>
+类办法，第 <span class="math inline">\(i\)</span> 类办法中有 <span
+class="math inline">\(m_i\)</span> 种不同的方法，那么完成这件事一共有
+<span class="math inline">\(N=\displaystyle\sum_{i=1}^n m_i\)</span>
+种不同的方法。</p></li>
+</ul>
+<h3 id="排列与组合">排列与组合</h3>
+<ul>
+<li><p>排列：从 <span class="math inline">\(n\)</span>
+个不同元素中，按照一定的顺序选取 <span class="math inline">\(r\)</span>
+个元素的不同排列方式数目，记为 <span
+class="math inline">\(P_n^r=\frac{n!}{(n-r)!}\)</span></p>
+<p>若选取全部元素（即 <span class="math inline">\(r = n\)</span>），称为
+<span class="math inline">\(n\)</span> 个元素的全排列，其排列数也称为
+<span class="math inline">\(n\)</span> 的阶乘，记作 <span
+class="math inline">\(n!\)</span>。</p></li>
+<li><p>组合：从 <span class="math inline">\(n\)</span>
+个不同元素中，不考虑顺序地选取 <span class="math inline">\(r\)</span>
+个元素的方式数目，记为 <span
+class="math inline">\(C_n^r=\frac{n!}{(n-r)!r!}\)</span></p></li>
+</ul>
+<p>​ 组合数有以下三个性质：1. <span
+class="math inline">\(C_n^m=C_n^{n-m}\)</span>；2. <span
+class="math inline">\(C_{n+1}^m=C_n^m+C_n^{m-1}\)</span>；3. <span
+class="math inline">\(kC_{n}^k=nC_{n-1}^{k-1}\)</span>.</p>
+<p>​ 性质 <span class="math inline">\(1,2\)</span> 较为显然，以下是对性质
+<span class="math inline">\(3\)</span> 的证明： <span
+class="math display">\[
+kC_n^k=k·\frac{n!}{k!(n-k)!}=n·\frac{(n-1)!}{(k-1)!(n-k)!}=nC_{n-1}^{k-1}   
+\]</span></p>
+<h3 id="二项式定理及其性质">二项式定理及其性质</h3>
+<p>​ 一般地，对于任意 <span class="math inline">\(n \in
+\mathbb{N}^*\)</span>，二项式 <span
+class="math inline">\((a+b)^n\)</span> 的展开形式：<span
+class="math inline">\((a+b)^n = \displaystyle \sum_{r=0}^{n} C_n^r
+a^{n-r} b^r\)</span>. 其中 <span class="math inline">\(C_n^r\)</span>
+表示在展开过程中选择 <span class="math inline">\(k\)</span> 次 <span
+class="math inline">\(b\)</span> 的方式数。式中 <span
+class="math inline">\(C_n^ra^{n-r}b_r\)</span>
+称为二项展开式的通项，由于其为第 <span
+class="math inline">\(r+1\)</span> 项，因此记作 <span
+class="math inline">\(T_{r+1}\)</span>.</p>
+<p>​ 二项式定理的系数有如下性质：</p>
+<ol type="1">
+<li><span class="math inline">\((a+b)^n\)</span>
+的二项展开式中，与首末两端 “等距离” 的两项的二项式系数相等。</li>
+<li><span class="math inline">\((a+b)^n\)</span>
+的二项展开式中，所有二项式系数之和等于 <span
+class="math inline">\(2^n\)</span>。</li>
+<li><span class="math inline">\((a+b)^n\)</span>
+的二项展开式中，奇数项的二项式系数之和等于偶数项的二项式系数之和。这一性质在
+<span class="math inline">\((a+b)^n\)</span> 的展开式中，用 <span
+class="math inline">\(a=1,b=-1\)</span> 代入即可。</li>
+<li><span class="math inline">\((a+b)^n\)</span> 的二项展开式中，当
+<span class="math inline">\(n\)</span> 为偶数时，<span
+class="math inline">\(C_n^{\frac{n}{2}}\)</span>
+取到二项式系数最大值；当 <span class="math inline">\(n\)</span>
+为奇数时，<span class="math inline">\(C_n^{\frac{n-1}{2}}\)</span> 与
+<span class="math inline">\(C_n^{\frac{n+1}{2}}\)</span>
+同时取到最大值。</li>
+</ol>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2025-08-21T11:12:09+08:00"
-              content="2025-08-21">
-          08-21
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/" itemprop="url">
-            <span itemprop="name">【高中数学笔记】概率论基础</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6/" rel="tag"># 高中数学</a>
+              <a href="/tags/%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88/" rel="tag"># 排列组合</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/" rel="prev" title="【高中数学笔记】概率论基础">
+                  <i class="fa fa-angle-left"></i> 【高中数学笔记】概率论基础
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2025/08/22/%E3%80%90%E7%BD%AE%E9%A1%B6%E3%80%91%E6%96%AD%E6%9B%B4%E5%A3%B0%E6%98%8E/" rel="next" title="【置顶】断更声明">
+                  【置顶】断更声明 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
   </article>
+</div>
 
-    </div>
-  </div>
-  
-  
-  
 
+
+
+
+
+    <div class="comments utterances-container"></div>
 </div>
   </main>
 
