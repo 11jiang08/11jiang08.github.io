@@ -19,30 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"11jiang08.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="​ 设 \(a_1,a_2,...,a_n\) 是 \(n\) 个正实数，其平方平均 \(Q_n&#x3D;\sqrt{\frac{a_1^2+a_2^2+...+a_n^2}{n}}\)，算术平均 \(A_n&#x3D;\frac{a_1+a_2+...+a_n}{n}\)，几何平均 \(G_n&#x3D;\sqrt[n]{a_1a_2...a_n}\)，调和平均 \(H_n&#x3D;\frac{n}{\frac{1}{a_1">
+    <meta name="description" content="​ 概率论是研究随机现象的学科， 它为我们认识客观世界提供了重要的思维模式和解决问题的方法，同时 为统计学的发展提供了理论基础概率论的研究目的是研究随机事件的概率，寻求随机变量的规律。 ​ 统计学是用科学方法收集、整理、描述和分析所得数据资料，并由此进行推断或决策的学科本章所要学习的主要内容就是如何收集数据， 根据所获得的数据提取有用的信息，作出合理的决策。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【高中数学笔记】均值不等式的证明方法">
-<meta property="og:url" content="https://11jiang08.github.io/2025/08/20/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E8%AF%81%E6%98%8E%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:title" content="【高中数学笔记】概率论基础">
+<meta property="og:url" content="https://11jiang08.github.io/2025/08/24/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="11jiang08&#39;s Blog">
-<meta property="og:description" content="​ 设 \(a_1,a_2,...,a_n\) 是 \(n\) 个正实数，其平方平均 \(Q_n&#x3D;\sqrt{\frac{a_1^2+a_2^2+...+a_n^2}{n}}\)，算术平均 \(A_n&#x3D;\frac{a_1+a_2+...+a_n}{n}\)，几何平均 \(G_n&#x3D;\sqrt[n]{a_1a_2...a_n}\)，调和平均 \(H_n&#x3D;\frac{n}{\frac{1}{a_1">
+<meta property="og:description" content="​ 概率论是研究随机现象的学科， 它为我们认识客观世界提供了重要的思维模式和解决问题的方法，同时 为统计学的发展提供了理论基础概率论的研究目的是研究随机事件的概率，寻求随机变量的规律。 ​ 统计学是用科学方法收集、整理、描述和分析所得数据资料，并由此进行推断或决策的学科本章所要学习的主要内容就是如何收集数据， 根据所获得的数据提取有用的信息，作出合理的决策。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250820120849.png">
-<meta property="article:published_time" content="2025-08-20T02:48:26.000Z">
-<meta property="article:modified_time" content="2025-08-20T04:15:12.974Z">
+<meta property="article:published_time" content="2025-08-24T03:12:09.000Z">
+<meta property="article:modified_time" content="2025-08-30T08:29:31.454Z">
 <meta property="article:author" content="11jiang08">
 <meta property="article:tag" content="高中数学">
-<meta property="article:tag" content="不等式">
+<meta property="article:tag" content="概率论">
+<meta property="article:tag" content="统计">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250820120849.png">
 
 
-<link rel="canonical" href="https://11jiang08.github.io/2025/08/20/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E8%AF%81%E6%98%8E%E6%96%B9%E6%B3%95/">
+<link rel="canonical" href="https://11jiang08.github.io/2025/08/24/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://11jiang08.github.io/2025/08/20/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E8%AF%81%E6%98%8E%E6%96%B9%E6%B3%95/","path":"2025/08/20/【高中数学笔记】均值不等式的证明方法/","title":"【高中数学笔记】均值不等式的证明方法"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://11jiang08.github.io/2025/08/24/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/","path":"2025/08/24/【高中数学笔记】概率论基础/","title":"【高中数学笔记】概率论基础"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【高中数学笔记】均值不等式的证明方法 | 11jiang08's Blog</title>
+<title>【高中数学笔记】概率论基础 | 11jiang08's Blog</title>
   
 
 
@@ -167,7 +166,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E5%AD%A6%E5%BD%92%E7%BA%B3%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">数学归纳法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%85%83%E5%BD%A2%E5%BC%8F%E7%9A%84%E5%87%A0%E4%BD%95%E8%AF%81%E6%98%8E"><span class="nav-number">2.</span> <span class="nav-text">二元形式的几何证明</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A6%82%E7%8E%87"><span class="nav-number">1.</span> <span class="nav-text">概率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B"><span class="nav-number">1.1.</span> <span class="nav-text">古典概型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%91%E7%8E%87%E4%B8%8E%E6%A6%82%E7%8E%87"><span class="nav-number">1.2.</span> <span class="nav-text">频率与概率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%9A%84%E6%A6%82%E7%8E%87"><span class="nav-number">1.3.</span> <span class="nav-text">事件和的概率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8B%AC%E7%AB%8B%E4%BA%8B%E4%BB%B6%E7%A7%AF%E7%9A%84%E6%A6%82%E7%8E%87"><span class="nav-number">1.4.</span> <span class="nav-text">独立事件积的概率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F%E4%B8%8E%E6%95%B0%E5%AD%A6%E6%9C%9F%E6%9C%9B"><span class="nav-number">1.5.</span> <span class="nav-text">随机变量与数学期望</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1"><span class="nav-number">2.</span> <span class="nav-text">统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E5%92%8C%E5%92%8C%E6%A0%B7%E6%9C%AC"><span class="nav-number">2.1.</span> <span class="nav-text">总和和样本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%BD%E6%A0%B7%E6%8A%80%E6%9C%AF"><span class="nav-number">2.2.</span> <span class="nav-text">抽样技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9F%E8%AE%A1%E4%BC%B0%E8%AE%A1"><span class="nav-number">2.3.</span> <span class="nav-text">统计估计</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -182,7 +181,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -240,7 +239,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://11jiang08.github.io/2025/08/20/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E8%AF%81%E6%98%8E%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="https://11jiang08.github.io/2025/08/24/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -253,12 +252,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【高中数学笔记】均值不等式的证明方法 | 11jiang08's Blog">
+      <meta itemprop="name" content="【高中数学笔记】概率论基础 | 11jiang08's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【高中数学笔记】均值不等式的证明方法
+          【高中数学笔记】概率论基础
         </h1>
 
         <div class="post-meta-container">
@@ -268,9 +267,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2025-08-20 10:48:26 / 修改时间：12:15:12" itemprop="dateCreated datePublished" datetime="2025-08-20T10:48:26+08:00">2025-08-20</time>
+      <time title="创建时间：2025-08-24 11:12:09" itemprop="dateCreated datePublished" datetime="2025-08-24T11:12:09+08:00">2025-08-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2025-08-30 16:29:31" itemprop="dateModified" datetime="2025-08-30T16:29:31+08:00">2025-08-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -289,14 +294,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>779</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>6 分钟</span>
     </span>
 </div>
 
@@ -306,96 +311,132 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>​ 设 <span class="math inline">\(a_1,a_2,...,a_n\)</span> 是 <span
-class="math inline">\(n\)</span> 个正实数，其平方平均 <span
-class="math inline">\(Q_n=\sqrt{\frac{a_1^2+a_2^2+...+a_n^2}{n}}\)</span>，算术平均
-<span
-class="math inline">\(A_n=\frac{a_1+a_2+...+a_n}{n}\)</span>，几何平均
-<span
-class="math inline">\(G_n=\sqrt[n]{a_1a_2...a_n}\)</span>，调和平均
-<span
-class="math inline">\(H_n=\frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+...+\frac{1}{a_n}}\)</span>。由均值不等式可知：
-<span class="math display">\[
-\min\{a_1,a_2,...,a_n\} \leq H_n \leq G_n \leq A_n \leq Q_n \leq
-\max\{a_1,a_2,...,a_n\}
-\]</span> ​ 当且仅当 <span class="math inline">\(a_1=a_2=...a_n\)</span>
-时等号成立。</p>
-<p>​
-均值不等式的证明方法有很多，数学归纳法、拉格朗日乘数法、琴生不等式法、排序不等式法、柯西不等式法等等，都可以证明均值不等式。</p>
+    <div class="post-body" itemprop="articleBody"><p>​ 概率论是研究随机现象的学科，
+它为我们认识客观世界提供了重要的思维模式和解决问题的方法，同时
+为统计学的发展提供了理论基础概率论的研究目的是研究随机事件的概率，寻求随机变量的规律。
+​
+统计学是用科学方法收集、整理、描述和分析所得数据资料，并由此进行推断或决策的学科本章所要学习的主要内容就是如何收集数据，
+根据所获得的数据提取有用的信息，作出合理的决策。</p>
 <span id="more"></span>
-<h3 id="数学归纳法">数学归纳法</h3>
-<p>​ 首先证明 <span class="math inline">\(A_n \geq G_n\)</span>，先证
-<span class="math inline">\(n=2^m(m\in \mathbb{R}^+)\)</span> 时 <span
-class="math inline">\(A_n \geq G_n\)</span> 成立。</p>
-<p>​ 当 <span class="math inline">\(m=1\)</span> 时，由基本不等式得 <span
-class="math inline">\(\frac{a_1+a_2}{2} \geq \sqrt{a_1a_2}\)</span>
-显然成立。</p>
-<p>​ 假设当 <span class="math inline">\(m=k\)</span> 时命题成立，则 <span
-class="math inline">\(m=k+1\)</span> 时，</p>
-<p>​ <span
-class="math inline">\(\sqrt[2^{k+1}]{a_1a_2...a_{2^k}...a_{2^{k+1}}}=\sqrt{\sqrt[2^k]{a_1a_2...a_{2^k}}\sqrt[2^k]{a_{2^k}a_{2^k+1}...a_{2^{k+1}}}}\)</span></p>
-<p>​ <span class="math inline">\(\leq
-\frac{1}{2}(\sqrt[2^k]{a_1a_2...a_{2^k}}+\sqrt[2^k]{a_{2^k}a_{2^k+1}...a_{2^{k+1}}})\)</span></p>
-<p>​ <span class="math inline">\(\leq
-\frac{1}{2}(\frac{a_1+a_2+...+a_{2^k}}{2^k}+\frac{a_{2^k+1}+a_{2^k+2}+...+a_{2^{k+1}}}{2^k})\)</span></p>
-<p>​ <span
-class="math inline">\(=\frac{a_1+a_2+...a_{2^{k+1}}}{2^{k+1}}\)</span></p>
-<p>​ 当且仅当 <span
-class="math inline">\(a_1=a_2=...=a_{2^{k+1}}\)</span>
-时取到等号。由数学归纳法可知 <span class="math inline">\(n=2^m(m\in
-\mathbb{R}^+)\)</span> 时 <span class="math inline">\(A_n \geq
-G_n\)</span> 成立。即 <span class="math inline">\(A_n \geq G_n\)</span>
-对无数个正整数 <span class="math inline">\(n\)</span> 成立。</p>
-<p>​ 假设 <span class="math inline">\(n=k+1\)</span> 时命题成立，则当
-<span class="math inline">\(n=k\)</span> 时，令 <span
-class="math inline">\(b=\frac{a_1+a_2+...+a_k}{k}\)</span>，有</p>
-<p>​ <span class="math inline">\(\sqrt[k+1]{a_1a_2...a_kb} \leq
-\frac{a_1+a_2+...+a_k+b}{k+1}=\frac{kb+b}{k+1}=b\)</span>，当且仅当
-<span class="math inline">\(a_1=a_2=...=a_k\)</span> 时取到等号。</p>
-<p>​ 则 <span class="math inline">\(a_1a_2...a_kb \leq
-b^{k+1}\)</span>，即 <span class="math inline">\(a_1a_2...a_k \leq
-b^k\)</span>.</p>
-<p>​ 因此 <span class="math inline">\(\sqrt[k]{a_1a_2...a_k} \leq b =
-\frac{a_1+a_2+...+a_k}{k}\)</span>，所以 <span
-class="math inline">\(n=k\)</span>
-时命题成立。由反向数学归纳法可知当正整数 <span
-class="math inline">\(n&gt;1\)</span> 时 <span class="math inline">\(A_n
-\geq G_n\)</span> 成立。</p>
-<p>​ 接下来证明 <span class="math inline">\(G_n \geq H_n\)</span>，取
-<span class="math inline">\(b_i=a_i\)</span>，则由 <span
-class="math inline">\(A_n \geq G_n\)</span>， <span
+<h3 id="概率">概率</h3>
+<h4 id="古典概型">古典概型</h4>
+<p>​
+在一定条件下必然发生某种结果的现象称为必然现象，在相同条件下多次观察一种现象，每次观察到的结果不一定相同，称为随机现象。</p>
+<p>​
+为了探索随机现象的规律性，需要对随机现象进行观察。我们把观察随机现象或为了某种目的而进行的实验统称为试验，把观察结果或实验结果统称为试验结果。</p>
+<p>​ 在同样的条件下重复进行试验时，始终不会发生的结果称为不可能事件，记作
+<span
+class="math inline">\(\varnothing\)</span>，一定会发生的结果称为必然事件，记作
+<span
+class="math inline">\(\Omega\)</span>，可能发生、也可能不发生的结果称为随机事件。</p>
+<p>​
+在一次试验中，我们常常关心的是所有可能发生的基本结果，它们是试验中不能再分的最简单的随机事件，其他事件可以用它们来描绘，这样的事件称为基本事件。如果一个试验满足以下特征：(1)
+有限性；(2) 等可能性。我们就称这样的试验为古典概型。</p>
+<p>​ 在古典概型中，如果有 <span class="math inline">\(n\)</span>
+个基本事件，如果某个事件 <span class="math inline">\(A\)</span>
+包含的结果有 <span class="math inline">\(m\)</span> 个，那么事件 <span
+class="math inline">\(A\)</span> 的概率有 <span
+class="math inline">\(P(A)=\frac{m}{n}\)</span>.</p>
+<p>​ 因此有以下结论：</p>
+<ol type="1">
+<li>不可能事件概率为 <span class="math inline">\(0\)</span>，即 <span
+class="math inline">\(P(\varnothing)=0\)</span>.</li>
+<li>必然事件的概率为 <span class="math inline">\(1\)</span>，即 <span
+class="math inline">\(P(\Omega)=1\)</span>.</li>
+<li>对任意随机事件 <span class="math inline">\(A\)</span>，<span
+class="math inline">\(0 \leq P(A) \leq 1\)</span>.</li>
+<li>若 <span
+class="math inline">\(\Omega=\{\omega_1,\omega_2,...,\omega_n\}\)</span>，则
+<span class="math inline">\(\displaystyle \sum _{i=1}^n
+P(\omega_i)=1\)</span>.</li>
+</ol>
+<p>​ 如果事件 <span class="math inline">\(A\)</span> 和事件 <span
+class="math inline">\(B\)</span>
+不可能同时发生，则称这两个事件为互斥事件。如果两个互斥事件中有一个必然发生，则称这两个为对立事件，<span
+class="math inline">\(P(A)=1-P(B)\)</span>.</p>
+<h4 id="频率与概率">频率与概率</h4>
+<p>​ 如果在相同的条件下进行 <span class="math inline">\(n\)</span>
+次重复试验，事件 <span class="math inline">\(A\)</span> 出现了 <span
+class="math inline">\(m\)</span> 次，那么称 <span
+class="math inline">\(m\)</span> 为事件 <span
+class="math inline">\(A\)</span> 出现的频数，<span
+class="math inline">\(\frac{m}{n}\)</span> 为事件 <span
+class="math inline">\(A\)</span> 出现的频率。</p>
+<p>​
+大数定律：在多次重复试验中，同一件事件发生的频率在某一个数值附近摆动，而且随着试验次数的增加，一般摆动的幅度就越小，而且观察到的大的偏差就越少，频率呈现一定的稳定性。</p>
+<h4 id="事件和的概率">事件和的概率</h4>
+<p>​ <span class="math inline">\(P(A\cup B)\)</span>：事件<span
+class="math inline">\(A\)</span> 与事件 <span
+class="math inline">\(B\)</span> 至少有一个出现的概率。</p>
+<p>​ <span class="math inline">\(P(A\cap B)\)</span>：事件 <span
+class="math inline">\(A\)</span> 和事件 <span
+class="math inline">\(B\)</span> 同时出现的概率。</p>
+<p>​ 概率的加法公式：<span class="math inline">\(P(A\cup B)=P(A)+P(B)-P(A
+\cap B)\)</span>. 如果 <span class="math inline">\(A\)</span> 与 <span
+class="math inline">\(B\)</span> 为互斥事件，则 <span
+class="math inline">\(P(A \cap B)=0\)</span>，<span
+class="math inline">\(P(A\cup B)=P(A)+P(B)\)</span>.</p>
+<h4 id="独立事件积的概率">独立事件积的概率</h4>
+<p>​ 如果事件 <span class="math inline">\(A\)</span> 是否发生 对事件
+<span class="math inline">\(B\)</span>
+发生的概率没有影响，那么我们称两个事件<span
+class="math inline">\(A,B\)</span>
+相互独立，并把这两个事件称为相互独立事件。</p>
+<p>​ 如果 <span class="math inline">\(A,B\)</span> 为互相独立事件，则
+<span
+class="math inline">\(P(AB)=P(A)·P(B)\)</span>，这个公式称为互相独立随机事件的概率乘法公式。</p>
+<p>​ 在相同的条件下，重复地做 <span class="math inline">\(n\)</span>
+次试验，且各次试验的结果相互独立。称作 <span
+class="math inline">\(n\)</span> 次独立重复试验。在 <span
+class="math inline">\(n\)</span> 次独立重复试验中，假设事件 <span
+class="math inline">\(A\)</span> 发生的概率为 <span
+class="math inline">\(p\)</span>，则恰好发生 <span
+class="math inline">\(k\)</span> 次的概率为 <span
+class="math inline">\(P_n(k)=C_n^kp^k(1-p)^{n-k}\)</span>.</p>
+<h4 id="随机变量与数学期望">随机变量与数学期望</h4>
+<p>​
+随着试验结果变化而变化的变量称为随机变量，所有取值可以一一列出的随机变量，称为离散型随机变量。</p>
+<p>​ 若离散型随机变量 <span class="math inline">\(\xi\)</span>
+可能取的值为 <span
+class="math inline">\(x_1,x_2,...,x_n\)</span>，取到每个值的概率 <span
+class="math inline">\(P=p_i\)</span>，则称 <span class="math inline">\(E
+\xi = \displaystyle\sum_{i=1}^nx_ip_i\)</span> 为随机变量 <span
+class="math inline">\(\xi\)</span> 的数学期望。<span
+class="math inline">\(D\xi=\displaystyle
+\sum_{i=1}^n(x_i-E\xi)^2p_i\)</span> 为 <span
+class="math inline">\(x_i\)</span> 相对于 <span
+class="math inline">\(E\xi\)</span> 偏离程度的加权平均，称作随机变量
+<span class="math inline">\(E \xi\)</span> 的方差，而 <span
+class="math inline">\(\sqrt{D\xi}\)</span> 称为 <span
+class="math inline">\(E\xi\)</span> 的标准差，记作 <span
+class="math inline">\(\sigma\xi\)</span>。</p>
+<h3 id="统计">统计</h3>
+<h4 id="总和和样本">总和和样本</h4>
+<p>​
+在统计问题中，我们一般把所研究对象的全体称为总体，总体中的每一个对象称为个体．从总体中抽出若干个体所组成的集合称为样本。我们用有限总体中所有个体的平均数来表示总体的平均状态，即一般水平，称为总体均值。
+<span class="math display">\[
+\mu = \frac{1}{N}\displaystyle\sum_{i=1}^nx_i
+\]</span> ​ 各个个体与平均数 <span class="math inline">\(\mu\)</span>
+的差的平方的平均数叫作总体方差，记作 <span
+class="math inline">\(\sigma^2\)</span>，反映了各个个体偏离平均数 <span
+class="math inline">\(\mu\)</span> 的情况。 <span
 class="math display">\[
-\frac{b_1+b_2+...+b_n}{n} \geq \sqrt[n]{b_1b_2...b_n}
-\]</span> ​ 代入得 <span class="math display">\[
-\frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+...+\frac{1}{a_n}} \leq
-\sqrt[n]{a_1a_2...a_n}
-\]</span> ​ 当且仅当 <span class="math inline">\(a_1=a_2=...=a_n\)</span>
-时等号成立。</p>
-<p>​ 又因为 <span class="math inline">\(\displaystyle n\sum_{i=1}^n
-a_i^2-(\sum_{i=1}^na_i)^2=\sum_{i=1}^n a_i\sum_{j=1}^n(a_i-a_j)=\sum_{1
-\leq i &lt;j \leq n}(a_i-a_j)^2 \geq 0\)</span></p>
-<p>​ 即 <span class="math inline">\(\displaystyle n\sum_{i=1}^n a_i^2
-\geq (\sum_{i=1}^na_i)^2\)</span> ，<span
-class="math inline">\(\sqrt{\frac{a_1^2+a_2^2+...+a_n^2}{n}} \geq
-\frac{a_1+a_2+...+a_n}{n}\)</span></p>
-<p>​ 综上所述，<span class="math inline">\(Q_n \geq A_n \geq G_n \geq
-H_n\)</span>，当且仅当 <span
-class="math inline">\(a_1=a_2=...=a_n\)</span> 时取到等号。</p>
-<h3 id="二元形式的几何证明">二元形式的几何证明</h3>
-<p>​ 对于均值不等式的二元形式，我们可以通过几何法进行巧妙的证明。</p>
-<p>​ 如图所示，<span class="math inline">\(CH \perp AB,AB \perp OG,CO
-\perp CM\)</span>.</p>
-<p><img src="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250820120849.png" alt="img1" style="zoom:33%;" /></p>
-<p>​ 设 <span class="math inline">\(AM=a,BM=b\)</span>，不难发现，<span
-class="math inline">\(AO=CO=BO=\frac{a-b}{2}\)</span>,<span
-class="math inline">\(OM=\frac{a+b}{2}\)</span>,<span
-class="math inline">\(MC=\sqrt{AM·BM}=\sqrt{ab}\)</span>.</p>
-<p>​ <span
-class="math inline">\(MG=\sqrt{OG^2+OM^2}=\sqrt{\frac{a^2+b^2}{2}}\)</span>,<span
-class="math inline">\(HM=\frac{MC^2}{OM}=\frac{ab}{\frac{a+b}{2}}=\frac{2}{\frac{1}{a}+\frac{1}{b}}\)</span>.</p>
-<p>​ 在直角三角形中，<span
-class="math inline">\(MG&gt;OM&gt;CM&gt;HM\)</span>，即 <span
-class="math inline">\(\sqrt{\frac{a^2+b^2}{2}}&gt;\frac{a+b}{2}&gt;\sqrt{ab}&gt;\frac{2}{\frac{1}{a}+\frac{1}{b}}\)</span></p>
+\sigma^2=\frac{1}{N}\displaystyle\sum_{i=1}^n(x_1-\mu)^2
+\]</span></p>
+<h4 id="抽样技术">抽样技术</h4>
+<p>​
+在实际研究中，我们可以从总体中抽取一部分个体进行研究，然后对总体进行估计。从总体中抽取的一部分个体所组成的集合叫做样本。样本中所含个体的个数称为样本容量，抽取样本的过程称为抽样。</p>
+<p>​
+科学的抽样方法必须使样本具有代表性，能客观的反应总体的情况。具体方法有：1.
+随机抽样；2. 系统抽样；3. 分层抽样；</p>
+<h4 id="统计估计">统计估计</h4>
+<p>​ 统计估计是利用样本数据获取总体信息的重要手段．统计估计分为两类：
+一类是用样本中某事件出现的频率估计该事件出现的概率，简称为概率估计（可能性估计）；另一类是用样本的算术平均数和样本的标准差估计总体均值和总体标准差，简称为参数估计．</p>
+<p>​ 设样本容量为 <span class="math inline">\(n\)</span>，样本为 <span
+class="math inline">\(x_1,x_2,...,x_n\)</span>。可以用其平均值 <span
+class="math inline">\(\overline{x}\)</span>
+作为总体均值的点估计值，用其标准差 <span
+class="math inline">\(s\)</span> 作为总体标准差的点估计值。</p>
 
     </div>
 
@@ -406,20 +447,21 @@ class="math inline">\(\sqrt{\frac{a^2+b^2}{2}}&gt;\frac{a+b}{2}&gt;\sqrt{ab}&gt;
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6/" rel="tag"># 高中数学</a>
-              <a href="/tags/%E4%B8%8D%E7%AD%89%E5%BC%8F/" rel="tag"># 不等式</a>
+              <a href="/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" rel="tag"># 概率论</a>
+              <a href="/tags/%E7%BB%9F%E8%AE%A1/" rel="tag"># 统计</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/08/20/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%9F%BA%E7%A1%80/" rel="prev" title="【高中数学笔记】不等式基础">
-                  <i class="fa fa-angle-left"></i> 【高中数学笔记】不等式基础
+                <a href="/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E8%AF%81%E6%98%8E%E6%96%B9%E6%B3%95/" rel="prev" title="【高中数学笔记】均值不等式的证明方法">
+                  <i class="fa fa-angle-left"></i> 【高中数学笔记】均值不等式的证明方法
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%A6%82%E7%8E%87%E8%AE%BA%E5%9F%BA%E7%A1%80/" rel="next" title="【高中数学笔记】概率论基础">
-                  【高中数学笔记】概率论基础 <i class="fa fa-angle-right"></i>
+                <a href="/2025/08/27/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86%E5%9F%BA%E7%A1%80/" rel="next" title="【高中数学笔记】排列组合与二项式定理基础">
+                  【高中数学笔记】排列组合与二项式定理基础 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
