@@ -1368,4 +1368,247 @@ class="math inline">\(\beta\)</span> 互为充要条件。</p>
         <tag>命题</tag>
       </tags>
   </entry>
+  <entry>
+    <title>【高中数学笔记】导数基础</title>
+    <url>/2025/08/30/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%AF%BC%E6%95%B0%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<p>​
+导数是微积分中的一个核心概念，它用来刻画函数在某一点处的变化率。简单来说，导数描述了“函数值随自变量变化的快慢”。例如，在物理中，位置对时间的导数就是速度，速度对时间的导数则是加速度。</p>
+<p>​
+从几何意义上看，函数在某点的导数就是该点切线的斜率。如果把函数曲线放大到无限接近，该曲线在这一点附近就会越来越像一条直线，而这条直线的斜率就是导数。</p>
+<span id="more"></span>
+<h3 id="函数的极限">函数的极限</h3>
+<p>​
+极限是微积分的基础概念，它用来描述一个变量无限接近某个值时，函数的趋势。</p>
+<h4 id="自变量趋近无穷的极限">自变量趋近无穷的极限</h4>
+<p>​ <span class="math inline">\(x \rightarrow + \infty\)</span>
+时的极限的定义：存在 <span class="math inline">\(M&gt;0\)</span>，满足
+<span class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(x&gt;M\)</span> 时有定义，当 <span
+class="math inline">\(x\)</span> 不断增大时，<span
+class="math inline">\(f(x)\)</span> 的值无限趋近常数 <span
+class="math inline">\(A\)</span>，则称 <span
+class="math inline">\(\displaystyle \lim_{x \rightarrow + \infty} f(x) =
+A\)</span>.</p>
+<p>​ 类似地，<span class="math inline">\(x \rightarrow - \infty\)</span>
+时的极限的定义：存在 <span class="math inline">\(M&gt;0\)</span>，满足
+<span class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(x&lt;-M\)</span> 时有定义，当 <span
+class="math inline">\(x\)</span> 不断增大时，<span
+class="math inline">\(f(x)\)</span> 的值无限趋近常数 <span
+class="math inline">\(A\)</span>，则称 <span
+class="math inline">\(\displaystyle \lim_{x \rightarrow - \infty} f(x) =
+A\)</span>.</p>
+<p>​ <span class="math inline">\(x \rightarrow  \infty\)</span>
+时的极限的定义：存在 <span class="math inline">\(M&gt;0\)</span>，满足
+<span class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(|x|&gt;M\)</span> 时有定义，当 <span
+class="math inline">\(|x|\)</span> 不断增大时，<span
+class="math inline">\(f(x)\)</span> 的值无限趋近常数 <span
+class="math inline">\(A\)</span>，则称 <span
+class="math inline">\(\displaystyle \lim_{x \rightarrow  \infty} f(x) =
+A\)</span>.</p>
+<p>​ 由定义可以看出，<span class="math inline">\(\displaystyle\lim_{x
+\rightarrow \infty}=A\)</span> 的充要条件为 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow
++\infty}f(x)=\displaystyle\lim_{x \rightarrow
+-\infty}f(x)=A\)</span>.</p>
+<h4 id="自变量趋向一点的极限">自变量趋向一点的极限</h4>
+<p>​ 设函数 <span class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(x_0\)</span> 的某一去心邻域 <span
+class="math inline">\(U\degree (x_0,\delta)\)</span> 内有定义，对 <span
+class="math inline">\(\forall \varepsilon &gt; 0\)</span>，总存在 <span
+class="math inline">\(\delta &gt;0\)</span>，当 <span
+class="math inline">\(0&lt;|x-x_0|&lt;\delta\)</span> 时，有 <span
+class="math inline">\(|f(x)-\varepsilon| &lt;A\)</span> 恒成立，则称
+<span class="math inline">\(\displaystyle\lim_{x \rightarrow x_0}
+f(x)=A\)</span>.</p>
+<p>​ 如果只考虑 <span class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(x_0\)</span> 的某个右半邻域 <span
+class="math inline">\((x_0,x_0+\delta)\)</span>（或左半邻域 <span
+class="math inline">\((x_0-\delta,x_0)\)</span>），对 <span
+class="math inline">\(\forall \varepsilon &gt; 0\)</span>，总存在 <span
+class="math inline">\(\delta &gt;0\)</span>，当 <span
+class="math inline">\(0&lt;x-x_0&lt;\delta\)</span>（或 <span
+class="math inline">\(0&lt;x_0-x&lt;\delta\)</span>） 时，有 <span
+class="math inline">\(|f(x)-\varepsilon| &lt;A\)</span> 恒成立，则称
+<span class="math inline">\(\displaystyle\lim_{x \rightarrow x_0^+}
+f(x)=A\)</span>（或 <span class="math inline">\(\displaystyle\lim_{x
+\rightarrow x_0^-} f(x)=A\)</span>）。分别称为函数 <span
+class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(x_0\)</span> 的右极限和左极限。</p>
+<p>​ 由定义可知，<span class="math inline">\(\displaystyle\lim_{x
+\rightarrow x_0} f(x)=A\)</span> 的充要条件为 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow x_0^+}
+f(x)=\displaystyle\lim_{x \rightarrow x_0^-}f(x)= A\)</span>.</p>
+<h4 id="极限的性质">极限的性质</h4>
+<ol type="1">
+<li><p>若 <span class="math inline">\(\displaystyle\lim_{x \rightarrow
+x_0} f(x) =A,\displaystyle\lim_{x \rightarrow x_0}f(x)=B\)</span>，则
+<span class="math inline">\(A=B\)</span>.</p></li>
+<li><p>若 <span class="math inline">\(\displaystyle\lim_{x \rightarrow
+x_0} f(x) =A\)</span>，则存在某一去心邻域 <span
+class="math inline">\(U\degree (x_0,\delta)\)</span> 和 <span
+class="math inline">\(M&gt;0\)</span>，使 <span
+class="math inline">\(\forall x \in U\degree(x_0,\delta)\)</span>，有
+<span class="math inline">\(|f(x)|\leq M\)</span>.</p></li>
+<li><p>若 <span class="math inline">\(\displaystyle\lim_{x \rightarrow
+x_0} f(x) =A\)</span>，且 <span
+class="math inline">\(A&gt;0\)</span>，则存在某一去心邻域 <span
+class="math inline">\(U\degree (x_0,\delta)\)</span>，使得 <span
+class="math inline">\(\forall x \in U\degree(x_0,\delta)\)</span>，有
+<span class="math inline">\(f(x)&gt;0\)</span>，<span
+class="math inline">\(A&lt;0\)</span> 时亦同理。</p></li>
+<li><p>函数的极限满足四则运算法则，前提是数列的极限存在。</p>
+<p>此外，若 <span class="math inline">\(n \in \mathbb{N}\)</span>，则
+<span class="math inline">\(\displaystyle\lim_{x \rightarrow x_0}
+(f(x))^n =(\lim_{x \rightarrow x_0}f(x))^n=A^n\)</span>.</p></li>
+<li><p>设函数 <span class="math inline">\(f(\varphi(x))\)</span> 是
+<span class="math inline">\(y=f(u)\)</span>，<span
+class="math inline">\(u=\varphi(x)\)</span> 复合而成的，如果 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow x_0} \varphi(x) =
+u_0\)</span>，且在 <span class="math inline">\(x_0\)</span>
+的一个去心邻域内 <span class="math inline">\(\varphi(x) \ne
+u_0\)</span>，又 <span class="math inline">\(\displaystyle \lim_{u
+\rightarrow u_0}f(u)=A\)</span>，则 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow
+x_0}f(\varphi(x))=A\)</span>.</p></li>
+</ol>
+<h4 id="夹逼定理">夹逼定理</h4>
+<p>​ 设函数 <span class="math inline">\(f(x),g(x),h(x)\)</span>
+在去心邻域 <span class="math inline">\(U\degree(x_0,\delta)\)</span>
+内有定义，且对于 <span class="math inline">\(\forall x \in
+U\degree(x,\delta)\)</span> 满足 <span class="math inline">\(f(x)\le
+g(x) \le h(x)\)</span>，又 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow x_0}f(x)=\lim_{x
+\rightarrow x_0}h(x)=A\)</span>，则有 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow x_0}
+g(x)=A\)</span>.</p>
+<h4 id="两个重要极限">两个重要极限</h4>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow
+x_0}\frac{\sin x}{x}=1\)</span>.</li>
+<li><span class="math inline">\(\displaystyle\lim_{x \rightarrow \infty}
+(1+\frac{1}{x})^x = e\)</span>.</li>
+</ol>
+<h3 id="函数的连续性">函数的连续性</h3>
+<h4 id="连续性的定义">连续性的定义</h4>
+<p>​ 函数连续性的定义：设函数 <span class="math inline">\(f(x)\)</span>
+在 <span class="math inline">\(x_0\)</span> 的某一邻域 <span
+class="math inline">\(U(x_0,\delta)\)</span> 内有定义，且满足 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow x_0} f(x) =
+f(x_0)\)</span>，则 称 <span class="math inline">\(f(x)\)</span> 在
+<span class="math inline">\(x_0\)</span> 处连续。</p>
+<p>​ 函数连续的充要条件为 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow
+x_0^+}f(x)=\lim_{x \rightarrow x_0^-}f(x)=f(x_0)\)</span>.</p>
+<p>​ 若函数在它的定义域内每一点都连续，则称 <span
+class="math inline">\(f(x)\)</span> 为连续函数。</p>
+<h4 id="连续性的性质">连续性的性质</h4>
+<ol type="1">
+<li>若 <span class="math inline">\(f(x),g(x)\)</span> 在 <span
+class="math inline">\(x_0\)</span> 处连续，则 <span
+class="math inline">\(f(x)\pm g(x)\)</span>,<span
+class="math inline">\(f(x)\times g(x)\)</span>,<span
+class="math inline">\(\frac{f(x)}{g(x)}\)</span> 都在 <span
+class="math inline">\(x_0\)</span> 处连续。</li>
+<li>若 <span class="math inline">\(u=\varphi(x)\)</span> 在 <span
+class="math inline">\(x_0\)</span> 处连续，设 <span
+class="math inline">\(u_0 = \varphi(x_0)\)</span>，<span
+class="math inline">\(y=f(u)\)</span> 在 <span
+class="math inline">\(u_0\)</span> 处连续，则 <span
+class="math inline">\(f(\varphi(x))\)</span> 在 <span
+class="math inline">\(x_0\)</span> 处连续。</li>
+</ol>
+<h4 id="闭区间连续函数的性质">闭区间连续函数的性质</h4>
+<p>​ 若 <span class="math inline">\(f(x)\)</span> 在闭区间 <span
+class="math inline">\([a,b]\)</span> 上连续，则：</p>
+<ol type="1">
+<li><span class="math inline">\(f(x)\)</span> 可以在 <span
+class="math inline">\([a,b]\)</span> 上取到最大值和最小值。</li>
+<li>若 <span class="math inline">\(f(a)·f(b) &lt; 0\)</span>，则 <span
+class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\((a,b)\)</span> 内至少有一点满足 <span
+class="math inline">\(f(x)=0\)</span>.</li>
+<li><span class="math inline">\(f(x)\)</span> 可以取到介于 <span
+class="math inline">\([a,b]\)</span>
+上的最大值与最小值之间的任意一个数。</li>
+</ol>
+<p>### 导数概念与运算</p>
+<h4 id="导数的定义">导数的定义</h4>
+<p>​ 设 <span class="math inline">\(y=f(x)\)</span> 在 <span
+class="math inline">\(x_0\)</span> 附近有定义，当自变量 <span
+class="math inline">\(x=x_0\)</span> 有改变量 <span
+class="math inline">\(\Delta x\)</span> 时，相应有 <span
+class="math inline">\(\Delta y=f(x+\Delta x) -f(x)\)</span>. 当 <span
+class="math inline">\(\Delta x \rightarrow 0\)</span> 时，若 <span
+class="math inline">\(\displaystyle \lim_{x \rightarrow x_0}
+\frac{\Delta y}{\Delta x}\)</span> 存在，则函数 <span
+class="math inline">\(f(x)\)</span> 在 <span
+class="math inline">\(x_0\)</span> 处可导，记作 <span
+class="math inline">\(f&#39;(x)=\displaystyle \lim_{x \rightarrow x_0}
+\frac{\Delta y}{\Delta x}\)</span>.</p>
+<p>​ 导数存在定理：<span class="math inline">\(y=f(x)\)</span> 在 <span
+class="math inline">\(x_0\)</span>
+处的导数存在的充要条件是其左、右导数存在且其值相等。</p>
+<p>​ 从几何的角度来看，差商 <span class="math inline">\(\frac{\Delta
+y}{\Delta x}\)</span> 即为曲线 <span
+class="math inline">\(y=f(x)\)</span> 割线的斜率，而 <span
+class="math inline">\(\displaystyle \lim_{\Delta x \rightarrow 0}
+\frac{\Delta y}{\Delta x}\)</span>
+即为这条割线的极限位置（切线）的斜率。</p>
+<h4 id="重要的求导法则">重要的求导法则</h4>
+<p>​
+重要的求导法则包括四则运算法则、复合函数的求导法则和反函数求导法则。</p>
+<ol type="1">
+<li><span class="math inline">\([u(x)\pm v(x)]&#39;=u&#39;(x) \pm
+v&#39;(x)\)</span></li>
+<li><span
+class="math inline">\([u(x)v(x)]&#39;=u&#39;(x)v(x)+u(x)v&#39;(x)\)</span></li>
+<li><span
+class="math inline">\([\frac{u(x)}{v(x)}]&#39;=\frac{u&#39;(x)v(x)-u(x)v&#39;(x)}{v^2(x)}\)</span></li>
+<li><span
+class="math inline">\(f(\varphi(x))=f&#39;(u)\varphi&#39;(x)\)</span></li>
+<li>若 <span class="math inline">\(y=f(x)\)</span> 与 <span
+class="math inline">\(x=\varphi(y)\)</span> 互为反函数，<span
+class="math inline">\(y=f(x)\)</span> 在 <span
+class="math inline">\(x\)</span> 处连续，<span
+class="math inline">\(x=\varphi(y)\)</span> 在 <span
+class="math inline">\(x\)</span> 的导数不为 <span
+class="math inline">\(0\)</span>，则 <span
+class="math inline">\(f&#39;(x)=\frac{1}{\varphi&#39;(y)}\)</span></li>
+</ol>
+<h4 id="常见函数的导数">常见函数的导数</h4>
+<ol type="1">
+<li><p><span class="math inline">\((x^n)&#39;=nx^{n-1}\)</span></p></li>
+<li><p><span class="math inline">\((e^x)&#39;=e^x\)</span></p></li>
+<li><p><span class="math inline">\((a^x)&#39;=a^x\ln
+a\)</span>，推导：<span class="math inline">\((a^x)&#39;=\)</span><span
+class="math inline">\((e^{\ln ax})&#39;=\)</span><span
+class="math inline">\(e^{\ln ax}\ln a=\)</span><span
+class="math inline">\(a^x\ln a\)</span>.</p></li>
+<li><p><span class="math inline">\((\ln x)&#39; =
+\frac{1}{x}\)</span></p></li>
+<li><p><span
+class="math inline">\((\log_ax)&#39;=\frac{1}{x}\log_ae\)</span>，推导：<span
+class="math inline">\((\log_ax)&#39;=\)</span><span
+class="math inline">\((\frac{\ln x}{\ln a})&#39;=\)</span><span
+class="math inline">\(\frac{1}{\ln a} · \frac{1}{x}=\)</span><span
+class="math inline">\(\frac{1}{x}\log_ae\)</span>.</p></li>
+<li><p><span class="math inline">\((\sin x)&#39;=\cos x\)</span>，<span
+class="math inline">\((\cos x)&#39;=-\sin x\)</span></p></li>
+<li><p><span class="math inline">\((\arcsin x)&#39; =
+\frac{1}{\sqrt{1-x^2}}\)</span>，<span class="math inline">\((\arccos
+x)&#39;=-\frac{1}{\sqrt{1-x^2}}\)</span>，<span
+class="math inline">\((\arctan x)&#39;=\frac{1}{1+x^2}\)</span></p></li>
+</ol>
+]]></content>
+      <categories>
+        <category>初等数学</category>
+      </categories>
+      <tags>
+        <tag>高中数学</tag>
+        <tag>函数</tag>
+        <tag>导数</tag>
+      </tags>
+  </entry>
 </search>
