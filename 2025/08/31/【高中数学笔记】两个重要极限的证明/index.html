@@ -19,30 +19,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"11jiang08.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="​ 不等式是数学中表示两个数量之间大小关系的式子。它与方程类似，但用不等号来表示不相等的情况。不等式的解通常不是单个数，而是一个数集。 ​ 在高中数学里，我们将学习一元二次不等式、分式不等式、高词不等式、无理不等式、绝对值不等式、均值不等式和柯西不等式。">
+    <meta name="description" content="​ 本文为 【高中数学笔记】导数基础 的一个补充。 ​ 在高中内容中，有两个重要的极限：1. \(\displaystyle\lim_{x \rightarrow 0}\frac{\sin x}{x}&#x3D;1\)；2. \(\displaystyle \lim _{x \rightarrow \infty}(1+\frac{1}{x})^x &#x3D; e\). 下面用夹逼定理证明这两个极限的存在性">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【高中数学笔记】不等式基础">
-<meta property="og:url" content="https://11jiang08.github.io/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="【高中数学笔记】两个重要极限的证明">
+<meta property="og:url" content="https://11jiang08.github.io/2025/08/31/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/index.html">
 <meta property="og:site_name" content="11jiang08&#39;s Blog">
-<meta property="og:description" content="​ 不等式是数学中表示两个数量之间大小关系的式子。它与方程类似，但用不等号来表示不相等的情况。不等式的解通常不是单个数，而是一个数集。 ​ 在高中数学里，我们将学习一元二次不等式、分式不等式、高词不等式、无理不等式、绝对值不等式、均值不等式和柯西不等式。">
+<meta property="og:description" content="​ 本文为 【高中数学笔记】导数基础 的一个补充。 ​ 在高中内容中，有两个重要的极限：1. \(\displaystyle\lim_{x \rightarrow 0}\frac{\sin x}{x}&#x3D;1\)；2. \(\displaystyle \lim _{x \rightarrow \infty}(1+\frac{1}{x})^x &#x3D; e\). 下面用夹逼定理证明这两个极限的存在性">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250820114607.png">
-<meta property="article:published_time" content="2025-08-21T00:47:32.000Z">
-<meta property="article:modified_time" content="2025-08-30T08:30:16.651Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250831102957.png">
+<meta property="article:published_time" content="2025-08-31T02:11:06.000Z">
+<meta property="article:modified_time" content="2025-08-31T03:29:37.661Z">
 <meta property="article:author" content="11jiang08">
 <meta property="article:tag" content="高中数学">
-<meta property="article:tag" content="不等式">
+<meta property="article:tag" content="极限">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250820114607.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250831102957.png">
 
 
-<link rel="canonical" href="https://11jiang08.github.io/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%9F%BA%E7%A1%80/">
+<link rel="canonical" href="https://11jiang08.github.io/2025/08/31/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://11jiang08.github.io/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%9F%BA%E7%A1%80/","path":"2025/08/21/【高中数学笔记】不等式基础/","title":"【高中数学笔记】不等式基础"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://11jiang08.github.io/2025/08/31/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/","path":"2025/08/31/【高中数学笔记】两个重要极限的证明/","title":"【高中数学笔记】两个重要极限的证明"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>【高中数学笔记】不等式基础 | 11jiang08's Blog</title>
+<title>【高中数学笔记】两个重要极限的证明 | 11jiang08's Blog</title>
   
 
 
@@ -154,7 +154,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -167,7 +167,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E5%85%83%E4%BA%8C%E6%AC%A1%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">一元二次不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E5%BC%8F%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">分式不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%AB%98%E6%AC%A1%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">高次不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E7%90%86%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">无理不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">5.</span> <span class="nav-text">绝对值不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">6.</span> <span class="nav-text">基本不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">7.</span> <span class="nav-text">均值不等式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%AF%E8%A5%BF%E4%B8%8D%E7%AD%89%E5%BC%8F"><span class="nav-number">8.</span> <span class="nav-text">柯西不等式</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -238,10 +237,31 @@
       </a>
     </li>
     <li class="popular-posts-item">
-      <a class="popular-posts-link" href="/2025/08/18/%E3%80%90%E5%88%9D%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9B%A0%E5%BC%8F%E5%88%86%E8%A7%A3%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E5%85%A5%E5%9C%9F/" rel="bookmark">
-        <time class="popular-posts-time">2025-08-18</time>
+      <a class="popular-posts-link" href="/2025/08/17/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E9%9B%86%E5%90%88%E4%B8%8E%E5%91%BD%E9%A2%98%E5%9F%BA%E7%A1%80/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-17</time>
         <br>
-      【初中数学笔记】因式分解：从入门到入土
+      【高中数学笔记】集合与命题基础
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%9F%BA%E7%A1%80/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-21</time>
+        <br>
+      【高中数学笔记】不等式基础
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/27/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E6%8E%92%E5%88%97%E7%BB%84%E5%90%88%E4%B8%8E%E4%BA%8C%E9%A1%B9%E5%BC%8F%E5%AE%9A%E7%90%86%E5%9F%BA%E7%A1%80/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-27</time>
+        <br>
+      【高中数学笔记】排列组合与二项式定理基础
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E8%AF%81%E6%98%8E%E6%96%B9%E6%B3%95/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-21</time>
+        <br>
+      【高中数学笔记】均值不等式的证明方法
       </a>
     </li>
   </ul>
@@ -264,7 +284,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://11jiang08.github.io/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%8D%E7%AD%89%E5%BC%8F%E5%9F%BA%E7%A1%80/">
+    <link itemprop="mainEntityOfPage" href="https://11jiang08.github.io/2025/08/31/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -277,12 +297,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="【高中数学笔记】不等式基础 | 11jiang08's Blog">
+      <meta itemprop="name" content="【高中数学笔记】两个重要极限的证明 | 11jiang08's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【高中数学笔记】不等式基础
+          【高中数学笔记】两个重要极限的证明
         </h1>
 
         <div class="post-meta-container">
@@ -292,15 +312,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2025-08-21 08:47:32" itemprop="dateCreated datePublished" datetime="2025-08-21T08:47:32+08:00">2025-08-21</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-08-30 16:30:16" itemprop="dateModified" datetime="2025-08-30T16:30:16+08:00">2025-08-30</time>
+      <time title="创建时间：2025-08-31 10:11:06 / 修改时间：11:29:37" itemprop="dateCreated datePublished" datetime="2025-08-31T10:11:06+08:00">2025-08-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -319,14 +333,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.2k</span>
+      <span>727</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
+      <span>3 分钟</span>
     </span>
 </div>
 
@@ -336,138 +350,91 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>​
-不等式是数学中表示两个数量之间大小关系的式子。它与方程类似，但用不等号来表示不相等的情况。不等式的解通常不是单个数，而是一个数集。</p>
-<p>​
-在高中数学里，我们将学习一元二次不等式、分式不等式、高词不等式、无理不等式、绝对值不等式、均值不等式和柯西不等式。</p>
+    <div class="post-body" itemprop="articleBody"><p>​ 本文为 <a
+target="_blank" rel="noopener" href="https://blog.80gnaij11.top/2025/08/30/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%AF%BC%E6%95%B0%E5%9F%BA%E7%A1%80/">【高中数学笔记】导数基础</a>
+的一个补充。</p>
+<p>​ 在高中内容中，有两个重要的极限：1. <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow 0}\frac{\sin
+x}{x}=1\)</span>；2. <span class="math inline">\(\displaystyle \lim _{x
+\rightarrow \infty}(1+\frac{1}{x})^x = e\)</span>.
+下面用夹逼定理证明这两个极限的存在性。</p>
 <span id="more"></span>
-<h3 id="一元二次不等式">一元二次不等式</h3>
-<p>​ 一元二次不等式的基本形式为 <span
-class="math inline">\(ax^2+bx+c&gt;0\)</span> 或 <span
-class="math inline">\(ax^2+bx+c \geq 0\)</span> <span
-class="math inline">\((a&gt;0)\)</span>.
-我们通常与二次函数的图像结合在一起解一元二次不等式。</p>
-<p>​ 设方程 <span class="math inline">\(ax^2+bx+c=0\)</span> 的两根为
-<span class="math inline">\(x_1,x_2(x_1 \leq x_2)\)</span>，<span
-class="math inline">\(\Delta=b^2-4ac\)</span>.</p>
-<ol type="1">
-<li><span class="math inline">\(\Delta &gt;0\)</span>：<span
-class="math inline">\(ax^2+bx+c&gt;0\)</span> 的解集为 <span
-class="math inline">\(\{x|x&lt;x_1或x&gt;x_2\}\)</span>，<span
-class="math inline">\(ax^2+bx+c &lt; 0\)</span> 的解集为 <span
-class="math inline">\(\{x|x_1 &lt; x &lt; x_2 \}\)</span>.</li>
-<li><span class="math inline">\(\Delta =0\)</span>：<span
-class="math inline">\(ax^2+bx+c&gt;0\)</span> 的解集为 <span
-class="math inline">\(\{x|x \neq -\frac{b}{2a}\}\)</span>，<span
-class="math inline">\(ax^2+bx+c &lt; 0\)</span> 的解集为 <span
-class="math inline">\(\varnothing\)</span>.</li>
-<li><span class="math inline">\(\Delta &lt; 0\)</span>：<span
-class="math inline">\(ax^2+bx+c&gt;0\)</span> 的解集为 <span
-class="math inline">\(\mathbb{R}\)</span>，<span
-class="math inline">\(ax^2+bx+c &lt; 0\)</span> 的解集为 <span
-class="math inline">\(\varnothing\)</span>.</li>
-</ol>
-<h3 id="分式不等式">分式不等式</h3>
-<p>​ 分式不等式通常转换为整式不等式，同时考虑分母不能为零。</p>
-<ol type="1">
-<li><span class="math inline">\(\frac{f(x)}{g(x)}&gt;0\)</span>：<span
-class="math inline">\(f(x)g(x)&gt;0\)</span>，在这种情况下，解集中一定不包含分母为
-<span class="math inline">\(0\)</span> 的情况。</li>
-<li><span class="math inline">\(\frac{f(x)}{g(x)} \geq 0\)</span>：<span
-class="math inline">\(f(x)g(x)\geq 0\)</span> 且 <span
-class="math inline">\(g(x) \neq 0\)</span>.</li>
-</ol>
-<h3 id="高次不等式">高次不等式</h3>
-<p>​ 高次不等式是指次数大于 <span class="math inline">\(2\)</span>
-的多项式不等式，如 <span
-class="math inline">\(x^3-4x^2+3&gt;0\)</span>，通常将高次不等式整理为标准形式，然后将
-<span class="math inline">\(f(x)\)</span>
-因式分解，从而确定多项式的根。在数轴上画出 <span
-class="math inline">\(f(x)\)</span>
-的粗略图像，通过图像判断不等式的解集，注意是否包含零点。具体口诀为
-“奇穿偶不穿”，如果根的次数为奇数，则图像穿过零点，反之不穿过。</p>
-<p>​ 如 <span class="math inline">\(x^3-4x^2+3&gt;0\)</span>，因式分解为
-<span class="math inline">\((x-1)(x^2-3x-3)&gt;0\)</span>，三个根分别为
-<span
-class="math inline">\(x_1=1,x_2=\frac{3-\sqrt{21}}{2},x_3=\frac{3+\sqrt{21}}{2}\)</span>，画出图像：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250820114607.png" alt="img1" style="zoom: 33%;" /></p>
-<p>​ 可以看出，原不等式的解集为 <span
-class="math inline">\((\frac{3-\sqrt{21}}{2},1) \cup
-(\frac{3+\sqrt{21}}{2},+\infty)\)</span>.</p>
-<h3 id="无理不等式">无理不等式</h3>
-<p>​
-无理不等式指的是未知数含有根号的不等式，一般情况下我们将含有根号的部分放到一边，不含根号的部分放到另一边，然后两边平方。但同时要考虑根号内数的正负性。</p>
-<ol type="1">
-<li><span
-class="math inline">\(\sqrt{f(x)}&gt;\sqrt{g(x)}\)</span>：<span
-class="math inline">\(\begin{cases}
-f(x)\geq0\\g(x)\geq0\\f(x)&gt;g(x)\end{cases}\)</span></li>
-<li><span class="math inline">\(\sqrt{f(x)}&gt;g(x)\)</span>：<span
-class="math inline">\(\begin{cases}f(x)\geq0\\g(x)\geq0\\f(x)&gt;g(x)^2\end{cases}\)</span>
-或 <span
-class="math inline">\(\begin{cases}f(x)\geq0\\g(x)&lt;0\end{cases}\)</span></li>
-</ol>
-<h3 id="绝对值不等式">绝对值不等式</h3>
-<p>​
-绝对值不等式是指含有绝对值符号的、不等号连接的代数式。在解绝对值不等式时，要结合绝对值的定义，把它转化为普通不等式来求解。解绝对值不等式的方法通常有：1.
-定义法；2. 零点分段法；3. 平方法；4.
-图像法。其中零点分段法最为常用。</p>
-<p>​ 绝对值不等式中一个重要的不等式为三角不等式： <span
-class="math display">\[
-||a|-|b|| \leq |a+b| \leq |a|+|b|
-\]</span> ​ 其中当 <span class="math inline">\(a,b\)</span>
-同号时右边取等号，<span class="math inline">\(a,b\)</span>
-异号时左边取等号。</p>
-<h3 id="基本不等式">基本不等式</h3>
-<p>​ 由 <span class="math inline">\((a-b)^2 \geq 0\)</span> 可知 <span
-class="math inline">\(a^2-2ab+b^2 \geq 0\)</span>，即 <span
-class="math inline">\(a^2+b^2 \geq 2ab\)</span>.</p>
-<p>​ 由 <span class="math inline">\((a-b)^2 \geq 0\)</span> 可知 <span
-class="math inline">\((a+b)^2 \geq 4ab\)</span>，即 <span
-class="math inline">\(ab \leq \frac{1}{4}(a+b)^2\)</span>.</p>
-<p>​ <span class="math inline">\((a+b)^2 \geq 4ab\)</span> 两边开平方得
-<span class="math inline">\(a+b \geq 2\sqrt{ab}\)</span>，当 <span
-class="math inline">\(a=b\)</span> 时取到等号。
-这个式子称为基本不等式。</p>
-<p>​ 基本不等式不仅适用于两个数，也可以推广到多个非负实数：</p>
-<p>​ 三个数：<span class="math inline">\(\frac{a+b+c}{3}\geq
-\sqrt[3]{abc}\)</span></p>
-<p>​ <span class="math inline">\(n\)</span> 个数：<span
-class="math inline">\(\frac{a_1+a_2+...+a_n}{n} \geq
-\sqrt[n]{a_1a_2...a_n}\)</span>，当 <span
-class="math inline">\(a_1=a_2=...=a_n\)</span> 时取到等号。</p>
-<h3 id="均值不等式">均值不等式</h3>
-<p>​ 均值不等式是基本不等式的推广形式。记 <span
-class="math inline">\(a_1,a_2,...,a_n\)</span> 为 <span
-class="math inline">\(n\)</span> 个正实数，其一般形式为： <span
-class="math display">\[
-\sqrt{\frac{\sum a_i^2}{n}} \geq \frac{\sum a_i}{n} \geq \sqrt[n]{\prod
-x_i} \geq \frac{n}{\sum \frac{1}{x_i}}
-\]</span> ​ 当 <span class="math inline">\(x_1=x_2=...=x_n\)</span>
-时取到等号。</p>
-<p>​ 为了方便记忆，我们称为 平方平均 <span
-class="math inline">\(\geq\)</span> 算术平均 <span
-class="math inline">\(\geq\)</span> 几何平均 <span
-class="math inline">\(\geq\)</span> 调和平均。</p>
-<h3 id="柯西不等式">柯西不等式</h3>
-<p>​ 柯西不等式的二元形式：<span
-class="math inline">\((a_1^2+a_2^2)(b_1^2+b_2^2)\geq(a_1b_1+a_2b_2)^2\)</span>，当
-<span class="math inline">\(\frac{a_1}{b_1}=\frac{a_2}{b_2}\)</span>
-时取到等号。</p>
-<p>​ 柯西不等式的一般形式：<span class="math inline">\((\sum a_i^2)(\sum
-b_i^2)\geq(\sum a_ib_i)^2\)</span>.</p>
-<p>​ 柯西不等式的证明：</p>
-<p>​ 构造二次函数 <span
-class="math inline">\(f(x)=(a_1x+b_1)^2+(a_2x+b_2)^2+...+(a_nx+b_n)^2\)</span></p>
+<p>​ 首先证明 <span class="math inline">\(\displaystyle\lim_{x
+\rightarrow 0}\frac{\sin x}{x}=1\)</span>：</p>
+<p>​ 由于 <span class="math inline">\(\displaystyle\frac{\sin
+x}{x}\)</span> 是偶函数，所以证明 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow 0^+}\frac{\sin
+x}{x}=1\)</span> 即可，<span class="math inline">\(\displaystyle\lim_{x
+\rightarrow 0^-}\frac{\sin x}{x}=1\)</span> 同理。</p>
+<p>​ 首先考虑 <span
+class="math inline">\(0&lt;x&lt;\frac{\pi}{2}\)</span>
+的情况，在如图所示的单位圆中，<span class="math inline">\(S_{\triangle
+ABO}&lt;S_{扇形ABO}&lt;S_{\triangle AOE}\)</span>，所以有 <span
+class="math inline">\(\frac{1}{2}\sin
+x&lt;\frac{1}{2}x&lt;\frac{1}{2}\tan x\)</span>，即 <span
+class="math inline">\(1&lt;\frac{\sin x}{x}&lt; \frac{1}{\cos
+x}\)</span>.</p>
+<p><img src="https://cdn.jsdelivr.net/gh/11jiang08/img-bed/IMG20250831102957.png" alt="img1" style="zoom:25%;" /></p>
+<p>​ 又有 <span class="math inline">\(\displaystyle \lim_{x \rightarrow
+0^+} \cos x=1\)</span>，即 <span class="math inline">\(\displaystyle
+\lim _{x \rightarrow 0^+}\frac{1}{\cos x}=1\)</span>，根据夹逼定理即有
+<span class="math inline">\(\displaystyle \lim _{x \rightarrow
+0^+}\frac{\sin x}{x}=1\)</span>.</p>
+<p>​ 当 <span class="math inline">\(-\frac{\pi}{2}&lt;x&lt;0\)</span>
+时，令 <span class="math inline">\(y=-x\)</span>，即 <span
+class="math inline">\(0&lt;y&lt;\frac{\pi}{2}\)</span>，<span
+class="math inline">\(x \rightarrow 0^- \Leftrightarrow y \rightarrow
+0^+\)</span>，则 <span class="math inline">\(\displaystyle \lim_{x
+\rightarrow 0 ^-}\frac{\sin x}{x}=\lim_{y \rightarrow 0 ^+}\frac{\sin
+x}{x} =1\)</span>，综上所述即有 <span
+class="math inline">\(\displaystyle\lim_{x \rightarrow 0}\frac{\sin
+x}{x}=1\)</span>.</p>
+<hr />
+<p>​ 接下来证明 <span class="math inline">\(\displaystyle \lim _{x
+\rightarrow \infty}(1+\frac{1}{x})^x = e\)</span>，该证明更加复杂。</p>
+<p>​ 首先证明数列 <span class="math inline">\((1+\frac{1}{n})^n\)</span>
+存在极限。令 <span
+class="math inline">\(a_n=(1+\frac{1}{n})^n\)</span>，有：</p>
 <p>​ <span
-class="math inline">\(=(a_1^2+a_2^2+...+a_n^2)x^2+2(a_1b_1+a_2b_2+...+a_nb_n)x\)</span></p>
-<p>​ <span class="math inline">\(+(b_1^2+b_2^2+...+b_n^2)\)</span></p>
-<p>​ 由于 <span class="math inline">\(f(x)\geq 0\)</span> 恒成立，则由
-$&lt; 0 $ 可得 <span class="math display">\[
-4(a_1b_1+a_2b_2+...+a_nb_n)^2-4(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)&lt;0
-\]</span> ​ 即 <span class="math display">\[
-(a_1^2+a_2^2+...+a_n^2)(b_1^2+b_2^2+...+b_n^2)&gt;(a_1b_1+a_2b_2+...+a_nb_n)^2
-\]</span></p>
+class="math inline">\(a_n=\displaystyle\sum_{i=0}^{n}C_n^i·(\frac{1}{n})^i=\sum_{i=0}^n\frac{1}{i!}·(1-\frac{1}{n})(1-\frac{2}{n})...(1-\frac{i}{n})\)</span>，于是
+<span class="math inline">\(\displaystyle
+a_{n+1}=\sum_{i=0}^{n+1}\frac{1}{i!}·(1-\frac{1}{n})(1-\frac{2}{n})...(1-\frac{i}{n})\)</span>.</p>
+<p>​ 做差可得 <span class="math inline">\(a_{n+1}&gt;a_n\)</span>，于是
+<span class="math inline">\(\{a_n\}\)</span> 是一个单调递增序列。</p>
+<p>​ 又有 <span
+class="math inline">\(a_n&lt;\displaystyle\sum_{i=0}^{n}\frac{1}{i!}&lt;1+1+\sum_{i=1}^{n-1}
+(\frac{1}{i}-\frac{1}{i+1})&lt;3\)</span>，因此 <span
+class="math inline">\(\{a_n\}\)</span> 是一个单调有界数列，于是 <span
+class="math inline">\(\displaystyle\lim_{n \rightarrow
+\infty}a_n\)</span> 存在，其极限值是一个无理数，我们将其记作 <span
+class="math inline">\(e\)</span>.</p>
+<p>​ 再证明 <span class="math inline">\(\displaystyle\lim_{x \rightarrow
+\infty}(1+\frac{1}{x})^x=e\)</span>.</p>
+<p>​ 当 <span class="math inline">\(x&gt;0\)</span> 时，令 <span
+class="math inline">\(n=[x]\)</span>，于是 <span
+class="math inline">\(\displaystyle 1+\frac{1}{n+1}&lt;1+\frac{1}{x} \le
+1 + \frac{1}{n}\)</span>，且 <span class="math inline">\(\displaystyle
+(1+\frac{1}{n+1})^n\le (1+\frac{1}{x})^x \le
+(1+\frac{1}{n})^{n+1}\)</span>.</p>
+<p>​ 又 <span class="math inline">\(\displaystyle \lim_{n\rightarrow
++\infty}(1+\frac{1}{n+1})^{n}=\lim_{n\rightarrow
++\infty}(1+\frac{1}{n+1})^{n+1-1}=\lim_{n\rightarrow
++\infty}[(1+\frac{1}{n+1})^{n+1}·(1+\frac{1}{n+1})^{-1}]=e\)</span>.</p>
+<p>​ <span class="math inline">\(\displaystyle \lim_{n\rightarrow +
+\infty}\displaystyle (1+\frac{1}{n})^{n+1}=\lim_{n\rightarrow +
+\infty}[(1+\frac{1}{n})^n·(1+\frac{1}{n})]=e\)</span>.</p>
+<p>​ 另外 <span class="math inline">\(x \rightarrow +\infty
+\Leftrightarrow n \rightarrow \infty\)</span>，由夹逼定理得 <span
+class="math inline">\(\displaystyle\lim_{x\rightarrow+\infty}(1+\frac{1}{x})^x=e\)</span>.</p>
+<p>​ 当 <span class="math inline">\(x&lt;0\)</span> 时，令 <span
+class="math inline">\(y=-x\)</span>，$x-y +$，于是有</p>
+<p>​ <span
+class="math inline">\(\displaystyle(1+\frac{1}{x})^x=(1-\frac{1}{y})^{-y}=(1+\frac{1}{y-1})^y=(1+\frac{1}{y-1})^{y-1}·(1+\frac{1}{y-1})\)</span>.</p>
+<p>​ 因此 <span class="math inline">\(\displaystyle\lim_{x \rightarrow
+-\infty}(1+\frac{1}{x})^x=\lim_{y\rightarrow
++\infty}[(1+\frac{1}{y-1})^{y-1}·(1+\frac1{y-1})]=e\)</span>.</p>
+<p>​ 综上，有 <span class="math inline">\(\displaystyle\lim_{x
+\rightarrow \infty}(1+\frac{1}{x})^x=e\)</span>.</p>
 
     </div>
 
@@ -478,21 +445,18 @@ $&lt; 0 $ 可得 <span class="math display">\[
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6/" rel="tag"># 高中数学</a>
-              <a href="/tags/%E4%B8%8D%E7%AD%89%E5%BC%8F/" rel="tag"># 不等式</a>
+              <a href="/tags/%E6%9E%81%E9%99%90/" rel="tag"># 极限</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2025/08/19/%E3%80%90Hexo%E3%80%91%E5%8D%9A%E5%AE%A2%E6%96%B0%E5%A2%9E%E7%9A%84%E8%8B%A5%E5%B9%B2%E5%8A%9F%E8%83%BD/" rel="prev" title="【Hexo】博客新增的若干功能">
-                  <i class="fa fa-angle-left"></i> 【Hexo】博客新增的若干功能
+                <a href="/2025/08/30/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%AF%BC%E6%95%B0%E5%9F%BA%E7%A1%80/" rel="prev" title="【高中数学笔记】导数基础">
+                  <i class="fa fa-angle-left"></i> 【高中数学笔记】导数基础
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2025/08/21/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%9D%87%E5%80%BC%E4%B8%8D%E7%AD%89%E5%BC%8F%E7%9A%84%E8%AF%81%E6%98%8E%E6%96%B9%E6%B3%95/" rel="next" title="【高中数学笔记】均值不等式的证明方法">
-                  【高中数学笔记】均值不等式的证明方法 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
