@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha256-dABdfBfUoC8vJUBOwGVdm8L9qlMWaHTIfXt+7GnZCIo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"11jiang08.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.23.2","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":false,"nav":null,"activeClass":"utterances"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="​ 实数由有理数和无理数组成，记作 \(\mathbb{R}\)。有理数包括整数和分数，能表示为有限小数或无限循环小数；无理数是无限不循环小数。实数域是一个有序完备数域，数轴可以形象表示实数及区间。 函数是变量间的一一对应关系，映射是更一般的对应。常见函数包括常数函数、幂函数、指数函数、对数函数、三角函数及其反函数等；它们通过复合运算和四则运算构成初等函数。此外，还有双曲函数、取整函数、狄利克雷">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【高等数学笔记】实数、变量与函数">
+<meta property="og:url" content="https://11jiang08.github.io/2025/09/03/%E3%80%90%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%AE%9E%E6%95%B0%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E5%87%BD%E6%95%B0/index.html">
+<meta property="og:site_name" content="11jiang08&#39;s Blog">
+<meta property="og:description" content="​ 实数由有理数和无理数组成，记作 \(\mathbb{R}\)。有理数包括整数和分数，能表示为有限小数或无限循环小数；无理数是无限不循环小数。实数域是一个有序完备数域，数轴可以形象表示实数及区间。 函数是变量间的一一对应关系，映射是更一般的对应。常见函数包括常数函数、幂函数、指数函数、对数函数、三角函数及其反函数等；它们通过复合运算和四则运算构成初等函数。此外，还有双曲函数、取整函数、狄利克雷">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-09-03T07:19:43.000Z">
+<meta property="article:modified_time" content="2025-09-03T14:16:33.832Z">
+<meta property="article:author" content="11jiang08">
+<meta property="article:tag" content="函数">
+<meta property="article:tag" content="高等数学">
+<meta property="article:tag" content="实数">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://11jiang08.github.io/2025/09/03/%E3%80%90%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%AE%9E%E6%95%B0%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E5%87%BD%E6%95%B0/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://11jiang08.github.io/2025/09/03/%E3%80%90%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%AE%9E%E6%95%B0%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E5%87%BD%E6%95%B0/","path":"2025/09/03/【高等数学笔记】实数、变量与函数/","title":"【高等数学笔记】实数、变量与函数"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【高等数学笔记】实数、变量与函数 | 11jiang08's Blog</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
+<script src="/js/third-party/search/local-search.js" defer></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js" defer></script>
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">11jiang08's Blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Attention is all you need.</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li><li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">实数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E7%90%86%E6%95%B0%E4%B8%8E%E6%97%A0%E7%90%86%E6%95%B0"><span class="nav-number">1.1.</span> <span class="nav-text">有理数与无理数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E6%95%B0%E9%9B%86%E7%9A%84%E6%80%A7%E8%B4%A8"><span class="nav-number">1.2.</span> <span class="nav-text">实数集的性质</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E8%BD%B4%E4%B8%8E%E5%8C%BA%E9%97%B4"><span class="nav-number">1.3.</span> <span class="nav-text">数轴与区间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%9D%E5%AF%B9%E5%80%BC"><span class="nav-number">1.4.</span> <span class="nav-text">绝对值</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E4%B8%8E%E5%87%BD%E6%95%B0"><span class="nav-number">2.</span> <span class="nav-text">变量与函数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">函数的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%98%A0%E5%B0%84"><span class="nav-number">2.2.</span> <span class="nav-text">映射</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E5%88%9D%E7%AD%89%E5%87%BD%E6%95%B0"><span class="nav-number">2.3.</span> <span class="nav-text">基本初等函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E5%90%88%E5%87%BD%E6%95%B0"><span class="nav-number">2.4.</span> <span class="nav-text">复合函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E9%87%8D%E8%A6%81%E5%87%BD%E6%95%B0"><span class="nav-number">2.5.</span> <span class="nav-text">其它重要函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E7%95%8C%E5%87%BD%E6%95%B0"><span class="nav-number">2.6.</span> <span class="nav-text">有界函数</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="11jiang08"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">11jiang08</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">15</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/11jiang08" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;11jiang08" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://stackoverflow.com/users/27713753/" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;27713753&#x2F;" rel="noopener me" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:jwb20091108@gmail.com" title="E-Mail → mailto:jwb20091108@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/11jiang08" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;11jiang08" rel="noopener me" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/--11jiang08--" title="Zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;--11jiang08--" rel="noopener me" target="_blank"><i class="fab fa-zhihu fa-fw"></i>Zhihu</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/1480826359" title="bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;1480826359" rel="noopener me" target="_blank"><i class="fab fa-bilibili fa-fw"></i>bilibili</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="sidebar-inner sidebar-post-related">
+          <div class="animated">
+              <div class="links-of-blogroll-title"><i class="fa fa-signs-post fa-fw"></i>
+    相关文章
+  </div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/31/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-31</time>
+        <br>
+      【高中数学笔记】两个重要极限的证明
+      </a>
+    </li>
+    <li class="popular-posts-item">
+      <a class="popular-posts-link" href="/2025/08/30/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%AF%BC%E6%95%B0%E5%9F%BA%E7%A1%80/" rel="bookmark">
+        <time class="popular-posts-time">2025-08-30</time>
+        <br>
+      【高中数学笔记】导数基础
+      </a>
+    </li>
+  </ul>
+
+          </div>
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://11jiang08.github.io/2025/09/03/%E3%80%90%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E5%AE%9E%E6%95%B0%E3%80%81%E5%8F%98%E9%87%8F%E4%B8%8E%E5%87%BD%E6%95%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="11jiang08">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="11jiang08's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【高等数学笔记】实数、变量与函数 | 11jiang08's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【高等数学笔记】实数、变量与函数
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-09-03 15:19:43 / 修改时间：22:16:33" itemprop="dateCreated datePublished" datetime="2025-09-03T15:19:43+08:00">2025-09-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">高等数学</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%EF%BC%88%E5%8C%97%E4%BA%AC%E5%A4%A7%E5%AD%A6%E5%87%BA%E7%89%88%E7%A4%BE%EF%BC%89/" itemprop="url" rel="index"><span itemprop="name">高等数学（北京大学出版社）</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>​ 实数由有理数和无理数组成，记作 <span
+class="math inline">\(\mathbb{R}\)</span>。有理数包括整数和分数，能表示为有限小数或无限循环小数；无理数是无限不循环小数。实数域是一个有序完备数域，数轴可以形象表示实数及区间。</p>
+<p>函数是变量间的一一对应关系，映射是更一般的对应。常见函数包括常数函数、幂函数、指数函数、对数函数、三角函数及其反函数等；它们通过复合运算和四则运算构成初等函数。此外，还有双曲函数、取整函数、狄利克雷函数等特殊函数。</p>
+<h3 id="实数">实数</h3>
+<h4 id="有理数与无理数">有理数与无理数</h4>
+<p>​ 自然数：<span class="math inline">\(1,2,3,...\)</span>，自然数集用
+<span class="math inline">\(\mathbb{N}\)</span> 表示，整数集用 <span
+class="math inline">\(\mathbb{Z}\)</span> 表示，有理数集用 <span
+class="math inline">\(\mathbb{Q}\)</span> 表示，即 <span
+class="math display">\[
+\mathbb{Q}=\{\frac{m}{n}|m,n \in \mathbb{Z},n&gt;0,(m,n)=1\}
+\]</span> ​
+有理数集内的数作四则运算后仍在有理数集内。粗略地说，对四则运算封闭的数集合称为数域，有理数集
+<span class="math inline">\(\mathbb{Q}\)</span> 就是一个数域。</p>
+<p>​
+有理数可以表示为有穷小数或无限循环小数，而无理数则为无限不循环小数。有理数和无理数统称为实数，实数集记作
+<span class="math inline">\(\mathbb{R}\)</span>.</p>
+<h4 id="实数集的性质">实数集的性质</h4>
+<p>​ 实数集具有以下性质：</p>
+<ol type="1">
+<li>是一个数域；</li>
+<li>对加法和乘法满足交换律、结合律与分配律；</li>
+<li>是一个有序数域，也就是说，对于 <span class="math inline">\(\forall
+a,b \in \mathbb{R}\)</span> 且 <span class="math inline">\(a \ne
+b\)</span>，<span class="math inline">\(a&lt;b\)</span> 与 <span
+class="math inline">\(b&lt;a\)</span> 有且仅有一种情况成立；</li>
+<li>实数域对极限运算是封闭的，称为完备性，有时也称为连续性；</li>
+<li>由第 <span class="math inline">\(4\)</span>
+条性质可以看出，实数域内，任意一个单调有界序列一定有极限存在；</li>
+</ol>
+<h4 id="数轴与区间">数轴与区间</h4>
+<p>​ 在一条直线上规定原点 <span
+class="math inline">\(O\)</span>，正方向与单位长度。我们就得到一个数轴。实数集
+<span class="math inline">\(\mathbb{R}\)</span>
+与数轴上的点是一一对应的。实数集的有序性正反映了数轴上点的有序性。</p>
+<p>​ 给定两个实数 <span
+class="math inline">\(a,b(a&lt;b)\)</span>，把集合 <span
+class="math inline">\(\{x|a \le x \le b\}\)</span> 称为闭区间，记作
+<span class="math inline">\([a,b]\)</span>；把 <span
+class="math inline">\(\{x|a &lt; x &lt; b\}\)</span> 称为开区间，记作
+<span class="math inline">\((a,b)\)</span>. 类似地，也有半开半闭区间，为
+<span class="math inline">\([a,b)\)</span> 或 <span
+class="math inline">\((a,b]\)</span>. 有时 <span
+class="math inline">\(\mathbb{R}\)</span> 可以表示成无穷区间 <span
+class="math inline">\((-\infty,+\infty)\)</span>，此外 <span
+class="math inline">\([a,+\infty)\)</span>，<span
+class="math inline">\((-\infty,b]\)</span>
+等也可称作无穷区间，以上统称为区间。</p>
+<p>​ 开区间与闭区间的长度为 <span
+class="math inline">\(b-a\)</span>，半径为 <span
+class="math inline">\(\frac{b-a}{2}\)</span>.</p>
+<p>​ 对于任意区间 <span
+class="math inline">\((a,b)\)</span>，无论其长度多么小，其间总有有理数和无理数。具有此种性质的数集合称作在数轴上处处稠密的。</p>
+<p>​ 设 <span class="math inline">\((a,b)\)</span>
+为任意一个开区间，<span class="math inline">\(a,b \in
+\mathbb{Q}\)</span>，则 <span
+class="math inline">\(\frac{a+b}{2}\)</span> 为有理数且 <span
+class="math inline">\(a&lt;\frac{a+b}{2}&lt;b\)</span>，因此有理数在数轴上处处稠密。</p>
+<p>​ 设 <span class="math inline">\((a,b)\)</span>
+为任意一个开区间，<span class="math inline">\(a,b \in
+\mathbb{R}\)</span>，则 <span
+class="math inline">\(a+\frac{b-a}{\sqrt{2}}\)</span> 为无理数且 <span
+class="math inline">\(a&lt;a+\frac{b-a}{\sqrt{2}}&lt;b\)</span>，因此无理数在数轴上处处稠密。</p>
+<h4 id="绝对值">绝对值</h4>
+<p>​ 对于 <span class="math inline">\(x \in
+\mathbb{R}\)</span>，其绝对值记作 <span
+class="math inline">\(|x|\)</span>，它的定义为 <span
+class="math display">\[
+|x|=\begin{cases}x(x\ge 0)\\-x(x&lt;0) \end{cases}
+\]</span></p>
+<p>​ 几何上，绝对值反映了 <span class="math inline">\(x\)</span>
+在数轴上的点到原点的距离。</p>
+<p>​ 绝对值有以下性质：</p>
+<ol type="1">
+<li><span class="math inline">\(|x| \ge 0\)</span>；</li>
+<li><span class="math inline">\(||x|-|y|| \le |x+y| \le
+|x|+|y|\)</span>；</li>
+<li><span class="math inline">\(|a-c| \le |a-b| +
+|b-c|\)</span>，其几何意义是：数轴上 <span
+class="math inline">\(c\)</span> 到 <span
+class="math inline">\(a\)</span> 的距离之和小于等于 <span
+class="math inline">\(b\)</span> 到 <span
+class="math inline">\(a,c\)</span> 的距离之和。</li>
+</ol>
+<p>​ 对于形如 <span class="math inline">\(|x-a|&lt;r\)</span>
+的不等式，点 <span class="math inline">\(x\)</span> 必然落入以 <span
+class="math inline">\(a\)</span> 为中心，半径为 <span
+class="math inline">\(r\)</span> 的区间 <span
+class="math inline">\((a-r,a+r)\)</span> 内，我们将区间称为点 <span
+class="math inline">\(a\)</span> 的 <span
+class="math inline">\(r\)</span> 邻域，记作 <span
+class="math inline">\(U(a,r)\)</span>，将 <span
+class="math inline">\(U^\circ(a,r)\)</span> 称为点 <span
+class="math inline">\(a\)</span> 的空心 <span
+class="math inline">\(r\)</span> 邻域，简称空心邻域（或去心邻域）。</p>
+<h3 id="变量与函数">变量与函数</h3>
+<h4 id="函数的定义">函数的定义</h4>
+<p>​ 不断变化着的量称为变量，变量间的依赖关系称为函数。</p>
+<p>​ 函数的确切定义：设 <span class="math inline">\(x\)</span> 与 <span
+class="math inline">\(y\)</span> 是两个变量，分别在实数集合 <span
+class="math inline">\(X\)</span> 和 <span
+class="math inline">\(Y\)</span> 中取值，假如有一种对应关系 <span
+class="math inline">\(f\)</span>，使得对于 <span
+class="math inline">\(\forall x \in X\)</span>，都能找到唯一确定的 <span
+class="math inline">\(y \in Y\)</span> 与其对应，则我们称 <span
+class="math inline">\(f\)</span> 是一个函数，记作 <span
+class="math inline">\(f:X \rightarrow Y\)</span>，也记作 <span
+class="math inline">\(y=f(x),x\in X\)</span>，其中 <span
+class="math inline">\(X\)</span> 为函数的定义域，<span
+class="math inline">\(x\)</span> 是自变量，<span
+class="math inline">\(y\)</span> 是因变量，<span
+class="math inline">\(y\)</span> 是 <span
+class="math inline">\(x\)</span> 的函数。</p>
+<p>​ 用几个表达式给出的函数称为分段函数。</p>
+<p>​ 我们可以将序列 <span class="math inline">\(\{a_n\}\)</span>
+看作是定义在正整数集 <span class="math inline">\(N^*\)</span>
+上的一个函数。</p>
+<h4 id="映射">映射</h4>
+<p>​ 对于集合 <span
+class="math inline">\(E,F\)</span>，如果存在某种对应关系 <span
+class="math inline">\(f\)</span>，使得 <span
+class="math inline">\(\forall x \in E\)</span> 都有唯一确定的 <span
+class="math inline">\(y \in F\)</span> 与其对应，则称 <span
+class="math inline">\(f:E \rightarrow F\)</span> 是集合 <span
+class="math inline">\(E\)</span> 与 <span
+class="math inline">\(F\)</span> 的一个映射。<span
+class="math inline">\(y\)</span> 称为像点，全体像点的集合称为 <span
+class="math inline">\(E\)</span> 的像集合 <span
+class="math inline">\(f(E)\)</span>，显然 <span
+class="math inline">\(f(E)\subset F\)</span>.</p>
+<p>​ 若 <span
+class="math inline">\(f(E)=F\)</span>，则称这个映射为满射。若对于 <span
+class="math inline">\(\forall x_1,x_2 \in E,x_1 \neq x_2 \Rightarrow
+f(x_1) \neq f(x_2)\)</span>，则称 <span class="math inline">\(f\)</span>
+为单射。</p>
+<p>​ 若映射既是满射又是单射，则称为一一映射。此时对于 <span
+class="math inline">\(\forall y \in F\)</span>，都有唯一确定的 <span
+class="math inline">\(x\)</span> 与其对应，此时存在 <span
+class="math inline">\(f\)</span> 的逆映射 <span
+class="math inline">\(f^{-1}:F \rightarrow E\)</span>.</p>
+<h4 id="基本初等函数">基本初等函数</h4>
+<p>​ 基本初等函数一共有六类：</p>
+<ol type="1">
+<li>常数函数：<span class="math inline">\(y=c\)</span>，其定义域为 <span
+class="math inline">\(\mathbb{R}\)</span>.</li>
+<li>幂函数：<span class="math inline">\(y=x^\alpha(\alpha \ne
+0)\)</span>，当 <span class="math inline">\(\alpha\)</span>
+为正整数时，<span class="math inline">\(x\in \mathbb{R}\)</span>，当
+<span class="math inline">\(\alpha\)</span> 为负整数时，<span
+class="math inline">\(x\in \mathbb{R}\backslash\{0\}\)</span>.</li>
+<li>指数函数：<span class="math inline">\(y=a^x(a&gt;0,a\ne
+1)\)</span>，<span class="math inline">\(x\in\mathbb{R}\)</span>.</li>
+<li>对数函数：<span
+class="math inline">\(y=\log_ax(a&gt;0,a\ne1)\)</span>，<span
+class="math inline">\(x\in(0,+\infty)\)</span>.</li>
+<li>三角函数：<span class="math inline">\(y=\sin x\)</span>, <span
+class="math inline">\(y=\cos x\)</span>, <span
+class="math inline">\(y=\tan x\)</span>, <span
+class="math inline">\(y=\cot x\)</span>, <span
+class="math inline">\(y=\sec x\)</span>, <span
+class="math inline">\(y=\csc x\)</span>.</li>
+<li>反三角函数：如 <span class="math inline">\(y=\arcsin x\)</span>,
+<span class="math inline">\(y=\arccos x\)</span>, <span
+class="math inline">\(y=\arctan
+x\)</span>，它们是三角函数的反函数。</li>
+</ol>
+<h4 id="复合函数">复合函数</h4>
+<p>​ 设两个函数 <span class="math inline">\(f:X\rightarrow
+Y,g:Y^*\rightarrow Z\)</span>，假定 <span
+class="math inline">\(f(X)\subset Y^*\)</span>，这时对于 <span
+class="math inline">\(\forall x \in X\)</span>，都有唯一确定的数 <span
+class="math inline">\(y=f(x)\in Y\)</span>与之对应，由于 <span
+class="math inline">\(y \in Y^*\)</span>，则有有唯一确定的数 <span
+class="math inline">\(z=g(y)\in Z\)</span> 与其对应，则这个从 <span
+class="math inline">\(x\)</span> 到 <span
+class="math inline">\(z\)</span> 的对应称为 <span
+class="math inline">\(f\)</span> 与 <span
+class="math inline">\(g\)</span> 的复合函数，记作 <span
+class="math inline">\(z=g(f(x))\)</span> 或 <span
+class="math inline">\(g\circ f(x)\)</span>.</p>
+<p>​
+由有限个基本初等函数经过有限次四则运算及复合运算所得到的函数称为初等函数。</p>
+<h4 id="其它重要函数">其它重要函数</h4>
+<ol type="1">
+<li>我们将函数 <span class="math inline">\(\displaystyle y={\rm
+sh}x=\frac{e^x-e^{-x}}{2},y={\rm ch}x=\frac{e^x+e^{-x}}{2}\)</span>
+分别称为双曲正弦函数和双曲余弦函数。</li>
+<li>函数 <span class="math inline">\(y = [x]\)</span> 用于表示不超过
+<span class="math inline">\(x\)</span> 的最大整数。在数学文献中把 <span
+class="math inline">\(y=x-[x]\)</span> 记作 <span
+class="math inline">\(y=\{x\}\)</span>，用于表示 <span
+class="math inline">\(x\)</span> 的小数部分。</li>
+<li>狄利克雷函数：<span class="math inline">\(D(x)=\begin{cases}0(x \in
+\mathbb{R} 且 x \notin \mathbb{Q} )\\1(x \in
+\mathbb{Q})\end{cases}\)</span></li>
+</ol>
+<h4 id="有界函数">有界函数</h4>
+<p>​ 如果 <span class="math inline">\(\exist M \in
+\mathbb{R}\)</span>，使得对于 <span class="math inline">\(\forall x \in
+X\)</span>，<span class="math inline">\(f(x)\leq M\)</span>，则称 <span
+class="math inline">\(M\)</span> 是 <span
+class="math inline">\(f\)</span> 的一个上界。相似地，如果 <span
+class="math inline">\(\exist N \in \mathbb{R}\)</span>，使得对于 <span
+class="math inline">\(\forall x \in X\)</span>，<span
+class="math inline">\(f(x)\geq N\)</span>，则称 <span
+class="math inline">\(N\)</span> 是 <span
+class="math inline">\(f\)</span>
+的一个下界。既有上界又有下界的函数称为有界函数。</p>
+<p>​ 函数 <span class="math inline">\(f:X \rightarrow Y\)</span>
+为有界函数的充要条件是，存在一个实数 <span
+class="math inline">\(C\)</span>，使得对于 <span
+class="math inline">\(\forall x \in X\)</span>，<span
+class="math inline">\(|f(x)| \le C\)</span>.</p>
+<p>​</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%87%BD%E6%95%B0/" rel="tag"># 函数</a>
+              <a href="/tags/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/" rel="tag"># 高等数学</a>
+              <a href="/tags/%E5%AE%9E%E6%95%B0/" rel="tag"># 实数</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2025/08/31/%E3%80%90%E9%AB%98%E4%B8%AD%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0%E3%80%91%E4%B8%A4%E4%B8%AA%E9%87%8D%E8%A6%81%E6%9E%81%E9%99%90%E7%9A%84%E8%AF%81%E6%98%8E/" rel="prev" title="【高中数学笔记】两个重要极限的证明">
+                  <i class="fa fa-angle-left"></i> 【高中数学笔记】两个重要极限的证明
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments utterances-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">11jiang08</span>
+  </div>
+
+
+<span id="runtime">载入中...</span>
+
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt = new Date("08/16/2025 16:00:00"); // 建站时间
+        now.setTime(now.getTime() + 250);
+
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) { hnum = "0" + hnum; }
+
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) { mnum = "0" + mnum; }
+
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) { snum = "0" + snum; }
+
+        document.getElementById("runtime").innerHTML =
+            "本站已安全运行 " + dnum + " 天 " + hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+    setInterval(createtime, 250);
+</script><script color="128,128,128" opacity="0.8" zIndex="-1" count="200" src="https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js"></script>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: '32px',
+  left: 'unset',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"11jiang08/blog-comment","issue_term":"pathname","theme":"preferred-color-scheme"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
+
+</body>
+</html>
