@@ -1717,6 +1717,7 @@ class="math inline">\(\beta\)</span> 互为充要条件。</p>
     <content><![CDATA[<p>​ 实数由有理数和无理数组成，记作 <span
 class="math inline">\(\mathbb{R}\)</span>。有理数包括整数和分数，能表示为有限小数或无限循环小数；无理数是无限不循环小数。实数域是一个有序完备数域，数轴可以形象表示实数及区间。</p>
 <p>函数是变量间的一一对应关系，映射是更一般的对应。常见函数包括常数函数、幂函数、指数函数、对数函数、三角函数及其反函数等；它们通过复合运算和四则运算构成初等函数。此外，还有双曲函数、取整函数、狄利克雷函数等特殊函数。</p>
+<span id="more"></span>
 <h3 id="实数">实数</h3>
 <h4 id="有理数与无理数">有理数与无理数</h4>
 <p>​ 自然数：<span class="math inline">\(1,2,3,...\)</span>，自然数集用
@@ -1911,12 +1912,12 @@ class="math inline">\(x\)</span> 的小数部分。</li>
 \mathbb{Q})\end{cases}\)</span></li>
 </ol>
 <h4 id="有界函数">有界函数</h4>
-<p>​ 如果 <span class="math inline">\(\exist M \in
+<p>​ 如果 <span class="math inline">\(\exists M \in
 \mathbb{R}\)</span>，使得对于 <span class="math inline">\(\forall x \in
 X\)</span>，<span class="math inline">\(f(x)\leq M\)</span>，则称 <span
 class="math inline">\(M\)</span> 是 <span
 class="math inline">\(f\)</span> 的一个上界。相似地，如果 <span
-class="math inline">\(\exist N \in \mathbb{R}\)</span>，使得对于 <span
+class="math inline">\(\exists N \in \mathbb{R}\)</span>，使得对于 <span
 class="math inline">\(\forall x \in X\)</span>，<span
 class="math inline">\(f(x)\geq N\)</span>，则称 <span
 class="math inline">\(N\)</span> 是 <span
