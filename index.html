@@ -6,434 +6,197 @@
     <title>11jiang08 的个人主页</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* 清除默认边距，让页面占满全屏 */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        .container { display: flex; height: 100%; min-height: 100vh; }
 
-        body, html {
-            height: 100%;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
-
-        /* 使用 Flexbox 实现两栏布局 */
-        .container {
-            display: flex;
-            height: 100%;
-            min-height: 100vh;
-        }
-
-        /* 左侧栏：个人介绍 (占 25%) */
+        /* 左侧栏 */
         .sidebar {
-            flex: 25%; /* 约占 1/4 */
-            background-color: #2d3748; /* 较深的灰蓝色 */
-            color: #ffffff; /* 文字用白色 */
-            padding: 40px 24px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            flex: 25%; background-color: #2d3748; color: #ffffff; padding: 40px 24px;
+            display: flex; flex-direction: column; align-items: center; text-align: center;
         }
-
-        /* 头像样式 */
-        .profile-img {
-            width: 120px;       
-            height: 120px;      
-            border-radius: 50%; 
-            object-fit: cover;  
-            margin-bottom: 15px;
-            border: 3px solid #4a5568; 
-        }
-
-        /* 头像/名字样式 */
-        .profile-name {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-            border-bottom: 2px solid #4a5568;
-            padding-bottom: 10px;
-            width: 100%;
-        }
-
-        /* 欢迎语样式 */
-        .welcome-msg {
-            font-size: 1.1rem;
-            color: #63b3ed; 
-            margin-bottom: 20px;
-            font-weight: 500;
-            width: 100%;
-            text-align: left;
-        }
-
-        /* 介绍信息条目样式 */
-        .info-item {
-            margin-bottom: 16px;
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #e2e8f0;
-            width: 100%;
-            text-align: left; 
-        }
-
-        /* 专为条目内文本超链接设计的样式 */
-        .info-item a.text-link {
-            color: #63b3ed;
-            text-decoration: none;
-        }
-        .info-item a.text-link:hover {
-            text-decoration: underline;
-        }
-
-        /* 为条目内的 Font Awesome 图标固定宽度 */
-        .info-item i {
-            width: 24px;
-            text-align: center;
-            margin-right: 4px;
-            color: #a0aec0; 
-        }
-
-        /* 底部社交图标区域样式 */
-        .social-container {
-            margin-top: 10px; 
-            display: flex;
-            gap: 24px; 
-            justify-content: flex-start; 
-            width: 100%;
-            padding-top: 5px;
-        }
-
-        /* 图标基础样式 */
-        .social-icon {
-            color: #cbd5e0; 
-            font-size: 1.6rem;
-            transition: color 0.3s ease, transform 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .social-icon:hover {
-            transform: scale(1.15); 
-        }
-
+        .profile-img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 3px solid #4a5568; }
+        .profile-name { font-size: 1.8rem; margin-bottom: 20px; font-weight: bold; border-bottom: 2px solid #4a5568; padding-bottom: 10px; width: 100%; }
+        .welcome-msg { font-size: 1.1rem; color: #63b3ed; margin-bottom: 20px; font-weight: 500; width: 100%; text-align: left; }
+        .info-item { margin-bottom: 16px; font-size: 1rem; line-height: 1.6; color: #e2e8f0; width: 100%; text-align: left; }
+        .info-item a.text-link { color: #63b3ed; text-decoration: none; }
+        .info-item a.text-link:hover { text-decoration: underline; }
+        .info-item i { width: 24px; text-align: center; margin-right: 4px; color: #a0aec0; }
+        .social-container { margin-top: 10px; display: flex; gap: 24px; justify-content: flex-start; width: 100%; padding-top: 5px; }
+        .social-icon { color: #cbd5e0; font-size: 1.6rem; transition: color 0.3s, transform 0.3s; text-decoration: none; display: inline-block; }
+        .social-icon:hover { transform: scale(1.15); }
         .icon-github:hover { color: #ffffff; }
         .icon-bilibili:hover { color: #00aeec; }
         .icon-email:hover { color: #63b3ed; }
 
-        /* 右侧栏基础样式 */
-        .main-content {
-            flex: 75%; 
-            background-color: #f7fafc; 
-            color: #2d3748;
-            padding: 40px;
-            overflow-y: auto;
-        }
+        /* 右侧栏 */
+        .main-content { flex: 75%; background-color: #f7fafc; color: #2d3748; padding: 40px; overflow-y: auto; }
+        .page-title { font-size: 2rem; margin-bottom: 30px; border-bottom: 3px solid #e2e8f0; padding-bottom: 10px; }
 
-        .page-title {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #e2e8f0;
-            padding-bottom: 10px;
-        }
-
-        /* ==================== 1. 项目网格与卡片样式 ==================== */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-            margin-top: 20px;
-        }
-
+        /* 项目大厅 */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-top: 20px; }
         .project-card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 180px;
+            background: white; border-radius: 12px; padding: 24px; border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+            display: flex; flex-direction: column; justify-content: space-between; min-height: 180px;
         }
+        .project-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); border-color: #4299e1; }
+        .project-icon { font-size: 2rem; color: #4299e1; margin-bottom: 12px; }
+        .project-card h3 { font-size: 1.25rem; color: #2d3748; margin-bottom: 8px; }
+        .project-card p { font-size: 0.95rem; color: #718096; line-height: 1.5; }
+        .project-footer { margin-top: 15px; font-size: 0.85rem; color: #4299e1; font-weight: bold; display: flex; align-items: center; gap: 5px; }
 
-        .project-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            border-color: #4299e1;
-        }
+        .hidden-section { display: none; }
+        .back-btn { background: #edf2f7; border: none; padding: 8px 16px; border-radius: 6px; color: #4a5568; cursor: pointer; font-weight: 600; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px; }
+        .back-btn:hover { background: #e2e8f0; color: #2d3748; }
 
-        .project-icon {
-            font-size: 2rem;
-            color: #4299e1;
-            margin-bottom: 12px;
-        }
+        /* 【更新】看板扩展为三列响应式网格布局 */
+        .schedule-board { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        .column-title { font-size: 1.2rem; margin-bottom: 20px; padding-left: 10px; display: flex; align-items: center; gap: 8px; }
+        
+        /* 每一列自定义边框颜色标识 */
+        .yesterday-column .column-title { border-left: 4px solid #a0aec0; } /* 昨天用灰色 */
+        .today-column .column-title { border-left: 4px solid #ed8936; }     /* 今天用橙色 */
+        .tomorrow-column .column-title { border-left: 4px solid #4299e1; }  /* 明天用蓝色 */
 
-        .project-card h3 {
-            font-size: 1.25rem;
-            color: #2d3748;
-            margin-bottom: 8px;
-        }
+        /* 比赛卡片 */
+        .match-card { background: white; border-radius: 8px; padding: 16px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #edf2f7; display: flex; flex-direction: column; gap: 8px; }
+        .match-time { font-size: 0.85rem; color: #a0aec0; font-weight: bold; }
+        .match-league { font-size: 0.8rem; background: #edf2f7; color: #4a5568; padding: 2px 8px; border-radius: 12px; align-self: flex-start; }
+        .match-teams { font-size: 1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
+        
+        /* 比分框样式 */
+        .match-score { background: #4a5568; color: white; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.95rem; }
 
-        .project-card p {
-            font-size: 0.95rem;
-            color: #718096;
-            line-height: 1.5;
-        }
+        .no-match { color: #a0aec0; font-style: italic; padding: 20px; background: #edf2f7; border-radius: 8px; text-align: center; font-size: 0.9rem; }
 
-        .project-footer {
-            margin-top: 15px;
-            font-size: 0.85rem;
-            color: #4299e1;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* ==================== 2. 赛事看板隐藏页样式 ==================== */
-        .hidden-section {
-            display: none; /* 默认隐藏 */
-        }
-
-        .back-btn {
-            background: #edf2f7;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            color: #4a5568;
-            cursor: pointer;
-            font-weight: 600;
-            margin-bottom: 20px;
-            transition: background 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .back-btn:hover {
-            background: #e2e8f0;
-            color: #2d3748;
-        }
-
-        .schedule-board {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        .column-title {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            padding-left: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .today-column .column-title { border-left: 4px solid #ed8936; }
-        .tomorrow-column .column-title { border-left: 4px solid #4299e1; }
-
-        .match-card {
-            background: white;
-            border-radius: 8px;
-            padding: 16px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
-            border: 1px solid #edf2f7;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .match-time {
-            font-size: 0.9rem;
-            color: #a0aec0;
-            font-weight: bold;
-        }
-
-        .match-league {
-            font-size: 0.8rem;
-            background: #edf2f7;
-            color: #4a5568;
-            padding: 2px 8px;
-            border-radius: 12px;
-            align-self: flex-start;
-        }
-
-        .match-teams {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .no-match {
-            color: #a0aec0;
-            font-style: italic;
-            padding: 20px;
-            background: #edf2f7;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 1024px) {
-            .schedule-board { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 768px) {
-            .container { flex-direction: column; }
-            .sidebar, .main-content { flex: 100%; }
-            .sidebar { padding: 30px 20px; }
-        }
+        /* 屏幕适配 */
+        @media (max-width: 1200px) { .schedule-board { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .container { flex-direction: column; } .sidebar, .main-content { flex: 100%; } .sidebar { padding: 30px 20px; } }
     </style>
 </head>
 <body>
 
     <div class="container">
-        
         <aside class="sidebar">
             <img src="avatar.jpg" alt="11jiang08的头像" class="profile-img">
-
             <div class="profile-name">11jiang08</div>
-
-            <div class="welcome-msg">
-                👋 Hi, I'm 11jiang08!
-            </div>
-            
-            <div class="info-item">
-                <strong><i class="fa-solid fa-location-dot"></i> Current City：</strong><br>Shanghai, China
-            </div>
-
-            <div class="info-item">
-                <strong><i class="fa-solid fa-graduation-cap"></i> Current School：</strong><br>High School Affiliated to Fudan University
-            </div>
-
-            <div class="info-item">
-                <strong><i class="fa-solid fa-robot"></i> FRC Team：</strong><br>
-                Member of the <a href="https://team6907.org/" target="_blank" rel="noopener noreferrer" class="text-link">FRC Team 6907 The G.O.A.T</a>
-            </div>
-
-            <div class="info-item">
-                <strong><i class="fa-solid fa-address-card"></i> Contact & Social：</strong><br>
+            <div class="welcome-msg">👋 Hi, I'm 11jiang08!</div>
+            <div class="info-item"><strong><i class="fa-solid fa-location-dot"></i> Current City：</strong><br>Shanghai, China</div>
+            <div class="info-item"><strong><i class="fa-solid fa-graduation-cap"></i> Current School：</strong><br>High School Affiliated to Fudan University</div>
+            <div class="info-item"><strong><i class="fa-solid fa-robot"></i> FRC Team：</strong><br>Member of the <a href="https://team6907.org/" target="_blank" rel="noopener noreferrer" class="text-link">FRC Team 6907 The G.O.A.T</a></div>
+            <div class="info-item"><strong><i class="fa-solid fa-address-card"></i> Contact & Social：</strong><br>
                 <div class="social-container">
-                    <a href="https://github.com/11jiang08" target="_blank" rel="noopener noreferrer" class="social-icon icon-github" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://space.bilibili.com/1480826359" target="_blank" rel="noopener noreferrer" class="social-icon icon-bilibili" title="Bilibili">
-                        <i class="fa-solid fa-tv"></i>
-                    </a>
-                    <a href="mailto:jwb20091108@gmail.com" class="social-icon icon-email" title="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                    </a>
+                    <a href="https://github.com/11jiang08" target="_blank" rel="noopener noreferrer" class="social-icon icon-github" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://space.bilibili.com/1480826359" target="_blank" rel="noopener noreferrer" class="social-icon icon-bilibili" title="Bilibili"><i class="fa-solid fa-tv"></i></a>
+                    <a href="mailto:jwb20091108@gmail.com" class="social-icon icon-email" title="Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </aside>
 
         <main class="main-content">
-            
             <div id="projects-lobby">
                 <h2 class="page-title">My Personal Projects</h2>
                 <div class="projects-grid">
-                    
                     <div class="project-card" onclick="switchView('tracker-view')">
                         <div>
                             <div class="project-icon"><i class="fa-solid fa-circle-play"></i></div>
                             <h3>Sports Event Tracker</h3>
-                            <p>一个动态追踪并定时更新的赛程看板，按时间顺序自动罗列出今天与明天的精彩赛事信息。</p>
+                            <p>基于 GitHub Actions 与 TheSportsDB 驱动的赛程看板，自动罗列出昨天、今天与明天的赛事信息。</p>
                         </div>
-                        <div class="project-footer">
-                            点击进入项目 <i class="fa-solid fa-arrow-right"></i>
-                        </div>
+                        <div class="project-footer">点击进入项目 <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
-
                     <div class="project-card" style="cursor: default; opacity: 0.6; border-style: dashed;">
                         <div>
                             <div class="project-icon" style="color: #a0aec0;"><i class="fa-solid fa-ellipsis"></i></div>
                             <h3>Next Project</h3>
-                            <p>下一个炫酷的项目正在酝酿中...</p>
+                            <p>下一个科创研发项目正在酝酿中...</p>
                         </div>
-                        <div class="project-footer" style="color: #a0aec0;">
-                            Coming Soon
-                        </div>
+                        <div class="project-footer" style="color: #a0aec0;">Coming Soon</div>
                     </div>
-
                 </div>
             </div>
 
             <div id="tracker-view" class="hidden-section">
-                <button class="back-btn" onclick="switchView('projects-lobby')">
-                    <i class="fa-solid fa-arrow-left"></i> 返回项目大厅
-                </button>
+                <button class="back-btn" onclick="switchView('projects-lobby')"><i class="fa-solid fa-arrow-left"></i> 返回项目大厅</button>
                 <h2 class="page-title"><i class="fa-solid fa-calendar-days"></i> Sports Schedule Board</h2>
                 
                 <div class="schedule-board">
+                    <div class="yesterday-column">
+                        <h3 class="column-title"><i class="fa-solid fa-clock-rotate-left"></i> Yesterday's Events</h3>
+                        <div id="yesterday-matches"><div class="no-match">加载中...</div></div>
+                    </div>
                     <div class="today-column">
                         <h3 class="column-title"><i class="fa-solid fa-fire"></i> Today's Events</h3>
-                        <div id="today-matches">
-                            <div class="no-match">加载中...</div>
-                        </div>
+                        <div id="today-matches"><div class="no-match">加载中...</div></div>
                     </div>
-
                     <div class="tomorrow-column">
                         <h3 class="column-title"><i class="fa-solid fa-bolt"></i> Tomorrow's Events</h3>
-                        <div id="tomorrow-matches">
-                            <div class="no-match">加载中...</div>
-                        </div>
+                        <div id="tomorrow-matches"><div class="no-match">加载中...</div></div>
                     </div>
                 </div>
             </div>
-
         </main>
-
     </div>
 
     <script>
-        // 控制“项目大厅”与“赛事追踪”页面的平滑切换
         function switchView(viewId) {
             if (viewId === 'tracker-view') {
                 document.getElementById('projects-lobby').style.display = 'none';
                 document.getElementById('tracker-view').style.display = 'block';
-                loadSchedule(); // 切换到赛事页时再加载数据
+                loadSchedule();
             } else {
                 document.getElementById('tracker-view').style.display = 'none';
                 document.getElementById('projects-lobby').style.display = 'block';
             }
         }
 
-        // 异步读取同仓库下的 schedule.json 数据文件
         async function loadSchedule() {
             try {
                 const response = await fetch('schedule.json');
                 const data = await response.json();
                 
-                renderMatches(data.today, 'today-matches');
-                renderMatches(data.tomorrow, 'tomorrow-matches');
+                // 【更新】增加渲染昨天数据
+                renderMatches(data.yesterday, 'yesterday-matches', true);
+                renderMatches(data.today, 'today-matches', false);
+                renderMatches(data.tomorrow, 'tomorrow-matches', false);
             } catch (error) {
-                console.error('数据读取失败:', error);
-                document.getElementById('today-matches').innerHTML = '<div class="no-match">暂无今日赛事数据</div>';
-                document.getElementById('tomorrow-matches').innerHTML = '<div class="no-match">暂无明日赛事数据</div>';
+                console.error('数据流读取失败:', error);
+                document.getElementById('yesterday-matches').innerHTML = '<div class="no-match">暂无数据</div>';
+                document.getElementById('today-matches').innerHTML = '<div class="no-match">暂无数据</div>';
+                document.getElementById('tomorrow-matches').innerHTML = '<div class="no-match">暂无数据</div>';
             }
         }
 
-        function renderMatches(matches, elementId) {
+        function renderMatches(matches, elementId, isYesterday) {
             const container = document.getElementById(elementId);
             if (!matches || matches.length === 0) {
-                container.innerHTML = '<div class="no-match">☕ 今天没有关注的比赛</div>';
+                container.innerHTML = '<div class="no-match">☕ 当日没有关注的比赛</div>';
                 return;
             }
             
-            // 按时间严格排序
             matches.sort((a, b) => a.time.localeCompare(b.time));
 
-            container.innerHTML = matches.map(match => `
-                <div class="match-card">
-                    <span class="match-time"><i class="fa-regular fa-clock"></i> ${match.time}</span>
-                    <span class="match-league">${match.league}</span>
-                    <div class="match-teams">${match.homeTeam} vs ${match.awayTeam}</div>
-                </div>
-            `).join('');
+            container.innerHTML = matches.map(match => {
+                // 如果是昨天的完赛且有比分，则渲染比分条；其余情况正常显示 vs
+                const hasScore = match.homeScore !== "" && match.awayScore !== "";
+                const middleDisplay = (isYesterday && hasScore) 
+                    ? `<span class="match-score">${match.homeScore} : ${match.awayScore}</span>`
+                    : `<span style="color: #a0aec0; font-size: 0.9rem;">VS</span>`;
+
+                return `
+                    <div class="match-card">
+                        <span class="match-time"><i class="fa-regular fa-clock"></i> ${match.time}</span>
+                        <span class="match-league">${match.league}</span>
+                        <div class="match-teams">
+                            <span>${match.homeTeam}</span>
+                            ${middleDisplay}
+                            <span>${match.awayTeam}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
         }
     </script>
 </body>
