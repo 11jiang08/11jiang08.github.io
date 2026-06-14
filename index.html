@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>11jiang08 的个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* 清除默认边距，让页面占满全屏 */
         * {
@@ -76,14 +77,42 @@
             text-align: left; /* 信息左对齐 */
         }
 
-        /* 超链接样式（邮箱和B站链接） */
-        .info-item a {
-            color: #63b3ed;
+        /* 为条目内的 Font Awesome 图标固定宽度，保持对齐 */
+        .info-item i {
+            width: 24px;
+            text-align: center;
+            margin-right: 4px;
+            color: #a0aec0; /* 让文字前的小图标颜色低调好看 */
+        }
+
+        /* 底部社交图标区域样式 */
+        .social-container {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px; /* 图标之间的间距 */
+            justify-content: flex-start;
+            width: 100%;
+            padding-top: 10px;
+        }
+
+        /* 图标基础样式 */
+        .social-icon {
+            color: #cbd5e0; /* 默认浅灰色，在深色背景下很清晰 */
+            font-size: 1.6rem;
+            transition: color 0.3s ease, transform 0.3s ease;
             text-decoration: none;
+            display: inline-block;
         }
-        .info-item a:hover {
-            text-decoration: underline; /* 鼠标悬停时出现下划线 */
+
+        /* 鼠标悬停时的动态效果 */
+        .social-icon:hover {
+            transform: scale(1.15); /* 轻轻放大 */
         }
+
+        /* 各个图标自定义悬停颜色 */
+        .icon-github:hover { color: #ffffff; }
+        .icon-bilibili:hover { color: #00aeec; }
+        .icon-email:hover { color: #63b3ed; }
 
         /* 右侧栏：个人项目展示 (占 75%) */
         .main-content {
@@ -139,20 +168,22 @@
             </div>
 
             <div class="info-item">
-              <strong><i class="fa-solid fa-robot"></i> FRC Team：</strong><br>Member of the FRC Team 6907 The G.O.A.T
+                <strong><i class="fa-solid fa-robot"></i> FRC Team：</strong><br>Member of the FRC Team 6907 The G.O.A.T
             </div>
 
             <div class="info-item">
-                <strong>📬 Contact & Social：</strong><br>
-                <a href="https://github.com/11jiang08" target="_blank" rel="noopener noreferrer" class="social-icon icon-github" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://space.bilibili.com/1480826359" target="_blank" rel="noopener noreferrer" class="social-icon icon-bilibili" title="Bilibili">
-                    <i class="fa-solid fa-tv"></i>
-                </a>
-                <a href="mailto:jwb20091108@gmail.com" class="social-icon icon-email" title="Email">
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
+                <strong><i class="fa-solid fa-address-card"></i> Contact & Social：</strong><br>
+                <div class="social-container">
+                    <a href="https://github.com/11jiang08" target="_blank" rel="noopener noreferrer" class="social-icon icon-github" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://space.bilibili.com/1480826359" target="_blank" rel="noopener noreferrer" class="social-icon icon-bilibili" title="Bilibili">
+                        <i class="fa-solid fa-tv"></i>
+                    </a>
+                    <a href="mailto:jwb20091108@gmail.com" class="social-icon icon-email" title="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
             </div>
         </aside>
 
