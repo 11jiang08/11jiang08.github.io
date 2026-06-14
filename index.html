@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11jiang08 的个人主页</title>
+    <style>
+        /* 清除默认边距，让页面占满全屏 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* 使用 Flexbox 实现两栏布局 */
+        .container {
+            display: flex;
+            height: 100%;
+            min-height: 100vh;
+        }
+
+        /* 左侧栏：个人介绍 (占 25%) */
+        .sidebar {
+            flex: 25%; /* 约占 1/4 */
+            background-color: #2d3748; /* 较深的灰蓝色，更有质感 */
+            color: #ffffff; /* 文字用白色 */
+            padding: 40px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* 头像/名字样式 */
+        .profile-name {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+            border-bottom: 2px solid #4a5568;
+            padding-bottom: 10px;
+            width: 100%;
+        }
+
+        /* 介绍信息条目样式 */
+        .info-item {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e2e8f0;
+            width: 100%;
+            text-align: left; /* 信息左对齐 */
+        }
+
+        /* 右侧栏：个人项目展示 (占 75%) */
+        .main-content {
+            flex: 75%; /* 约占 3/4 */
+            background-color: #f7fafc; /* 浅灰色背景 */
+            color: #2d3748;
+            padding: 40px;
+        }
+
+        .placeholder-text {
+            color: #a0aec0;
+            font-size: 1.2rem;
+            border: 2px dashed #e2e8f0;
+            padding: 100px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* 响应式设计：在手机等小屏幕上自动变成上下排列 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar, .main-content {
+                flex: 100%;
+            }
+            .sidebar {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <aside class="sidebar">
+            <div class="profile-name">11jiang08</div>
+            
+            <div class="info-item">
+                <strong>📍 现居城市：</strong><br>中国，上海
+            </div>
+            
+            <div class="info-item">
+                <strong>🏫 毕业/就读学校：</strong><br>复旦大学附属中学
+            </div>
+            
+            <div class="info-item">
+                <strong>🤖 FRC 战队：</strong><br>FRC Team 6907 The G.O.A.T 队员
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <h2>我的个人项目</h2>
+            <div class="placeholder-text">
+                展示区域正在建设中... 稍后将加入我的个人项目。
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
