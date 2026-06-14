@@ -56,6 +56,16 @@
             width: 100%;
         }
 
+        /* 欢迎语样式 */
+        .welcome-msg {
+            font-size: 1.1rem;
+            color: #63b3ed; /* 使用好看的天蓝色突出欢迎语 */
+            margin-bottom: 20px;
+            font-weight: 500;
+            width: 100%;
+            text-align: left;
+        }
+
         /* 介绍信息条目样式 */
         .info-item {
             margin-bottom: 16px;
@@ -64,6 +74,15 @@
             color: #e2e8f0;
             width: 100%;
             text-align: left; /* 信息左对齐 */
+        }
+
+        /* 超链接样式（邮箱和B站链接） */
+        .info-item a {
+            color: #63b3ed;
+            text-decoration: none;
+        }
+        .info-item a:hover {
+            text-decoration: underline; /* 鼠标悬停时出现下划线 */
         }
 
         /* 右侧栏：个人项目展示 (占 75%) */
@@ -106,22 +125,32 @@
             <img src="avatar.jpg" alt="11jiang08的头像" class="profile-img">
 
             <div class="profile-name">11jiang08</div>
-            
-            <div class="info-item">
-                <strong>📍 现居城市：</strong><br>中国，上海
+
+            <div class="welcome-msg">
+                👋 Hi, I'm 11jiang08!
             </div>
             
             <div class="info-item">
-                <strong>🏫 毕业/就读学校：</strong><br>复旦大学附属中学
+                <strong>📍 Current City：</strong><br>Shanghai, China
             </div>
             
             <div class="info-item">
-                <strong>🤖 FRC 战队：</strong><br>FRC Team 6907 The G.O.A.T 队员
+                <strong>🏫 Current School：</strong><br>High School Affiliated to Fudan University
+            </div>
+            
+            <div class="info-item">
+                <strong>🤖 FRC Team：</strong><br>Member of the FRC Team 6907 The G.O.A.T
+            </div>
+
+            <div class="info-item">
+                <strong>📬 Contact & Social：</strong><br>
+                Email: <a href="mailto:jwb20091108@gmail.com">jwb20091108@gmail.com</a><br>
+                Bilibili: <a href="https://space.bilibili.com/1480826359" target="_blank" rel="noopener noreferrer">11jiang08 的主页</a>
             </div>
         </aside>
 
         <main class="main-content">
-            <h2>我的个人项目</h2>
+            <h2>My Personal Projects</h2>
             <div class="placeholder-text">
                 展示区域正在建设中... 稍后将加入我的个人项目。
             </div>
