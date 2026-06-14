@@ -1,0 +1,35 @@
+name: Auto Update Sports Schedule
+
+on:
+  schedule:
+    # 定时任务：每 6 小时自动运行一次 (Cron 表达式)
+    # 你可以根据需要调整，0 */6 * * * 代表国际标准时间 0点, 6点, 12点, 18点
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # 允许你在 GitHub 页面上手动点击按钮触发运行
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+    - name: 检出仓库代码
+      uses: actions/checkout@v3
+
+    - name: 设置 Python 环境
+      uses: actions/setup-python@v4
+      with:
+        python-python: '3.10'
+
+    - name: 安装依赖库
+      run: |
+        pip install requests
+
+    - name: 运行 Python 脚本爬取赛程
+      run: python update_schedule.py
+
+    - name: 将新生成的数据提交并推送到仓库
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add schedule.json
+        # 只有在文件有变动时才提交，防止报错
+        git diff --quiet && git diff --staged --quiet || (git commit -m "自动更新赛事数据" && git push)
