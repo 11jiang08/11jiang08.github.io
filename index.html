@@ -36,6 +36,16 @@
             text-align: center;
         }
 
+        /* 头像样式 */
+        .profile-img {
+            width: 120px;       /* 控制头像宽度 */
+            height: 120px;      /* 控制头像高度，保持和宽度一致 */
+            border-radius: 50%; /* 让正方形图片变成完美的圆形 */
+            object-fit: cover;  /* 确保图片缩放时不会变形 */
+            margin-bottom: 15px;/* 与下方名字保持一点距离 */
+            border: 3px solid #4a5568; /* 给头像加一个好看的边框 */
+        }
+
         /* 头像/名字样式 */
         .profile-name {
             font-size: 1.8rem;
@@ -93,6 +103,8 @@
     <div class="container">
         
         <aside class="sidebar">
+            <img src="avatar.jpg" alt="11jiang08的头像" class="profile-img">
+
             <div class="profile-name">11jiang08</div>
             
             <div class="info-item">
