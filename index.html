@@ -66,6 +66,24 @@
         .countdown-display-wrapper { flex: 2; background: #000000; border-radius: 12px; display: flex; justify-content: center; align-items: center; position: relative; min-height: 360px; overflow: hidden; border: 1px solid #e2e8f0; }
         #countdown-canvas { display: block; border-radius: 12px; max-width: 100%; height: auto; }
 
+        /* 体育赛程聚合专属布局样式 */
+        .schedule-app-container { max-width: 700px; margin-top: 20px; display: flex; flex-direction: column; gap: 30px; }
+        .schedule-section h3 { font-size: 1.1rem; color: #4a5568; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+        .schedule-section.finished h3 { color: #718096; }
+        .schedule-list { display: flex; flex-direction: column; gap: 12px; }
+        .match-card { background: white; border-radius: 12px; padding: 16px 20px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); display: flex; flex-direction: column; gap: 10px; }
+        .match-meta { font-size: 0.85rem; color: #a0aec0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px dashed #edf2f7; padding-bottom: 8px; }
+        .match-league { font-weight: 600; color: #4a5568; display: flex; align-items: center; gap: 4px; }
+        .match-content { display: flex; align-items: center; justify-content: space-between; font-weight: bold; font-size: 1.05rem; color: #2d3748; padding: 4px 0; }
+        .vs-layout { display: flex; width: 100%; justify-content: space-between; align-items: center; }
+        .match-team { width: 42%; }
+        .match-team.right { text-align: right; }
+        .match-score { font-size: 1.25rem; color: #e53e3e; width: 16%; text-align: center; background: #fff5f5; padding: 2px 8px; border-radius: 6px; }
+        .match-vs { font-size: 0.9rem; color: #cbd5e0; width: 16%; text-align: center; font-style: italic; }
+        .match-title { font-weight: 600; color: #2d3748; }
+        .match-winner { font-size: 0.9rem; color: #38a169; background: #f0fff4; padding: 4px 10px; border-radius: 6px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; }
+        .schedule-empty { background: #edf2f7; color: #718096; text-align: center; padding: 20px; border-radius: 12px; font-size: 0.95rem; border: 1px dashed #cbd5e0; }
+
         /* 屏幕适配 */
         @media (max-width: 1200px) { .countdown-app-container { flex-direction: column; } .countdown-controls { max-width: 100%; } }
         @media (max-width: 768px) { .container { flex-direction: column; } .sidebar, .main-content { flex: 100%; } .sidebar { padding: 30px 20px; } }
@@ -103,6 +121,15 @@
                             <p>Canvas 驱动的高颜值倒计时工具，定制专属于你的特殊日子，多款精美主题随心配置。</p>
                         </div>
                         <div class="project-footer">点击进入项目 <i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+
+                    <div class="project-card" onclick="switchView('schedule-view')">
+                        <div>
+                            <div class="project-icon" style="color: #ed8936;"><i class="fa-solid fa-trophy"></i></div>
+                            <h3>体育赛事看板</h3>
+                            <p>纯净的个性化赛程聚合面板。自动读取数据，分类、排序并干净地展示关注的比赛。</p>
+                        </div>
+                        <div class="project-footer" style="color: #ed8936;">点击进入项目 <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
 
                     <div class="project-card" style="cursor: default; opacity: 0.6; border-style: dashed;">
@@ -148,6 +175,23 @@
                 </div>
             </div>
 
+            <div id="schedule-view" class="hidden-section">
+                <button class="back-btn" onclick="switchView('projects-lobby')"><i class="fa-solid fa-arrow-left"></i> 返回项目大厅</button>
+                <h2 class="page-title"><i class="fa-solid fa-trophy"></i> 个人赛程看板</h2>
+
+                <div class="schedule-app-container">
+                    <div class="schedule-section" id="schedule-upcoming">
+                        <h3><i class="fa-solid fa-calendar-days" style="color: #4299e1;"></i> 即将到来 / 进行中</h3>
+                        <div class="schedule-list" id="upcoming-list"></div>
+                    </div>
+
+                    <div class="schedule-section finished" id="schedule-finished">
+                        <h3><i class="fa-solid fa-circle-check" style="color: #a0aec0;"></i> 已经结束</h3>
+                        <div class="schedule-list" id="finished-list"></div>
+                    </div>
+                </div>
+            </div>
+
         </main>
     </div>
 
@@ -162,19 +206,29 @@
         document.getElementById('target-date').value = `${nextYear}-01-01`;
         document.getElementById('event-title').value = "元旦跨年";
 
+        // 全局视图切换路由
         function switchView(viewId) {
+            // 隐藏所有视图
+            document.getElementById('projects-lobby').style.display = 'none';
+            document.getElementById('countdown-view').style.display = 'none';
+            document.getElementById('schedule-view').style.display = 'none';
+
+            // 停用倒计时动画渲染
+            if (animationId) cancelAnimationFrame(animationId);
+
+            // 激活目标视图
             if (viewId === 'countdown-view') {
-                document.getElementById('projects-lobby').style.display = 'none';
                 document.getElementById('countdown-view').style.display = 'block';
                 initCountdown();
+            } else if (viewId === 'schedule-view') {
+                document.getElementById('schedule-view').style.display = 'block';
+                loadSchedule(); // 切入赛程板时实时读取本地数据
             } else {
-                document.getElementById('countdown-view').style.display = 'none';
                 document.getElementById('projects-lobby').style.display = 'block';
-                if (animationId) cancelAnimationFrame(animationId);
             }
         }
 
-        // 样式风格配置中心
+        // 样式风格配置中心（倒计时）
         const themeStyles = {
             'dark-tech': {
                 bgStart: '#1e293b', bgEnd: '#0f172a',
@@ -220,9 +274,8 @@
             const canvas = document.getElementById('countdown-canvas');
             const ctx = canvas.getContext('2d');
 
-            // 粒子系统配置
             const particles = [];
-            const particleCount = currentThemeKey === 'cyber-neon' ? 60 : 35; // 赛博风格粒子更密集
+            const particleCount = currentThemeKey === 'cyber-neon' ? 60 : 35; 
             for (let i = 0; i < particleCount; i++) {
                 particles.push({
                     x: Math.random() * canvas.width,
@@ -234,14 +287,12 @@
             }
 
             function draw() {
-                // 1. 绘制主题背景
                 let bgGradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
                 bgGradient.addColorStop(0, theme.bgStart);
                 bgGradient.addColorStop(1, theme.bgEnd);
                 ctx.fillStyle = bgGradient;
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                // 2. 绘制主题边框
                 ctx.strokeStyle = theme.border;
                 ctx.lineWidth = currentThemeKey === 'cyber-neon' ? 1 : 2;
                 if (currentThemeKey === 'cyber-neon') {
@@ -249,9 +300,8 @@
                     ctx.shadowBlur = 8;
                 }
                 ctx.strokeRect(15, 15, canvas.width - 30, canvas.height - 30);
-                ctx.shadowBlur = 0; // 重置边框发光
+                ctx.shadowBlur = 0; 
 
-                // 计算时间差
                 const now = new Date().getTime();
                 let diff = countdownTarget ? countdownTarget - now : 0;
 
@@ -267,7 +317,6 @@
                     seconds = Math.floor((diff % (1000 * 60)) / 1000);
                 }
 
-                // 3. 渲染事件名称标题
                 ctx.fillStyle = theme.titleColor;
                 ctx.font = 'bold 24px -apple-system, sans-serif';
                 ctx.textAlign = 'center';
@@ -278,7 +327,6 @@
                 ctx.fillText(eventName, canvas.width / 2, 110);
                 ctx.shadowBlur = 0;
 
-                // 4. 渲染核心纯净倒计时数字
                 if (isOver) {
                     ctx.fillStyle = theme.timeColor;
                     ctx.font = 'bold 36px -apple-system, sans-serif';
@@ -287,7 +335,6 @@
                     const pad = num => String(num).padStart(2, '0');
                     const timeStr = `${days}天 ${pad(hours)}时 ${pad(minutes)}分 ${pad(seconds)}秒`;
 
-                    // 注入发光主题特效
                     if (theme.glowBlur > 0) {
                         ctx.shadowColor = theme.glowColor;
                         ctx.shadowBlur = theme.glowBlur;
@@ -295,10 +342,9 @@
                     ctx.fillStyle = theme.timeColor;
                     ctx.font = 'bold 46px monospace';
                     ctx.fillText(timeStr, canvas.width / 2, 210);
-                    ctx.shadowBlur = 0; // 还原发光
+                    ctx.shadowBlur = 0; 
                 }
 
-                // 5. 渲染底部流动粒子
                 particles.forEach(p => {
                     ctx.fillStyle = theme.particleColor;
                     ctx.beginPath();
@@ -314,8 +360,85 @@
 
                 animationId = requestAnimationFrame(draw);
             }
-
             draw();
+        }
+
+        // ==================== 体育赛程逻辑 ====================
+        function formatMatchTime(dateStr) {
+            const d = new Date(dateStr);
+            const pad = (num) => String(num).padStart(2, '0');
+            return `${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+        }
+
+        function buildMatchCard(match) {
+            let innerContent = '';
+            
+            if (match.type === 'versus') {
+                if (match.status === 'finished' && match.result) {
+                    innerContent = `
+                        <div class="vs-layout">
+                            <span class="match-team">${match.homeTeam}</span>
+                            <span class="match-score">${match.result.homeScore} : ${match.result.awayScore}</span>
+                            <span class="match-team right">${match.awayTeam}</span>
+                        </div>`;
+                } else {
+                    innerContent = `
+                        <div class="vs-layout">
+                            <span class="match-team">${match.homeTeam}</span>
+                            <span class="match-vs">VS</span>
+                            <span class="match-team right">${match.awayTeam}</span>
+                        </div>`;
+                }
+            } else if (match.type === 'racing') {
+                if (match.status === 'finished' && match.result) {
+                    innerContent = `
+                        <div class="match-title">${match.title}</div>
+                        <div class="match-winner"><i class="fa-solid fa-crown"></i> 冠军: ${match.result.winner}</div>`;
+                } else {
+                    innerContent = `<div class="match-title">${match.title}</div>`;
+                }
+            }
+
+            return `
+                <div class="match-card">
+                    <div class="match-meta">
+                        <span class="match-league"><i class="fa-solid fa-flag"></i> ${match.league}</span>
+                        <span><i class="fa-regular fa-clock"></i> ${formatMatchTime(match.startTime)}</span>
+                    </div>
+                    <div class="match-content">
+                        ${innerContent}
+                    </div>
+                </div>`;
+        }
+
+        async function loadSchedule() {
+            const upcomingContainer = document.getElementById('upcoming-list');
+            const finishedContainer = document.getElementById('finished-list');
+            
+            try {
+                const response = await fetch('schedule.json');
+                if (!response.ok) throw new Error('网络响应异常');
+                const data = await response.json();
+
+                // 按时间由近到远生序排序
+                data.sort((a, b) => new Date(a.startTime) - new Date(b.startTime));
+
+                const upcomingMatches = data.filter(m => m.status === 'scheduled');
+                const finishedMatches = data.filter(m => m.status === 'finished');
+
+                upcomingContainer.innerHTML = upcomingMatches.length ? 
+                    upcomingMatches.map(buildMatchCard).join('') : 
+                    '<div class="schedule-empty">今日无关注的未开赛日程</div>';
+                    
+                finishedContainer.innerHTML = finishedMatches.length ? 
+                    finishedMatches.map(buildMatchCard).join('') : 
+                    '<div class="schedule-empty">暂无已结束的比赛</div>';
+
+            } catch (error) {
+                console.error('加载赛程失败:', error);
+                upcomingContainer.innerHTML = '<div class="schedule-empty" style="color: #e53e3e; background: #fff5f5; border-color: #fed7d7;">❌ 未能加载 schedule.json，请确保文件存在且格式正确。</div>';
+                finishedContainer.innerHTML = '<div class="schedule-empty">数据读取失败</div>';
+            }
         }
     </script>
 </body>

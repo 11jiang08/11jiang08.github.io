@@ -1,5 +1,6 @@
-{
-  "yesterday": [],
-  "today": [],
-  "tomorrow": []
-}
+[
+  {"id": 1,"league": "英超","type": "versus","homeTeam": "阿森纳","awayTeam": "切尔西","startTime": "2026-06-14T20:00:00","status": "scheduled","result": null},
+  {"id": 2,"league": "NBA","type": "versus","homeTeam": "湖人","awayTeam": "凯尔特人","startTime": "2026-06-13T09:00:00","status": "finished","result": {"homeScore": 102,"awayScore": 98}},
+  {"id": 3,"league": "F1 摩纳哥大奖赛","type": "racing","title": "正赛","startTime": "2026-06-14T21:10:00","status": "scheduled","result": null},
+  {"id": 4,"league": "WTT 乒乓球赛","type": "racing","title": "男子单打决赛","startTime": "2026-06-12T19:30:00","status": "finished","result": {"winner": "樊振东"}}
+]
