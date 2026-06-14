@@ -28,7 +28,7 @@
         /* 左侧栏：个人介绍 (占 25%) */
         .sidebar {
             flex: 25%; /* 约占 1/4 */
-            background-color: #2d3748; /* 较深的灰蓝色，更有质感 */
+            background-color: #2d3748; /* 较深的灰蓝色 */
             color: #ffffff; /* 文字用白色 */
             padding: 40px 24px;
             display: flex;
@@ -39,12 +39,12 @@
 
         /* 头像样式 */
         .profile-img {
-            width: 120px;       /* 控制头像宽度 */
-            height: 120px;      /* 控制头像高度，保持和宽度一致 */
-            border-radius: 50%; /* 让正方形图片变成完美的圆形 */
-            object-fit: cover;  /* 确保图片缩放时不会变形 */
-            margin-bottom: 15px;/* 与下方名字保持一点距离 */
-            border: 3px solid #4a5568; /* 给头像加一个好看的边框 */
+            width: 120px;       
+            height: 120px;      
+            border-radius: 50%; 
+            object-fit: cover;  
+            margin-bottom: 15px;
+            border: 3px solid #4a5568; 
         }
 
         /* 头像/名字样式 */
@@ -60,7 +60,7 @@
         /* 欢迎语样式 */
         .welcome-msg {
             font-size: 1.1rem;
-            color: #63b3ed; /* 使用好看的天蓝色突出欢迎语 */
+            color: #63b3ed; 
             margin-bottom: 20px;
             font-weight: 500;
             width: 100%;
@@ -74,75 +74,218 @@
             line-height: 1.6;
             color: #e2e8f0;
             width: 100%;
-            text-align: left; /* 信息左对齐 */
+            text-align: left; 
         }
 
-        /* 为条目内的 Font Awesome 图标固定宽度，保持对齐 */
+        /* 专为条目内文本超链接设计的样式 */
+        .info-item a.text-link {
+            color: #63b3ed;
+            text-decoration: none;
+        }
+        .info-item a.text-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 为条目内的 Font Awesome 图标固定宽度 */
         .info-item i {
             width: 24px;
             text-align: center;
             margin-right: 4px;
-            color: #a0aec0; /* 让文字前的小图标颜色低调好看 */
+            color: #a0aec0; 
         }
 
         /* 底部社交图标区域样式 */
         .social-container {
-            margin-top: 20px;
+            margin-top: 10px; 
             display: flex;
-            gap: 20px; /* 图标之间的间距 */
-            justify-content: flex-start;
+            gap: 24px; 
+            justify-content: flex-start; 
             width: 100%;
-            padding-top: 10px;
+            padding-top: 5px;
         }
 
         /* 图标基础样式 */
         .social-icon {
-            color: #cbd5e0; /* 默认浅灰色，在深色背景下很清晰 */
+            color: #cbd5e0; 
             font-size: 1.6rem;
             transition: color 0.3s ease, transform 0.3s ease;
             text-decoration: none;
             display: inline-block;
         }
 
-        /* 鼠标悬停时的动态效果 */
         .social-icon:hover {
-            transform: scale(1.15); /* 轻轻放大 */
+            transform: scale(1.15); 
         }
 
-        /* 各个图标自定义悬停颜色 */
         .icon-github:hover { color: #ffffff; }
         .icon-bilibili:hover { color: #00aeec; }
         .icon-email:hover { color: #63b3ed; }
 
-        /* 右侧栏：个人项目展示 (占 75%) */
+        /* 右侧栏基础样式 */
         .main-content {
-            flex: 75%; /* 约占 3/4 */
-            background-color: #f7fafc; /* 浅灰色背景 */
+            flex: 75%; 
+            background-color: #f7fafc; 
             color: #2d3748;
             padding: 40px;
+            overflow-y: auto;
         }
 
-        .placeholder-text {
-            color: #a0aec0;
-            font-size: 1.2rem;
-            border: 2px dashed #e2e8f0;
-            padding: 100px 20px;
-            text-align: center;
-            border-radius: 8px;
+        .page-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        /* ==================== 1. 项目网格与卡片样式 ==================== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
             margin-top: 20px;
         }
 
-        /* 响应式设计：在手机等小屏幕上自动变成上下排列 */
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 180px;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            border-color: #4299e1;
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            color: #4299e1;
+            margin-bottom: 12px;
+        }
+
+        .project-card h3 {
+            font-size: 1.25rem;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .project-card p {
+            font-size: 0.95rem;
+            color: #718096;
+            line-height: 1.5;
+        }
+
+        .project-footer {
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #4299e1;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* ==================== 2. 赛事看板隐藏页样式 ==================== */
+        .hidden-section {
+            display: none; /* 默认隐藏 */
+        }
+
+        .back-btn {
+            background: #edf2f7;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            color: #4a5568;
+            cursor: pointer;
+            font-weight: 600;
+            margin-bottom: 20px;
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            background: #e2e8f0;
+            color: #2d3748;
+        }
+
+        .schedule-board {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .column-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .today-column .column-title { border-left: 4px solid #ed8936; }
+        .tomorrow-column .column-title { border-left: 4px solid #4299e1; }
+
+        .match-card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            border: 1px solid #edf2f7;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .match-time {
+            font-size: 0.9rem;
+            color: #a0aec0;
+            font-weight: bold;
+        }
+
+        .match-league {
+            font-size: 0.8rem;
+            background: #edf2f7;
+            color: #4a5568;
+            padding: 2px 8px;
+            border-radius: 12px;
+            align-self: flex-start;
+        }
+
+        .match-teams {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .no-match {
+            color: #a0aec0;
+            font-style: italic;
+            padding: 20px;
+            background: #edf2f7;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 1024px) {
+            .schedule-board { grid-template-columns: 1fr; }
+        }
+
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .sidebar, .main-content {
-                flex: 100%;
-            }
-            .sidebar {
-                padding: 30px 20px;
-            }
+            .container { flex-direction: column; }
+            .sidebar, .main-content { flex: 100%; }
+            .sidebar { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -168,7 +311,8 @@
             </div>
 
             <div class="info-item">
-                <strong><i class="fa-solid fa-robot"></i> FRC Team：</strong><br>Member of the FRC Team 6907 The G.O.A.T
+                <strong><i class="fa-solid fa-robot"></i> FRC Team：</strong><br>
+                Member of the <a href="https://team6907.org/" target="_blank" rel="noopener noreferrer" class="text-link">FRC Team 6907 The G.O.A.T</a>
             </div>
 
             <div class="info-item">
@@ -188,13 +332,109 @@
         </aside>
 
         <main class="main-content">
-            <h2>My Personal Projects</h2>
-            <div class="placeholder-text">
-                展示区域正在建设中... 稍后将加入我的个人项目。
+            
+            <div id="projects-lobby">
+                <h2 class="page-title">My Personal Projects</h2>
+                <div class="projects-grid">
+                    
+                    <div class="project-card" onclick="switchView('tracker-view')">
+                        <div>
+                            <div class="project-icon"><i class="fa-solid fa-circle-play"></i></div>
+                            <h3>Sports Event Tracker</h3>
+                            <p>一个动态追踪并定时更新的赛程看板，按时间顺序自动罗列出今天与明天的精彩赛事信息。</p>
+                        </div>
+                        <div class="project-footer">
+                            点击进入项目 <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="project-card" style="cursor: default; opacity: 0.6; border-style: dashed;">
+                        <div>
+                            <div class="project-icon" style="color: #a0aec0;"><i class="fa-solid fa-ellipsis"></i></div>
+                            <h3>Next Project</h3>
+                            <p>下一个炫酷的项目正在酝酿中...</p>
+                        </div>
+                        <div class="project-footer" style="color: #a0aec0;">
+                            Coming Soon
+                        </div>
+                    </div>
+
+                </div>
             </div>
+
+            <div id="tracker-view" class="hidden-section">
+                <button class="back-btn" onclick="switchView('projects-lobby')">
+                    <i class="fa-solid fa-arrow-left"></i> 返回项目大厅
+                </button>
+                <h2 class="page-title"><i class="fa-solid fa-calendar-days"></i> Sports Schedule Board</h2>
+                
+                <div class="schedule-board">
+                    <div class="today-column">
+                        <h3 class="column-title"><i class="fa-solid fa-fire"></i> Today's Events</h3>
+                        <div id="today-matches">
+                            <div class="no-match">加载中...</div>
+                        </div>
+                    </div>
+
+                    <div class="tomorrow-column">
+                        <h3 class="column-title"><i class="fa-solid fa-bolt"></i> Tomorrow's Events</h3>
+                        <div id="tomorrow-matches">
+                            <div class="no-match">加载中...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </main>
 
     </div>
 
+    <script>
+        // 控制“项目大厅”与“赛事追踪”页面的平滑切换
+        function switchView(viewId) {
+            if (viewId === 'tracker-view') {
+                document.getElementById('projects-lobby').style.display = 'none';
+                document.getElementById('tracker-view').style.display = 'block';
+                loadSchedule(); // 切换到赛事页时再加载数据
+            } else {
+                document.getElementById('tracker-view').style.display = 'none';
+                document.getElementById('projects-lobby').style.display = 'block';
+            }
+        }
+
+        // 异步读取同仓库下的 schedule.json 数据文件
+        async function loadSchedule() {
+            try {
+                const response = await fetch('schedule.json');
+                const data = await response.json();
+                
+                renderMatches(data.today, 'today-matches');
+                renderMatches(data.tomorrow, 'tomorrow-matches');
+            } catch (error) {
+                console.error('数据读取失败:', error);
+                document.getElementById('today-matches').innerHTML = '<div class="no-match">暂无今日赛事数据</div>';
+                document.getElementById('tomorrow-matches').innerHTML = '<div class="no-match">暂无明日赛事数据</div>';
+            }
+        }
+
+        function renderMatches(matches, elementId) {
+            const container = document.getElementById(elementId);
+            if (!matches || matches.length === 0) {
+                container.innerHTML = '<div class="no-match">☕ 今天没有关注的比赛</div>';
+                return;
+            }
+            
+            // 按时间严格排序
+            matches.sort((a, b) => a.time.localeCompare(b.time));
+
+            container.innerHTML = matches.map(match => `
+                <div class="match-card">
+                    <span class="match-time"><i class="fa-regular fa-clock"></i> ${match.time}</span>
+                    <span class="match-league">${match.league}</span>
+                    <div class="match-teams">${match.homeTeam} vs ${match.awayTeam}</div>
+                </div>
+            `).join('');
+        }
+    </script>
 </body>
 </html>

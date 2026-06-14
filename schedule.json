@@ -1,0 +1,10 @@
+{
+  "today": [
+    { "time": "10:00", "league": "NBA", "homeTeam": "湖人", "awayTeam": "勇士" },
+    { "time": "20:00", "league": "英超", "homeTeam": "阿森纳", "awayTeam": "切尔西" }
+  ],
+  "tomorrow": [
+    { "time": "08:30", "league": "NBA", "homeTeam": "凯尔特人", "awayTeam": "热火" },
+    { "time": "15:00", "league": "中超", "homeTeam": "上海海港", "awayTeam": "申花" }
+  ]
+}
