@@ -1,7 +1,5 @@
-[
-  {"id":1,"league":"NBA","type":"versus","homeTeam":"马刺","awayTeam":"尼克斯","startTime":"2026-06-04T00:00:00","status":"finished","result":{"homeScore":95,"awayScore":105}},
-  {"id":2,"league":"NBA","type":"versus","homeTeam":"马刺","awayTeam":"尼克斯","startTime":"2026-06-06T00:00:00","status":"finished","result":{"homeScore":104,"awayScore":105}},
-  {"id":3,"league":"NBA","type":"versus","homeTeam":"尼克斯","awayTeam":"马刺","startTime":"2026-06-09T00:00:00","status":"finished","result":{"homeScore":111,"awayScore":115}},
-  {"id":4,"league":"NBA","type":"versus","homeTeam":"尼克斯","awayTeam":"马刺","startTime":"2026-06-11T00:00:00","status":"finished","result":{"homeScore":107,"awayScore":106}},
-  {"id":5,"league":"NBA","type":"versus","homeTeam":"马刺","awayTeam":"尼克斯","startTime":"2026-06-14T00:00:00","status":"finished","result":{"homeScore":90,"awayScore":94}}
-]
+{
+  "yesterday": [],
+  "today": [],
+  "tomorrow": []
+}
