@@ -51,28 +51,23 @@
         .back-btn { background: #edf2f7; border: none; padding: 8px 16px; border-radius: 6px; color: #4a5568; cursor: pointer; font-weight: 600; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 8px; }
         .back-btn:hover { background: #e2e8f0; color: #2d3748; }
 
-        /* 【更新】看板扩展为三列响应式网格布局 */
-        .schedule-board { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-        .column-title { font-size: 1.2rem; margin-bottom: 20px; padding-left: 10px; display: flex; align-items: center; gap: 8px; }
+        /* 万能倒计时专属布局样式 */
+        .countdown-app-container { display: flex; gap: 30px; margin-top: 20px; background: white; border-radius: 16px; border: 1px solid #e2e8f0; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+        .countdown-controls { flex: 1; display: flex; flex-direction: column; gap: 20px; max-width: 320px; }
+        .control-group { display: flex; flex-direction: column; gap: 8px; }
+        .control-group label { font-weight: 600; font-size: 0.95rem; color: #4a5568; }
+        .control-group input, .control-group select { padding: 10px 14px; border: 1px solid #cbd5e0; border-radius: 8px; font-size: 1rem; color: #2d3748; outline: none; transition: border-color 0.2s; background: white; }
+        .control-group input:focus, .control-group select:focus { border-color: #4299e1; box-shadow: 0 0 0 3px rgba(66,153,225,0.15); }
         
-        /* 每一列自定义边框颜色标识 */
-        .yesterday-column .column-title { border-left: 4px solid #a0aec0; } /* 昨天用灰色 */
-        .today-column .column-title { border-left: 4px solid #ed8936; }     /* 今天用橙色 */
-        .tomorrow-column .column-title { border-left: 4px solid #4299e1; }  /* 明天用蓝色 */
+        .action-btn { background: #4299e1; color: white; border: none; padding: 12px; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.2s, transform 0.1s; display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 10px; }
+        .action-btn:hover { background: #3182ce; }
+        .action-btn:active { transform: scale(0.98); }
 
-        /* 比赛卡片 */
-        .match-card { background: white; border-radius: 8px; padding: 16px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.04); border: 1px solid #edf2f7; display: flex; flex-direction: column; gap: 8px; }
-        .match-time { font-size: 0.85rem; color: #a0aec0; font-weight: bold; }
-        .match-league { font-size: 0.8rem; background: #edf2f7; color: #4a5568; padding: 2px 8px; border-radius: 12px; align-self: flex-start; }
-        .match-teams { font-size: 1rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; }
-        
-        /* 比分框样式 */
-        .match-score { background: #4a5568; color: white; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 0.95rem; }
-
-        .no-match { color: #a0aec0; font-style: italic; padding: 20px; background: #edf2f7; border-radius: 8px; text-align: center; font-size: 0.9rem; }
+        .countdown-display-wrapper { flex: 2; background: #000000; border-radius: 12px; display: flex; justify-content: center; align-items: center; position: relative; min-height: 360px; overflow: hidden; border: 1px solid #e2e8f0; }
+        #countdown-canvas { display: block; border-radius: 12px; max-width: 100%; height: auto; }
 
         /* 屏幕适配 */
-        @media (max-width: 1200px) { .schedule-board { grid-template-columns: 1fr; } }
+        @media (max-width: 1200px) { .countdown-app-container { flex-direction: column; } .countdown-controls { max-width: 100%; } }
         @media (max-width: 768px) { .container { flex-direction: column; } .sidebar, .main-content { flex: 100%; } .sidebar { padding: 30px 20px; } }
     </style>
 </head>
@@ -96,107 +91,231 @@
         </aside>
 
         <main class="main-content">
+            
             <div id="projects-lobby">
                 <h2 class="page-title">My Personal Projects</h2>
                 <div class="projects-grid">
-                    <div class="project-card" onclick="switchView('tracker-view')">
+                    
+                    <div class="project-card" onclick="switchView('countdown-view')">
                         <div>
-                            <div class="project-icon"><i class="fa-solid fa-circle-play"></i></div>
-                            <h3>Sports Event Tracker</h3>
-                            <p>基于 GitHub Actions 与 TheSportsDB 驱动的赛程看板，自动罗列出昨天、今天与明天的赛事信息。</p>
+                            <div class="project-icon"><i class="fa-solid fa-hourglass-start"></i></div>
+                            <h3>倒计时计算工具</h3>
+                            <p>Canvas 驱动的高颜值倒计时工具，定制专属于你的特殊日子，多款精美主题随心配置。</p>
                         </div>
                         <div class="project-footer">点击进入项目 <i class="fa-solid fa-arrow-right"></i></div>
                     </div>
+
                     <div class="project-card" style="cursor: default; opacity: 0.6; border-style: dashed;">
                         <div>
                             <div class="project-icon" style="color: #a0aec0;"><i class="fa-solid fa-ellipsis"></i></div>
                             <h3>Next Project</h3>
-                            <p>下一个科创研发项目正在酝酿中...</p>
+                            <p>下一个项目正在酝酿中...</p>
                         </div>
                         <div class="project-footer" style="color: #a0aec0;">Coming Soon</div>
                     </div>
                 </div>
             </div>
 
-            <div id="tracker-view" class="hidden-section">
+            <div id="countdown-view" class="hidden-section">
                 <button class="back-btn" onclick="switchView('projects-lobby')"><i class="fa-solid fa-arrow-left"></i> 返回项目大厅</button>
-                <h2 class="page-title"><i class="fa-solid fa-calendar-days"></i> Sports Schedule Board</h2>
+                <h2 class="page-title"><i class="fa-solid fa-clock"></i> 自定义倒计时</h2>
                 
-                <div class="schedule-board">
-                    <div class="yesterday-column">
-                        <h3 class="column-title"><i class="fa-solid fa-clock-rotate-left"></i> Yesterday's Events</h3>
-                        <div id="yesterday-matches"><div class="no-match">加载中...</div></div>
+                <div class="countdown-app-container">
+                    <div class="countdown-controls">
+                        <div class="control-group">
+                            <label for="event-title">我期待的事情：</label>
+                            <input type="text" id="event-title" placeholder="例如：高考、跨年、暑假">
+                        </div>
+                        <div class="control-group">
+                            <label for="target-date">目标日期：</label>
+                            <input type="date" id="target-date">
+                        </div>
+                        <div class="control-group">
+                            <label for="style-select">视觉主题风格：</label>
+                            <select id="style-select" onchange="initCountdown()">
+                                <option value="dark-tech">🌌 暗黑微光 (默认)</option>
+                                <option value="sunset-gold">🌇 落日熔金</option>
+                                <option value="minimal-white">🤍 极简白瓷</option>
+                                <option value="cyber-neon">⚡ 赛博霓虹</option>
+                            </select>
+                        </div>
+                        <button class="action-btn" onclick="initCountdown()"><i class="fa-solid fa-wand-magic-sparkles"></i> 渲染倒计时卡片</button>
                     </div>
-                    <div class="today-column">
-                        <h3 class="column-title"><i class="fa-solid fa-fire"></i> Today's Events</h3>
-                        <div id="today-matches"><div class="no-match">加载中...</div></div>
-                    </div>
-                    <div class="tomorrow-column">
-                        <h3 class="column-title"><i class="fa-solid fa-bolt"></i> Tomorrow's Events</h3>
-                        <div id="tomorrow-matches"><div class="no-match">加载中...</div></div>
+
+                    <div class="countdown-display-wrapper">
+                        <canvas id="countdown-canvas" width="600" height="360"></canvas>
                     </div>
                 </div>
             </div>
+
         </main>
     </div>
 
     <script>
+        let animationId = null;
+        let countdownTarget = null;
+        let eventName = "我的期待倒计时";
+
+        // 初始化默认日期（明年的元旦）
+        const today = new Date();
+        const nextYear = today.getFullYear() + 1;
+        document.getElementById('target-date').value = `${nextYear}-01-01`;
+        document.getElementById('event-title').value = "元旦跨年";
+
         function switchView(viewId) {
-            if (viewId === 'tracker-view') {
+            if (viewId === 'countdown-view') {
                 document.getElementById('projects-lobby').style.display = 'none';
-                document.getElementById('tracker-view').style.display = 'block';
-                loadSchedule();
+                document.getElementById('countdown-view').style.display = 'block';
+                initCountdown();
             } else {
-                document.getElementById('tracker-view').style.display = 'none';
+                document.getElementById('countdown-view').style.display = 'none';
                 document.getElementById('projects-lobby').style.display = 'block';
+                if (animationId) cancelAnimationFrame(animationId);
             }
         }
 
-        async function loadSchedule() {
-            try {
-                const response = await fetch('schedule.json');
-                const data = await response.json();
-                
-                // 【更新】增加渲染昨天数据
-                renderMatches(data.yesterday, 'yesterday-matches', true);
-                renderMatches(data.today, 'today-matches', false);
-                renderMatches(data.tomorrow, 'tomorrow-matches', false);
-            } catch (error) {
-                console.error('数据流读取失败:', error);
-                document.getElementById('yesterday-matches').innerHTML = '<div class="no-match">暂无数据</div>';
-                document.getElementById('today-matches').innerHTML = '<div class="no-match">暂无数据</div>';
-                document.getElementById('tomorrow-matches').innerHTML = '<div class="no-match">暂无数据</div>';
+        // 样式风格配置中心
+        const themeStyles = {
+            'dark-tech': {
+                bgStart: '#1e293b', bgEnd: '#0f172a',
+                border: 'rgba(99, 179, 237, 0.2)',
+                titleColor: '#e2e8f0', timeColor: '#ffffff',
+                glowColor: '#4299e1', glowBlur: 15,
+                particleColor: 'rgba(226, 232, 240, 0.3)'
+            },
+            'sunset-gold': {
+                bgStart: '#451a03', bgEnd: '#78350f',
+                border: 'rgba(251, 191, 36, 0.2)',
+                titleColor: '#fef3c7', timeColor: '#fcd34d',
+                glowColor: '#f59e0b', glowBlur: 20,
+                particleColor: 'rgba(251, 191, 36, 0.4)'
+            },
+            'minimal-white': {
+                bgStart: '#f8fafc', bgEnd: '#e2e8f0',
+                border: 'rgba(74, 85, 104, 0.1)',
+                titleColor: '#4a5568', timeColor: '#1a202c',
+                glowColor: 'transparent', glowBlur: 0,
+                particleColor: 'rgba(74, 85, 104, 0.15)'
+            },
+            'cyber-neon': {
+                bgStart: '#000000', bgEnd: '#111827',
+                border: '#00f0ff',
+                titleColor: '#00f0ff', timeColor: '#ff007f',
+                glowColor: '#ff007f', glowBlur: 25,
+                particleColor: 'rgba(0, 240, 255, 0.6)'
             }
-        }
+        };
 
-        function renderMatches(matches, elementId, isYesterday) {
-            const container = document.getElementById(elementId);
-            if (!matches || matches.length === 0) {
-                container.innerHTML = '<div class="no-match">☕ 当日没有关注的比赛</div>';
-                return;
-            }
+        function initCountdown() {
+            if (animationId) cancelAnimationFrame(animationId);
             
-            matches.sort((a, b) => a.time.localeCompare(b.time));
+            const titleInput = document.getElementById('event-title').value.trim();
+            const dateInput = document.getElementById('target-date').value;
+            const currentThemeKey = document.getElementById('style-select').value;
+            const theme = themeStyles[currentThemeKey];
 
-            container.innerHTML = matches.map(match => {
-                // 如果是昨天的完赛且有比分，则渲染比分条；其余情况正常显示 vs
-                const hasScore = match.homeScore !== "" && match.awayScore !== "";
-                const middleDisplay = (isYesterday && hasScore) 
-                    ? `<span class="match-score">${match.homeScore} : ${match.awayScore}</span>`
-                    : `<span style="color: #a0aec0; font-size: 0.9rem;">VS</span>`;
+            eventName = titleInput || "未命名事件";
+            countdownTarget = dateInput ? new Date(dateInput + "T00:00:00").getTime() : null;
 
-                return `
-                    <div class="match-card">
-                        <span class="match-time"><i class="fa-regular fa-clock"></i> ${match.time}</span>
-                        <span class="match-league">${match.league}</span>
-                        <div class="match-teams">
-                            <span>${match.homeTeam}</span>
-                            ${middleDisplay}
-                            <span>${match.awayTeam}</span>
-                        </div>
-                    </div>
-                `;
-            }).join('');
+            const canvas = document.getElementById('countdown-canvas');
+            const ctx = canvas.getContext('2d');
+
+            // 粒子系统配置
+            const particles = [];
+            const particleCount = currentThemeKey === 'cyber-neon' ? 60 : 35; // 赛博风格粒子更密集
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: canvas.height - 20 - Math.random() * 40,
+                    radius: Math.random() * (currentThemeKey === 'cyber-neon' ? 2 : 1.5) + 0.5,
+                    speed: Math.random() * 0.5 + 0.1,
+                    angle: Math.random() * Math.PI * 2
+                });
+            }
+
+            function draw() {
+                // 1. 绘制主题背景
+                let bgGradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+                bgGradient.addColorStop(0, theme.bgStart);
+                bgGradient.addColorStop(1, theme.bgEnd);
+                ctx.fillStyle = bgGradient;
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                // 2. 绘制主题边框
+                ctx.strokeStyle = theme.border;
+                ctx.lineWidth = currentThemeKey === 'cyber-neon' ? 1 : 2;
+                if (currentThemeKey === 'cyber-neon') {
+                    ctx.shadowColor = theme.border;
+                    ctx.shadowBlur = 8;
+                }
+                ctx.strokeRect(15, 15, canvas.width - 30, canvas.height - 30);
+                ctx.shadowBlur = 0; // 重置边框发光
+
+                // 计算时间差
+                const now = new Date().getTime();
+                let diff = countdownTarget ? countdownTarget - now : 0;
+
+                let days = 0, hours = 0, minutes = 0, seconds = 0;
+                let isOver = false;
+
+                if (diff <= 0) {
+                    isOver = true;
+                } else {
+                    days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                }
+
+                // 3. 渲染事件名称标题
+                ctx.fillStyle = theme.titleColor;
+                ctx.font = 'bold 24px -apple-system, sans-serif';
+                ctx.textAlign = 'center';
+                if (currentThemeKey === 'cyber-neon') {
+                    ctx.shadowColor = theme.titleColor;
+                    ctx.shadowBlur = 10;
+                }
+                ctx.fillText(eventName, canvas.width / 2, 110);
+                ctx.shadowBlur = 0;
+
+                // 4. 渲染核心纯净倒计时数字
+                if (isOver) {
+                    ctx.fillStyle = theme.timeColor;
+                    ctx.font = 'bold 36px -apple-system, sans-serif';
+                    ctx.fillText("🎉 目标日子已悄然来临！", canvas.width / 2, 205);
+                } else {
+                    const pad = num => String(num).padStart(2, '0');
+                    const timeStr = `${days}天 ${pad(hours)}时 ${pad(minutes)}分 ${pad(seconds)}秒`;
+
+                    // 注入发光主题特效
+                    if (theme.glowBlur > 0) {
+                        ctx.shadowColor = theme.glowColor;
+                        ctx.shadowBlur = theme.glowBlur;
+                    }
+                    ctx.fillStyle = theme.timeColor;
+                    ctx.font = 'bold 46px monospace';
+                    ctx.fillText(timeStr, canvas.width / 2, 210);
+                    ctx.shadowBlur = 0; // 还原发光
+                }
+
+                // 5. 渲染底部流动粒子
+                particles.forEach(p => {
+                    ctx.fillStyle = theme.particleColor;
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                    ctx.fill();
+
+                    p.x += Math.cos(p.angle) * p.speed;
+                    p.y += Math.sin(p.angle) * p.speed * 0.3;
+
+                    if (p.x < 25 || p.x > canvas.width - 25) p.angle = Math.PI - p.angle;
+                    if (p.y < canvas.height - 60 || p.y > canvas.height - 25) p.angle = -p.angle;
+                });
+
+                animationId = requestAnimationFrame(draw);
+            }
+
+            draw();
         }
     </script>
 </body>
