@@ -1,7 +1,6 @@
 {
   "yesterday": [],
-  "today": [],
-  "tomorrow": [
+  "today": [
     {
       "time": "00:00",
       "league": "NFL",
@@ -10,5 +9,6 @@
       "homeScore": "",
       "awayScore": ""
     }
-  ]
+  ],
+  "tomorrow": []
 }
