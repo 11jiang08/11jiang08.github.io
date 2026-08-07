@@ -6,8 +6,8 @@
       "league": "NFL",
       "homeTeam": "Arizona Cardinals",
       "awayTeam": "Carolina Panthers",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "30",
+      "awayScore": "33"
     }
   ],
   "tomorrow": []
