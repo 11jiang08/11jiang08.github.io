@@ -1,7 +1,6 @@
 {
   "yesterday": [],
-  "today": [],
-  "tomorrow": [
+  "today": [
     {
       "time": "23:00",
       "league": "NFL",
@@ -23,6 +22,24 @@
       "league": "NFL",
       "homeTeam": "New England Patriots",
       "awayTeam": "Indianapolis Colts",
+      "homeScore": "",
+      "awayScore": ""
+    }
+  ],
+  "tomorrow": [
+    {
+      "time": "00:00",
+      "league": "NFL",
+      "homeTeam": "Houston Texans",
+      "awayTeam": "Los Angeles Chargers",
+      "homeScore": "",
+      "awayScore": ""
+    },
+    {
+      "time": "23:00",
+      "league": "NFL",
+      "homeTeam": "Atlanta Falcons",
+      "awayTeam": "Denver Broncos",
       "homeScore": "",
       "awayScore": ""
     }
