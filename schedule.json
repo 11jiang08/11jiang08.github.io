@@ -5,24 +5,24 @@
       "league": "NFL",
       "homeTeam": "Cincinnati Bengals",
       "awayTeam": "Detroit Lions",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "3",
+      "awayScore": "0"
     },
     {
       "time": "23:00",
       "league": "NFL",
       "homeTeam": "Pittsburgh Steelers",
       "awayTeam": "Green Bay Packers",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "0",
+      "awayScore": "3"
     },
     {
       "time": "23:30",
       "league": "NFL",
       "homeTeam": "New England Patriots",
       "awayTeam": "Indianapolis Colts",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "3",
+      "awayScore": "0"
     }
   ],
   "today": [
@@ -31,8 +31,8 @@
       "league": "NFL",
       "homeTeam": "Houston Texans",
       "awayTeam": "Los Angeles Chargers",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "7",
+      "awayScore": "3"
     },
     {
       "time": "23:00",
