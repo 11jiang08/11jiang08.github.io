@@ -13,8 +13,8 @@
       "league": "NFL",
       "homeTeam": "Atlanta Falcons",
       "awayTeam": "Denver Broncos",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "0",
+      "awayScore": "7"
     }
   ],
   "today": [],
