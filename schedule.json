@@ -6,8 +6,8 @@
       "league": "NFL",
       "homeTeam": "Seattle Seahawks",
       "awayTeam": "Dallas Cowboys",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "7",
+      "awayScore": "17"
     }
   ],
   "tomorrow": []
