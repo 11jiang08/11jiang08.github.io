@@ -1,14 +1,5 @@
 {
-  "yesterday": [
-    {
-      "time": "00:00",
-      "league": "NFL",
-      "homeTeam": "Seattle Seahawks",
-      "awayTeam": "Dallas Cowboys",
-      "homeScore": "7",
-      "awayScore": "17"
-    }
-  ],
+  "yesterday": [],
   "today": [],
   "tomorrow": []
 }
