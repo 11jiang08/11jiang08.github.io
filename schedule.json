@@ -1,7 +1,6 @@
 {
   "yesterday": [],
-  "today": [],
-  "tomorrow": [
+  "today": [
     {
       "time": "00:00",
       "league": "NFL",
@@ -23,6 +22,16 @@
       "league": "NFL",
       "homeTeam": "Pittsburgh Steelers",
       "awayTeam": "New York Jets",
+      "homeScore": "",
+      "awayScore": ""
+    }
+  ],
+  "tomorrow": [
+    {
+      "time": "17:00",
+      "league": "NFL",
+      "homeTeam": "Cleveland Browns",
+      "awayTeam": "Buffalo Bills",
       "homeScore": "",
       "awayScore": ""
     }
