@@ -6,16 +6,16 @@
       "league": "NFL",
       "homeTeam": "Houston Texans",
       "awayTeam": "Las Vegas Raiders",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "20",
+      "awayScore": "22"
     },
     {
       "time": "02:00",
       "league": "NFL",
       "homeTeam": "Los Angeles Chargers",
       "awayTeam": "San Francisco 49ers",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "17",
+      "awayScore": "41"
     },
     {
       "time": "23:00",
