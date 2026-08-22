@@ -21,8 +21,8 @@
       "league": "NFL",
       "homeTeam": "Pittsburgh Steelers",
       "awayTeam": "New York Jets",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "0",
+      "awayScore": "7"
     }
   ],
   "today": [
