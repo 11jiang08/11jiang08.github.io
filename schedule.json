@@ -1,39 +1,23 @@
 {
   "yesterday": [
     {
-      "time": "00:00",
-      "league": "NFL",
-      "homeTeam": "Houston Texans",
-      "awayTeam": "Las Vegas Raiders",
-      "homeScore": "20",
-      "awayScore": "22"
-    },
-    {
-      "time": "02:00",
-      "league": "NFL",
-      "homeTeam": "Los Angeles Chargers",
-      "awayTeam": "San Francisco 49ers",
-      "homeScore": "17",
-      "awayScore": "41"
-    },
-    {
-      "time": "23:00",
-      "league": "NFL",
-      "homeTeam": "Pittsburgh Steelers",
-      "awayTeam": "New York Jets",
-      "homeScore": "0",
-      "awayScore": "17"
-    }
-  ],
-  "today": [
-    {
       "time": "17:00",
       "league": "NFL",
       "homeTeam": "Cleveland Browns",
       "awayTeam": "Buffalo Bills",
+      "homeScore": "0",
+      "awayScore": "0"
+    }
+  ],
+  "today": [],
+  "tomorrow": [
+    {
+      "time": "00:00",
+      "league": "NFL",
+      "homeTeam": "Tennessee Titans",
+      "awayTeam": "Seattle Seahawks",
       "homeScore": "",
       "awayScore": ""
     }
-  ],
-  "tomorrow": []
+  ]
 }
