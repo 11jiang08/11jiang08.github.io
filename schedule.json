@@ -1,16 +1,6 @@
 {
-  "yesterday": [
-    {
-      "time": "17:00",
-      "league": "NFL",
-      "homeTeam": "Cleveland Browns",
-      "awayTeam": "Buffalo Bills",
-      "homeScore": "7",
-      "awayScore": "31"
-    }
-  ],
-  "today": [],
-  "tomorrow": [
+  "yesterday": [],
+  "today": [
     {
       "time": "00:00",
       "league": "NFL",
@@ -19,5 +9,6 @@
       "homeScore": "",
       "awayScore": ""
     }
-  ]
+  ],
+  "tomorrow": []
 }
