@@ -1,14 +1,14 @@
 {
-  "yesterday": [
-    {
-      "time": "00:00",
-      "league": "NFL",
-      "homeTeam": "Tennessee Titans",
-      "awayTeam": "Seattle Seahawks",
-      "homeScore": "19",
-      "awayScore": "16"
-    }
-  ],
+  "yesterday": [],
   "today": [],
-  "tomorrow": []
+  "tomorrow": [
+    {
+      "time": "23:00",
+      "league": "NFL",
+      "homeTeam": "Buffalo Bills",
+      "awayTeam": "Pittsburgh Steelers",
+      "homeScore": "",
+      "awayScore": ""
+    }
+  ]
 }
