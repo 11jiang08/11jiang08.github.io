@@ -1,6 +1,5 @@
 {
-  "yesterday": [],
-  "today": [
+  "yesterday": [
     {
       "time": "23:00",
       "league": "NFL",
@@ -10,7 +9,7 @@
       "awayScore": ""
     }
   ],
-  "tomorrow": [
+  "today": [
     {
       "time": "00:00",
       "league": "NFL",
@@ -35,5 +34,6 @@
       "homeScore": "",
       "awayScore": ""
     }
-  ]
+  ],
+  "tomorrow": []
 }
