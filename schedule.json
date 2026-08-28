@@ -5,8 +5,8 @@
       "league": "NFL",
       "homeTeam": "Buffalo Bills",
       "awayTeam": "Pittsburgh Steelers",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "10",
+      "awayScore": "14"
     }
   ],
   "today": [
@@ -15,8 +15,8 @@
       "league": "NFL",
       "homeTeam": "Cleveland Browns",
       "awayTeam": "New England Patriots",
-      "homeScore": "",
-      "awayScore": ""
+      "homeScore": "7",
+      "awayScore": "7"
     },
     {
       "time": "02:00",
